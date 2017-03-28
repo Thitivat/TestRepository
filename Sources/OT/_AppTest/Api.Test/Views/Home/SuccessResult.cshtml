@@ -1,0 +1,56 @@
+﻿@model BND.Services.Security.OTP.ApiTest.Models.SuccessViewModel
+
+<section ng-controller="ResultCtrl" layout="column" ng-cloak class="md-inline-form">
+    <br />
+    <div class="otp-border">
+        <section >
+            <h2>@ViewBag.Title</h2> 
+            <md-button class="md-raised" ng-click="reTest()">Re-Test</md-button>
+        </section>
+    </div>
+    <hr />
+    <h4>Debug Parameters:</h4>
+    <br />
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Id)
+        @Html.TextBoxFor(model => model.SuccessModel.Id)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Suid)
+        @Html.TextBoxFor(model => model.SuccessModel.Suid)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.RefCode)
+        @Html.TextBoxFor(model => model.SuccessModel.RefCode)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Payload)
+        @Html.TextBoxFor(model => model.SuccessModel.Payload)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Status)
+        @Html.TextBoxFor(model => model.SuccessModel.Status)
+    </md-input-container>
+    @*<md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.ExpiryDate)
+        @Html.TextBoxFor(model => model.SuccessModel.ExpiryDate)
+    </md-input-container>*@
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Channel.Type)
+        @Html.TextBoxFor(model => model.SuccessModel.Channel.Type)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Channel.Sender)
+        @Html.TextBoxFor(model => model.SuccessModel.Channel.Sender)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Channel.Address)
+        @Html.TextBoxFor(model => model.SuccessModel.Channel.Address)
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => model.SuccessModel.Channel.Message)
+        @Html.TextBoxFor(model => model.SuccessModel.Channel.Message)
+    </md-input-container>
+
+</section>
+<script src="@Url.Content("~/Scripts/otp.js")"></script>

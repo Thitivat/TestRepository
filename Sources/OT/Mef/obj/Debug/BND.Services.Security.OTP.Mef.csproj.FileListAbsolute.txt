@@ -1,0 +1,6 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\bin\Debug\BND.Services.Security.OTP.Mef.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\bin\Debug\BND.Services.Security.OTP.Mef.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\obj\Debug\BND.Services.Security.OTP.Mef.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\obj\Debug\BND.Services.Security.OTP.Mef.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\obj\Debug\BND.Services.Security.OTP.Mef.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\obj\Debug\BND.Services.Security.OTP.Mef.pdb

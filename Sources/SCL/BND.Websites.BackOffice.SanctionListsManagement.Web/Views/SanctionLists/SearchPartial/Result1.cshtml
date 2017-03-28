@@ -1,0 +1,64 @@
+﻿@model int
+@{
+    var tabnumber = Model;
+}
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <span>Date : {{today|date:'yyyy-MM-dd HH:mm:ss'}}</span>
+        <button name="hSubmit" value="Export" ng-click="exportSanctionList(@tabnumber)" class="pull-right">Export</button><br /><br />
+        <div>
+            <span><strong>Parameters</strong>  </span>
+            <ul>
+                <li>Last name : {{criteriaLastName[@tabnumber]}}</li>
+                <li ng-show="!!criteriaFirstName[@tabnumber]">First name :{{criteriaFirstName[@tabnumber]}}</li>
+                <li ng-show="!!criteriaBirthDate[@tabnumber]">Birth Date :{{criteriaBirthDate[@tabnumber] |date:'yyyy-MM-dd'}}</li>
+                <li>List Type : {{criteriaSanctionType}}</li>
+            </ul>
+            <span><strong>Result count : </strong>{{totalItems[@tabnumber]}}</span>
+        </div>
+        <div class="row" ng-show="totalItems[@tabnumber] >
+            0">
+            <div style="margin-left: 12%;">
+                <data-pagination total-items="totalItems[@tabnumber]" items-per-page="ITEM_PER_PAGE" ng-model="currentPage[@tabnumber]" max-size="maxSize" class="pagination-sm" ng-change="pageChange(@tabnumber, currentPage[@tabnumber])" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>EntityId</th>
+                            <th>Gender</th>
+                            <th>Name</th>
+                            <th>BirthDate</th>
+                            <th>Regulation title</th>
+                            <th>Subject Type</th>
+                        </tr>
+                    </thead>
+                    @*<tbody>*@
+                    <tr ng-repeat="entity in entityList[@tabnumber] ">
+                        <td>
+                            {{entity.OriginalEntityId}}
+                        </td>
+                        <td>
+                            <span>{{entity.NameAliases[0].Gender.Name}}</span>
+                        </td>
+                        <td>
+                            <a ng-click="showEntityDetails(entity.EntityId)" style="cursor: hand;cursor: pointer"><span>{{entity.NameAliases[0].WholeName}}</span></a>
+                        </td>
+                        <td>
+                            <span>{{DMYDisplay(entity.Births[0].Day, entity.Births[0].Month, entity.Births[0].Year)}}</span>
+                        </td>
+                        <td><a href="{{entity.Regulation.PublicationUrl}}" target="_blank">{{entity.Regulation.PublicationTitle}}</a></td>
+                        <td>{{entity.SubjectType.Name}}</td>
+                    </tr>
+                    @*</tbody>*@
+                </table>
+            </div>
+            <div style="margin-left: 12%;">
+                <data-pagination total-items="totalItems[@tabnumber]" items-per-page="ITEM_PER_PAGE" ng-model="currentPage[@tabnumber]" max-size="maxSize" class="pagination-sm" ng-change="pageChange(@tabnumber, currentPage[@tabnumber])" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>

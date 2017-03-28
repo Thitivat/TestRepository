@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcquirerTrxRes xmlns="http://www.idealdesk.com/ideal/messages/mer-acq/3.3.1" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" version="3.3.1">
+    <createDateTimestamp>2016-05-16T08:08:16.158Z</createDateTimestamp>
+    <Acquirer>
+        <acquirerID>0030</acquirerID>
+    </Acquirer>
+    <Issuer>
+        <issuerAuthenticationURL>https://abnamro-test.ideal-payment.de/ideal/issuerSim.do?trxid=0030000041743099&amp;ideal=prob</issuerAuthenticationURL>
+    </Issuer>
+    <Transaction>
+        <transactionID>0030000041743099</transactionID>
+        <transactionCreateDateTimestamp>2016-05-16T08:08:16.158Z</transactionCreateDateTimestamp>
+        <purchaseID>2ac45813-cbec-4e</purchaseID>
+    </Transaction>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+            <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+            <Reference URI="">
+                <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                <DigestValue>DY0grf1X+M9NLqQ1whtQuYDYk80GApsaUw2I1ssI7Cs=</DigestValue>
+            </Reference>
+        </SignedInfo>
+        <SignatureValue>MZoyhlcR0dWGixJWRey9qy8iTskQN+AqRVa8H5MSIOraC/6eBWmTxOUG0q/gaUkrIKk5Q+HHUtwI
+fBhl2DaFcB87GKmFKOCRMPI7H272vqJ+3+BMCHhnZ6X4YvbjZlUVhxzj7t3biZQjUp7up0Ms02zn
+BA5FckStFhgWUtRU4ozdRRt8yGD8yQzY9dFeA30UvPNRHQ4LkfhtD7vCwDIXDmevFYUEzaAwao0n
+7vVUjDpgQMLaW2FpuXGqjvQeS+3UF7Dm83xTf8bemimM4dzQGi4qFRIcJBtFB86VA2+xnVEnBUGN
+UUwggk01u23lr5VFDOlh3Pv+sdDNSxfswSlp3w==</SignatureValue>
+        <KeyInfo>
+            <KeyName>00CDA7F82E4CBA8F5A3F2736BE02DC23204485C3</KeyName>
+        </KeyInfo>
+    </Signature>
+</AcquirerTrxRes>

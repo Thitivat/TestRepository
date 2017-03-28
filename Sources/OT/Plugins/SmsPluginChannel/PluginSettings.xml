@@ -1,0 +1,14 @@
+﻿<plugin-settings>
+  <plugin-setting name="EMAIL" version="1.0.0.0">
+    <parameters>
+      <parameter key="EmailAccount" value="info@brandnewday.nl" />
+      <parameter key="EmailSubject" value="Uw Brand New Day code" />
+      <parameter key="MailManUrl" value="http://api.int.test.brandnewday.nl/mailman" />
+    </parameters>
+  </plugin-setting>
+  <plugin-setting name="SMS" version="1.0.0.0">
+    <parameters>
+      <parameter key="SmsAccessKey" value="live_bSGiILD0930DnPpv80vVmj0D0" />
+    </parameters>
+  </plugin-setting>
+</plugin-settings>

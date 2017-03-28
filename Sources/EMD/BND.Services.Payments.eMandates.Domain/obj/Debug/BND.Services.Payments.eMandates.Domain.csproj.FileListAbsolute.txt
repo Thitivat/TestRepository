@@ -1,0 +1,13 @@
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\BND.Services.Payments.eMandates.Domain.dll.config
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\BND.Services.Payments.eMandates.Domain.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\BND.Services.Payments.eMandates.Domain.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\BND.Services.Payments.eMandates.Models.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\EntityFramework.Utilities.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\BND.Services.Payments.eMandates.Models.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\obj\Debug\BND.Services.Payments.eMandates.Domain.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\obj\Debug\BND.Services.Payments.eMandates.Domain.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Domain\obj\Debug\BND.Services.Payments.eMandates.Domain.pdb

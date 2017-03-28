@@ -1,0 +1,16 @@
+﻿
+<div ng-controller="AlertsController" ng-show="alerts.length > 0" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2" id="alert-manager">
+                <div class="alert-manager-main">
+                    <div ng-repeat="alert in alerts" class="fade in out">
+                        <data-alert ng-if="!(alert.timeout>0)" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</data-alert>
+                        <data-alert ng-if="alert.timeout>0" type="{{alert.type}}" close="closeAlert($index)" dismiss-on-timeout="{{alert.timeout}}">{{alert.msg}}</data-alert>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

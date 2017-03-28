@@ -1,0 +1,5 @@
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\bin\Debug\BND.Services.Payments.iDeal.Libs.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\bin\Debug\BND.Services.Payments.iDeal.Libs.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\obj\Debug\BND.Services.Payments.iDeal.Libs.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\obj\Debug\BND.Services.Payments.iDeal.Libs.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\obj\Debug\BND.Services.Payments.iDeal.Libs.pdb

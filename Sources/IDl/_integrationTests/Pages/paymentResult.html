@@ -1,0 +1,55 @@
+﻿<div ng-controller="paymentResultController">
+    <h1>U heeft betaald</h1>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="">
+                <div class="form-group">
+                    <label>Transaction ID : </label>
+                    <input id="txtTransactionId" type="text" class="form-control" ng-model="status.transactionId" />
+                </div>
+
+                <div class="form-group">
+                    <label>Entrance Code : </label>
+                    <input id="txtEntranceCode" type="text" class="form-control" ng-model="status.entranceCode" />
+                </div>
+
+                <div class="form-group">
+                    <label>Api Token : </label>
+                    <input id="txtApiToken" type="text" class="form-control" ng-model="status.apiToken" />
+                </div>
+
+                <div class="form-group">
+                    <button id="btnGetStatus" class="btn btn-primary" ng-click="getStatus(status)">
+                        <span ng-show="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                        Get Status
+                    </button>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="">Latest Update : {{LastedUpdate}} </label>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="">
+                <div class="form-group">
+                    <label class="">Response Result - Payment protocol :</label>
+                    <textarea id="txtPaymentResult" readonly class="form-control" style="resize:vertical; min-height:200px;">{{message}}</textarea>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="form-group">
+                    <label>Status Result - Query Protocol :</label>
+                    <textarea id="txtStatusResult" readonly class="form-control" style="resize:vertical; min-height:300px;">{{statusResult}}</textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

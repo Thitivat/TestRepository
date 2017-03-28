@@ -1,0 +1,13 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.ChannelFactory.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.ChannelFactory.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Mef.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Mef.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\bin\Release\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\obj\Release\BND.Services.Security.OTP.ChannelFactory.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\obj\Release\BND.Services.Security.OTP.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\obj\Release\BND.Services.Security.OTP.ChannelFactory.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\obj\Release\BND.Services.Security.OTP.ChannelFactory.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ChannelFactory\obj\Release\BND.Services.Security.OTP.ChannelFactory.pdb

@@ -1,0 +1,7 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\bin\Debug\BND.Services.Security.OTP.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\bin\Debug\BND.Services.Security.OTP.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\obj\Debug\BND.Services.Security.OTP.Libs.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\obj\Debug\BND.Services.Security.OTP.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Libs\obj\Debug\BND.Services.Security.OTP.Libs.pdb

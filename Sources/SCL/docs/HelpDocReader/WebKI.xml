@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="ApiErrorModel class">
+    <HelpKINode Title="ApiErrorModel Class" Url="html/1110336347.htm" />
+    <HelpKINode Title="ApiErrorModel Members" Url="html/908386307.htm" />
+    <HelpKINode Title="about ApiErrorModel class" Url="html/1110336347.htm" />
+    <HelpKINode Title="all members" Url="html/908386307.htm" />
+    <HelpKINode Title="methods" Url="html/2140069007.htm" />
+    <HelpKINode Title="properties" Url="html/594103786.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApiErrorModel.ErrorCode property" Url="html/882172233.htm" />
+  <HelpKINode Title="ApiErrorModel.Messages property" Url="html/1619772524.htm" />
+  <HelpKINode Title="ApiErrorModel.StatusCode property" Url="html/1830469432.htm" />
+  <HelpKINode Title="Area property" Url="html/1272293868.htm" />
+  <HelpKINode Title="AreaModel class">
+    <HelpKINode Title="AreaModel Class" Url="html/246405547.htm" />
+    <HelpKINode Title="AreaModel Members" Url="html/1044080486.htm" />
+    <HelpKINode Title="about AreaModel class" Url="html/246405547.htm" />
+    <HelpKINode Title="all members" Url="html/1044080486.htm" />
+    <HelpKINode Title="methods" Url="html/1546377744.htm" />
+    <HelpKINode Title="properties" Url="html/597159678.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AreaModel.Height property" Url="html/722346020.htm" />
+  <HelpKINode Title="AreaModel.Width property" Url="html/193752446.htm" />
+  <HelpKINode Title="AreaModel.X property" Url="html/47010128.htm" />
+  <HelpKINode Title="AreaModel.Y property" Url="html/1519073813.htm" />
+  <HelpKINode Title="AutoBrightness method">
+    <HelpKINode Title="AutoBrightness Method " Url="html/1575600442.htm" />
+    <HelpKINode Title="AutoBrightness Method " Url="html/891176077.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef namespace" Url="html/1594105422.htm" />
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.IPluginManager interface">
+    <HelpKINode Title="IPluginManager Interface" Url="html/197228586.htm" />
+    <HelpKINode Title="IPluginManager Members" Url="html/178654733.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.IPluginMetaData interface">
+    <HelpKINode Title="IPluginMetaData Interface" Url="html/550271533.htm" />
+    <HelpKINode Title="IPluginMetaData Members" Url="html/1064617698.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.PluginLoadException class">
+    <HelpKINode Title="PluginLoadException Class" Url="html/2041348796.htm" />
+    <HelpKINode Title="PluginLoadException Members" Url="html/544293041.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.PluginManager(Of TPluginContract) class">
+    <HelpKINode Title="PluginManager(TPluginContract) Class" Url="html/821956432.htm" />
+    <HelpKINode Title="PluginManager(TPluginContract) Members" Url="html/1337780974.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.PluginManager&lt;TPluginContract&gt; class">
+    <HelpKINode Title="PluginManager(TPluginContract) Class" Url="html/821956432.htm" />
+    <HelpKINode Title="PluginManager(TPluginContract) Members" Url="html/1337780974.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.PluginObject(Of TPluginContract) class">
+    <HelpKINode Title="PluginObject(TPluginContract) Class" Url="html/311544240.htm" />
+    <HelpKINode Title="PluginObject(TPluginContract) Members" Url="html/606036605.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.Common.Mef.PluginObject&lt;TPluginContract&gt; class">
+    <HelpKINode Title="PluginObject(TPluginContract) Class" Url="html/311544240.htm" />
+    <HelpKINode Title="PluginObject(TPluginContract) Members" Url="html/606036605.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader namespace" Url="html/2045524141.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api namespace" Url="html/815795850.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Controllers namespace" Url="html/915759824.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Controllers.DocReaderController class">
+    <HelpKINode Title="DocReaderController Class" Url="html/39579566.htm" />
+    <HelpKINode Title="DocReaderController Members" Url="html/1814659369.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Controllers.MainApiControllerBase class">
+    <HelpKINode Title="MainApiControllerBase Class" Url="html/531490996.htm" />
+    <HelpKINode Title="MainApiControllerBase Members" Url="html/1830452679.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Controllers.PluginController class">
+    <HelpKINode Title="PluginController Class" Url="html/634194544.htm" />
+    <HelpKINode Title="PluginController Members" Url="html/51657340.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Models namespace" Url="html/1505061345.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Models.ApiErrorModel class">
+    <HelpKINode Title="ApiErrorModel Class" Url="html/1110336347.htm" />
+    <HelpKINode Title="ApiErrorModel Members" Url="html/908386307.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Models.AreaModel class">
+    <HelpKINode Title="AreaModel Class" Url="html/246405547.htm" />
+    <HelpKINode Title="AreaModel Members" Url="html/1044080486.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.Models.DocReaderModel class">
+    <HelpKINode Title="DocReaderModel Class" Url="html/1526748337.htm" />
+    <HelpKINode Title="DocReaderModel Members" Url="html/2030838989.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.SwaggerConfig class">
+    <HelpKINode Title="SwaggerConfig Class" Url="html/1499272428.htm" />
+    <HelpKINode Title="SwaggerConfig Members" Url="html/1882679156.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.WebApiApplication class">
+    <HelpKINode Title="WebApiApplication Class" Url="html/47916236.htm" />
+    <HelpKINode Title="WebApiApplication Members" Url="html/1661492953.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Api.WebApiConfig class">
+    <HelpKINode Title="WebApiConfig Class" Url="html/372380492.htm" />
+    <HelpKINode Title="WebApiConfig Members" Url="html/1628729640.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.DocReaderException class">
+    <HelpKINode Title="DocReaderException Class" Url="html/687757292.htm" />
+    <HelpKINode Title="DocReaderException Members" Url="html/805758447.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.ImageModifier class">
+    <HelpKINode Title="ImageModifier Class" Url="html/1661185793.htm" />
+    <HelpKINode Title="ImageModifier Members" Url="html/2021902789.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.ImageOperationException class">
+    <HelpKINode Title="ImageOperationException Class" Url="html/1997448271.htm" />
+    <HelpKINode Title="ImageOperationException Members" Url="html/1962406030.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.ImageSettings class">
+    <HelpKINode Title="ImageSettings Class" Url="html/846628162.htm" />
+    <HelpKINode Title="ImageSettings Members" Url="html/1189909992.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Interfaces namespace" Url="html/545008915.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Interfaces.IImageModifier interface">
+    <HelpKINode Title="IImageModifier Interface" Url="html/1130997802.htm" />
+    <HelpKINode Title="IImageModifier Members" Url="html/1249627237.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Interfaces.IOcrEngine interface">
+    <HelpKINode Title="IOcrEngine Interface" Url="html/1648014276.htm" />
+    <HelpKINode Title="IOcrEngine Members" Url="html/87666263.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Interfaces.IReader interface">
+    <HelpKINode Title="IReader Interface" Url="html/619451828.htm" />
+    <HelpKINode Title="IReader Members" Url="html/375888768.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.OcrEngine class">
+    <HelpKINode Title="OcrEngine Class" Url="html/472580056.htm" />
+    <HelpKINode Title="OcrEngine Members" Url="html/807950840.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.OcrOperationException class">
+    <HelpKINode Title="OcrOperationException Class" Url="html/564814390.htm" />
+    <HelpKINode Title="OcrOperationException Members" Url="html/898881331.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins namespace" Url="html/1727299403.htm" />
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.CountryIso3 class">
+    <HelpKINode Title="CountryIso3 Class" Url="html/310980573.htm" />
+    <HelpKINode Title="CountryIso3 Members" Url="html/539133378.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.IPluginReader interface">
+    <HelpKINode Title="IPluginReader Interface" Url="html/1858340067.htm" />
+    <HelpKINode Title="IPluginReader Members" Url="html/663116815.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.MrzPluginReader class">
+    <HelpKINode Title="MrzPluginReader Class" Url="html/70811542.htm" />
+    <HelpKINode Title="MrzPluginReader Members" Url="html/2099861566.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.MrzResult class">
+    <HelpKINode Title="MrzResult Class" Url="html/1730579775.htm" />
+    <HelpKINode Title="MrzResult Members" Url="html/1504071383.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.PluginReaderMessage class">
+    <HelpKINode Title="PluginReaderMessage Class" Url="html/1035131520.htm" />
+    <HelpKINode Title="PluginReaderMessage Members" Url="html/857450253.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.PluginReaderResult class">
+    <HelpKINode Title="PluginReaderResult Class" Url="html/1689328687.htm" />
+    <HelpKINode Title="PluginReaderResult Members" Url="html/148884577.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Plugins.ReaderExportAttribute class">
+    <HelpKINode Title="ReaderExportAttribute Class" Url="html/399460336.htm" />
+    <HelpKINode Title="ReaderExportAttribute Members" Url="html/1765054168.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.Reader class">
+    <HelpKINode Title="Reader Class" Url="html/2110696397.htm" />
+    <HelpKINode Title="Reader Members" Url="html/964194914.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bndb.Kyc.DocReader.ReaderOperationException class">
+    <HelpKINode Title="ReaderOperationException Class" Url="html/913269177.htm" />
+    <HelpKINode Title="ReaderOperationException Members" Url="html/615064074.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Confidence property" Url="html/1984403939.htm" />
+  <HelpKINode Title="ConvertToGrayScale method">
+    <HelpKINode Title="ConvertToGrayScale Method " Url="html/2011586387.htm" />
+    <HelpKINode Title="ConvertToGrayScale Method " Url="html/290739926.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CountryIso3 class">
+    <HelpKINode Title="CountryIso3 Class" Url="html/310980573.htm" />
+    <HelpKINode Title="CountryIso3 Members" Url="html/539133378.htm" />
+    <HelpKINode Title="about CountryIso3 class" Url="html/310980573.htm" />
+    <HelpKINode Title="all members" Url="html/539133378.htm" />
+    <HelpKINode Title="methods" Url="html/1991063898.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CountryIso3.GuessCountry method" Url="html/663106861.htm" />
+  <HelpKINode Title="Crop method">
+    <HelpKINode Title="Crop Method " Url="html/1725422228.htm" />
+    <HelpKINode Title="Crop Method " Url="html/85905627.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DateOfBirth property" Url="html/403516609.htm" />
+  <HelpKINode Title="DecreaseBrightness method">
+    <HelpKINode Title="DecreaseBrightness Method " Url="html/1979232132.htm" />
+    <HelpKINode Title="DecreaseBrightness Method " Url="html/1965078493.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Description property">
+    <HelpKINode Title="Description Property " Url="html/2064612034.htm" />
+    <HelpKINode Title="Description Property " Url="html/1929529372.htm" />
+    <HelpKINode Title="Description Property " Url="html/955205121.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeSkew method">
+    <HelpKINode Title="DeSkew Method " Url="html/1649701784.htm" />
+    <HelpKINode Title="DeSkew Method " Url="html/1159865188.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DocReaderController class">
+    <HelpKINode Title="DocReaderController Class" Url="html/39579566.htm" />
+    <HelpKINode Title="DocReaderController Members" Url="html/1814659369.htm" />
+    <HelpKINode Title="about DocReaderController class" Url="html/39579566.htm" />
+    <HelpKINode Title="all members" Url="html/1814659369.htm" />
+    <HelpKINode Title="methods" Url="html/1423124932.htm" />
+    <HelpKINode Title="properties" Url="html/337205075.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DocReaderController.Post method" Url="html/2030890721.htm" />
+  <HelpKINode Title="DocReaderException class">
+    <HelpKINode Title="DocReaderException Class" Url="html/687757292.htm" />
+    <HelpKINode Title="DocReaderException Members" Url="html/805758447.htm" />
+    <HelpKINode Title="about DocReaderException class" Url="html/687757292.htm" />
+    <HelpKINode Title="all members" Url="html/805758447.htm" />
+    <HelpKINode Title="constructor" Url="html/910595477.htm" />
+    <HelpKINode Title="events" Url="html/1446894985.htm" />
+    <HelpKINode Title="methods" Url="html/965271533.htm" />
+    <HelpKINode Title="properties" Url="html/1431849439.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DocReaderException.DocReaderException constructor" Url="html/910595477.htm" />
+  <HelpKINode Title="DocReaderException.ErrorCode property" Url="html/382787345.htm" />
+  <HelpKINode Title="DocReaderModel class">
+    <HelpKINode Title="DocReaderModel Class" Url="html/1526748337.htm" />
+    <HelpKINode Title="DocReaderModel Members" Url="html/2030838989.htm" />
+    <HelpKINode Title="about DocReaderModel class" Url="html/1526748337.htm" />
+    <HelpKINode Title="all members" Url="html/2030838989.htm" />
+    <HelpKINode Title="methods" Url="html/914724823.htm" />
+    <HelpKINode Title="properties" Url="html/368083438.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DocReaderModel.Area property" Url="html/1272293868.htm" />
+  <HelpKINode Title="DocReaderModel.Image property" Url="html/62799663.htm" />
+  <HelpKINode Title="DocReaderModel.Plugins property" Url="html/593519568.htm" />
+  <HelpKINode Title="DocReaderModel.Token property" Url="html/215537565.htm" />
+  <HelpKINode Title="ErrorCode property">
+    <HelpKINode Title="ErrorCode Property " Url="html/882172233.htm" />
+    <HelpKINode Title="ErrorCode Property " Url="html/382787345.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExpiryDate property" Url="html/690197376.htm" />
+  <HelpKINode Title="Gender property" Url="html/1106185667.htm" />
+  <HelpKINode Title="Get method" Url="html/2005523383.htm" />
+  <HelpKINode Title="GetAllPluginNames method">
+    <HelpKINode Title="GetAllPluginNames Method " Url="html/1323702478.htm" />
+    <HelpKINode Title="GetAllPluginNames Method " Url="html/1096122229.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetReader method">
+    <HelpKINode Title="GetReader Method " Url="html/1896846927.htm" />
+    <HelpKINode Title="GetReader Method " Url="html/2054126292.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GivenName property" Url="html/2128971387.htm" />
+  <HelpKINode Title="GuessCountry method" Url="html/663106861.htm" />
+  <HelpKINode Title="Height property" Url="html/722346020.htm" />
+  <HelpKINode Title="IImageModifier interface">
+    <HelpKINode Title="IImageModifier Interface" Url="html/1130997802.htm" />
+    <HelpKINode Title="IImageModifier Members" Url="html/1249627237.htm" />
+    <HelpKINode Title="about IImageModifier interface" Url="html/1130997802.htm" />
+    <HelpKINode Title="all members" Url="html/1249627237.htm" />
+    <HelpKINode Title="methods" Url="html/1620583706.htm" />
+    <HelpKINode Title="properties" Url="html/559230215.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IImageModifier.AutoBrightness method" Url="html/891176077.htm" />
+  <HelpKINode Title="IImageModifier.Crop method" Url="html/1725422228.htm" />
+  <HelpKINode Title="IImageModifier.DecreaseBrightness method" Url="html/1979232132.htm" />
+  <HelpKINode Title="IImageModifier.Image property" Url="html/1698154874.htm" />
+  <HelpKINode Title="IImageModifier.IncreaseBrightness method" Url="html/323618712.htm" />
+  <HelpKINode Title="IImageModifier.Rotate method" Url="html/924046135.htm" />
+  <HelpKINode Title="Image property">
+    <HelpKINode Title="Image Property " Url="html/62799663.htm" />
+    <HelpKINode Title="Image Property " Url="html/1074977177.htm" />
+    <HelpKINode Title="Image Property " Url="html/1698154874.htm" />
+    <HelpKINode Title="Image Property " Url="html/772710909.htm" />
+    <HelpKINode Title="Image Property " Url="html/498672979.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImageModifier class">
+    <HelpKINode Title="ImageModifier Class" Url="html/1661185793.htm" />
+    <HelpKINode Title="ImageModifier Members" Url="html/2021902789.htm" />
+    <HelpKINode Title="about ImageModifier class" Url="html/1661185793.htm" />
+    <HelpKINode Title="all members" Url="html/2021902789.htm" />
+    <HelpKINode Title="constructor" Url="html/1308719656.htm" />
+    <HelpKINode Title="methods" Url="html/929691303.htm" />
+    <HelpKINode Title="properties" Url="html/1892738796.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImageModifier.AutoBrightness method" Url="html/1575600442.htm" />
+  <HelpKINode Title="ImageModifier.Crop method" Url="html/85905627.htm" />
+  <HelpKINode Title="ImageModifier.DecreaseBrightness method" Url="html/1965078493.htm" />
+  <HelpKINode Title="ImageModifier.Image property" Url="html/1074977177.htm" />
+  <HelpKINode Title="ImageModifier.ImageModifier constructor" Url="html/1308719656.htm" />
+  <HelpKINode Title="ImageModifier.IncreaseBrightness method" Url="html/1611543898.htm" />
+  <HelpKINode Title="ImageModifier.Rotate method" Url="html/1598964631.htm" />
+  <HelpKINode Title="ImageModifier.Settings property" Url="html/1285070376.htm" />
+  <HelpKINode Title="ImageOperationException class">
+    <HelpKINode Title="ImageOperationException Class" Url="html/1997448271.htm" />
+    <HelpKINode Title="ImageOperationException Members" Url="html/1962406030.htm" />
+    <HelpKINode Title="about ImageOperationException class" Url="html/1997448271.htm" />
+    <HelpKINode Title="all members" Url="html/1962406030.htm" />
+    <HelpKINode Title="constructor" Url="html/1840042048.htm" />
+    <HelpKINode Title="events" Url="html/439588586.htm" />
+    <HelpKINode Title="methods" Url="html/228656139.htm" />
+    <HelpKINode Title="properties" Url="html/396158489.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImageOperationException.ImageOperationException constructor" Url="html/1840042048.htm" />
+  <HelpKINode Title="ImageSettings class">
+    <HelpKINode Title="ImageSettings Class" Url="html/846628162.htm" />
+    <HelpKINode Title="ImageSettings Members" Url="html/1189909992.htm" />
+    <HelpKINode Title="about ImageSettings class" Url="html/846628162.htm" />
+    <HelpKINode Title="all members" Url="html/1189909992.htm" />
+    <HelpKINode Title="methods" Url="html/1113721492.htm" />
+    <HelpKINode Title="properties" Url="html/1116476119.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImageSettings.Load method" Url="html/1166083737.htm" />
+  <HelpKINode Title="ImageSettings.MaxFileSize property" Url="html/1125664402.htm" />
+  <HelpKINode Title="ImageSettings.MaxResolution property" Url="html/864873096.htm" />
+  <HelpKINode Title="ImageSettings.MinFileSize property" Url="html/720755062.htm" />
+  <HelpKINode Title="ImageSettings.MinResolution property" Url="html/1609101968.htm" />
+  <HelpKINode Title="ImageSettings.SupportedTypes property" Url="html/1380233375.htm" />
+  <HelpKINode Title="IncreaseBrightness method">
+    <HelpKINode Title="IncreaseBrightness Method " Url="html/323618712.htm" />
+    <HelpKINode Title="IncreaseBrightness Method " Url="html/1611543898.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IOcrEngine interface">
+    <HelpKINode Title="IOcrEngine Interface" Url="html/1648014276.htm" />
+    <HelpKINode Title="IOcrEngine Members" Url="html/87666263.htm" />
+    <HelpKINode Title="about IOcrEngine interface" Url="html/1648014276.htm" />
+    <HelpKINode Title="all members" Url="html/87666263.htm" />
+    <HelpKINode Title="methods" Url="html/1244957821.htm" />
+    <HelpKINode Title="properties" Url="html/1388910077.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IOcrEngine.ConvertToGrayScale method" Url="html/2011586387.htm" />
+  <HelpKINode Title="IOcrEngine.DeSkew method" Url="html/1159865188.htm" />
+  <HelpKINode Title="IOcrEngine.Image property" Url="html/498672979.htm" />
+  <HelpKINode Title="IOcrEngine.LanguagePath property" Url="html/1600531567.htm" />
+  <HelpKINode Title="IOcrEngine.Process method" Url="html/1424803541.htm" />
+  <HelpKINode Title="IOcrEngine.Result property" Url="html/36929124.htm" />
+  <HelpKINode Title="IPluginManager interface">
+    <HelpKINode Title="IPluginManager Interface" Url="html/197228586.htm" />
+    <HelpKINode Title="IPluginManager Members" Url="html/178654733.htm" />
+    <HelpKINode Title="about IPluginManager interface" Url="html/197228586.htm" />
+    <HelpKINode Title="all members" Url="html/178654733.htm" />
+    <HelpKINode Title="methods" Url="html/1193966127.htm" />
+    <HelpKINode Title="properties" Url="html/1418716409.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPluginManager.LoadPlugin method" Url="html/502120091.htm" />
+  <HelpKINode Title="IPluginManager.LoadPluginNames method" Url="html/1276034575.htm" />
+  <HelpKINode Title="IPluginManager.LoadPlugins method" Url="html/2064597293.htm" />
+  <HelpKINode Title="IPluginManager.PluginDirectory property" Url="html/83176023.htm" />
+  <HelpKINode Title="IPluginMetaData interface">
+    <HelpKINode Title="IPluginMetaData Interface" Url="html/550271533.htm" />
+    <HelpKINode Title="IPluginMetaData Members" Url="html/1064617698.htm" />
+    <HelpKINode Title="about IPluginMetaData interface" Url="html/550271533.htm" />
+    <HelpKINode Title="all members" Url="html/1064617698.htm" />
+    <HelpKINode Title="methods" Url="html/695086256.htm" />
+    <HelpKINode Title="properties" Url="html/1123320635.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPluginMetaData.Description property" Url="html/1929529372.htm" />
+  <HelpKINode Title="IPluginMetaData.Name property" Url="html/1282742566.htm" />
+  <HelpKINode Title="IPluginReader interface">
+    <HelpKINode Title="IPluginReader Interface" Url="html/1858340067.htm" />
+    <HelpKINode Title="IPluginReader Members" Url="html/663116815.htm" />
+    <HelpKINode Title="about IPluginReader interface" Url="html/1858340067.htm" />
+    <HelpKINode Title="all members" Url="html/663116815.htm" />
+    <HelpKINode Title="methods" Url="html/1701047334.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPluginReader.Read method" Url="html/73896067.htm" />
+  <HelpKINode Title="IReader interface">
+    <HelpKINode Title="IReader Interface" Url="html/619451828.htm" />
+    <HelpKINode Title="IReader Members" Url="html/375888768.htm" />
+    <HelpKINode Title="about IReader interface" Url="html/619451828.htm" />
+    <HelpKINode Title="all members" Url="html/375888768.htm" />
+    <HelpKINode Title="methods" Url="html/860879644.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IReader.GetAllPluginNames method" Url="html/1096122229.htm" />
+  <HelpKINode Title="IReader.GetReader method" Url="html/1896846927.htm" />
+  <HelpKINode Title="IssuerCountry property" Url="html/276114353.htm" />
+  <HelpKINode Title="Key property" Url="html/1619119557.htm" />
+  <HelpKINode Title="Language property" Url="html/1304878408.htm" />
+  <HelpKINode Title="LanguagePath property">
+    <HelpKINode Title="LanguagePath Property " Url="html/1600531567.htm" />
+    <HelpKINode Title="LanguagePath Property " Url="html/1675894090.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Load method" Url="html/1166083737.htm" />
+  <HelpKINode Title="LoadPlugin method">
+    <HelpKINode Title="LoadPlugin Method " Url="html/789555596.htm" />
+    <HelpKINode Title="LoadPlugin Method " Url="html/502120091.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadPluginNames method">
+    <HelpKINode Title="LoadPluginNames Method " Url="html/1751499260.htm" />
+    <HelpKINode Title="LoadPluginNames Method " Url="html/1276034575.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadPlugins method">
+    <HelpKINode Title="LoadPlugins Method " Url="html/2064597293.htm" />
+    <HelpKINode Title="LoadPlugins Method " Url="html/2039337454.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainApiControllerBase class">
+    <HelpKINode Title="MainApiControllerBase Class" Url="html/531490996.htm" />
+    <HelpKINode Title="MainApiControllerBase Members" Url="html/1830452679.htm" />
+    <HelpKINode Title="about MainApiControllerBase class" Url="html/531490996.htm" />
+    <HelpKINode Title="all members" Url="html/1830452679.htm" />
+    <HelpKINode Title="methods" Url="html/243417068.htm" />
+    <HelpKINode Title="properties" Url="html/1649084873.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MaxFileSize property" Url="html/1125664402.htm" />
+  <HelpKINode Title="MaxResolution property" Url="html/864873096.htm" />
+  <HelpKINode Title="Message property" Url="html/1896407679.htm" />
+  <HelpKINode Title="Messages property">
+    <HelpKINode Title="Messages Property " Url="html/246483111.htm" />
+    <HelpKINode Title="Messages Property " Url="html/1619772524.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinFileSize property" Url="html/720755062.htm" />
+  <HelpKINode Title="MinResolution property" Url="html/1609101968.htm" />
+  <HelpKINode Title="MrzPluginReader class">
+    <HelpKINode Title="MrzPluginReader Class" Url="html/70811542.htm" />
+    <HelpKINode Title="MrzPluginReader Members" Url="html/2099861566.htm" />
+    <HelpKINode Title="about MrzPluginReader class" Url="html/70811542.htm" />
+    <HelpKINode Title="all members" Url="html/2099861566.htm" />
+    <HelpKINode Title="methods" Url="html/1997539416.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MrzPluginReader.Read method" Url="html/1563589452.htm" />
+  <HelpKINode Title="MrzResult class">
+    <HelpKINode Title="MrzResult Class" Url="html/1730579775.htm" />
+    <HelpKINode Title="MrzResult Members" Url="html/1504071383.htm" />
+    <HelpKINode Title="about MrzResult class" Url="html/1730579775.htm" />
+    <HelpKINode Title="all members" Url="html/1504071383.htm" />
+    <HelpKINode Title="methods" Url="html/1220735312.htm" />
+    <HelpKINode Title="properties" Url="html/1465848959.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MrzResult.DateOfBirth property" Url="html/403516609.htm" />
+  <HelpKINode Title="MrzResult.ExpiryDate property" Url="html/690197376.htm" />
+  <HelpKINode Title="MrzResult.Gender property" Url="html/1106185667.htm" />
+  <HelpKINode Title="MrzResult.GivenName property" Url="html/2128971387.htm" />
+  <HelpKINode Title="MrzResult.IssuerCountry property" Url="html/276114353.htm" />
+  <HelpKINode Title="MrzResult.Nationality property" Url="html/1086762252.htm" />
+  <HelpKINode Title="MrzResult.Number property" Url="html/827460343.htm" />
+  <HelpKINode Title="MrzResult.PersonalNumber property" Url="html/789205587.htm" />
+  <HelpKINode Title="MrzResult.Surname property" Url="html/2114093648.htm" />
+  <HelpKINode Title="MrzResult.Type property" Url="html/815242106.htm" />
+  <HelpKINode Title="Name property">
+    <HelpKINode Title="Name Property " Url="html/147358049.htm" />
+    <HelpKINode Title="Name Property " Url="html/2023353813.htm" />
+    <HelpKINode Title="Name Property " Url="html/1282742566.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Nationality property" Url="html/1086762252.htm" />
+  <HelpKINode Title="Number property" Url="html/827460343.htm" />
+  <HelpKINode Title="OcrEngine class">
+    <HelpKINode Title="OcrEngine Class" Url="html/472580056.htm" />
+    <HelpKINode Title="OcrEngine Members" Url="html/807950840.htm" />
+    <HelpKINode Title="about OcrEngine class" Url="html/472580056.htm" />
+    <HelpKINode Title="all members" Url="html/807950840.htm" />
+    <HelpKINode Title="constructor" Url="html/669294339.htm" />
+    <HelpKINode Title="methods" Url="html/1377632232.htm" />
+    <HelpKINode Title="properties" Url="html/899052029.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OcrEngine.Confidence property" Url="html/1984403939.htm" />
+  <HelpKINode Title="OcrEngine.ConvertToGrayScale method" Url="html/290739926.htm" />
+  <HelpKINode Title="OcrEngine.DeSkew method" Url="html/1649701784.htm" />
+  <HelpKINode Title="OcrEngine.Image property" Url="html/772710909.htm" />
+  <HelpKINode Title="OcrEngine.Language property" Url="html/1304878408.htm" />
+  <HelpKINode Title="OcrEngine.LanguagePath property" Url="html/1675894090.htm" />
+  <HelpKINode Title="OcrEngine.OcrEngine constructor" Url="html/669294339.htm" />
+  <HelpKINode Title="OcrEngine.Process method" Url="html/1724788647.htm" />
+  <HelpKINode Title="OcrEngine.Result property" Url="html/1240498676.htm" />
+  <HelpKINode Title="OcrOperationException class">
+    <HelpKINode Title="OcrOperationException Class" Url="html/564814390.htm" />
+    <HelpKINode Title="OcrOperationException Members" Url="html/898881331.htm" />
+    <HelpKINode Title="about OcrOperationException class" Url="html/564814390.htm" />
+    <HelpKINode Title="all members" Url="html/898881331.htm" />
+    <HelpKINode Title="constructor" Url="html/1733301978.htm" />
+    <HelpKINode Title="events" Url="html/1123701987.htm" />
+    <HelpKINode Title="methods" Url="html/617611835.htm" />
+    <HelpKINode Title="properties" Url="html/1366647378.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OcrOperationException.OcrOperationException constructor" Url="html/1733301978.htm" />
+  <HelpKINode Title="PersonalNumber property" Url="html/789205587.htm" />
+  <HelpKINode Title="Plugin property" Url="html/1245424793.htm" />
+  <HelpKINode Title="PluginContractType property" Url="html/1671569039.htm" />
+  <HelpKINode Title="PluginController class">
+    <HelpKINode Title="PluginController Class" Url="html/634194544.htm" />
+    <HelpKINode Title="PluginController Members" Url="html/51657340.htm" />
+    <HelpKINode Title="about PluginController class" Url="html/634194544.htm" />
+    <HelpKINode Title="all members" Url="html/51657340.htm" />
+    <HelpKINode Title="methods" Url="html/1119252176.htm" />
+    <HelpKINode Title="properties" Url="html/336391892.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginController.Get method" Url="html/2005523383.htm" />
+  <HelpKINode Title="PluginDirectory property">
+    <HelpKINode Title="PluginDirectory Property " Url="html/761433952.htm" />
+    <HelpKINode Title="PluginDirectory Property " Url="html/83176023.htm" />
+    <HelpKINode Title="PluginDirectory Property " Url="html/2139367269.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginLoadException class">
+    <HelpKINode Title="PluginLoadException Class" Url="html/2041348796.htm" />
+    <HelpKINode Title="PluginLoadException Members" Url="html/544293041.htm" />
+    <HelpKINode Title="about PluginLoadException class" Url="html/2041348796.htm" />
+    <HelpKINode Title="all members" Url="html/544293041.htm" />
+    <HelpKINode Title="constructor" Url="html/1327473834.htm" />
+    <HelpKINode Title="events" Url="html/1157206243.htm" />
+    <HelpKINode Title="methods" Url="html/780407556.htm" />
+    <HelpKINode Title="properties" Url="html/188634761.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginLoadException.PluginContractType property" Url="html/1671569039.htm" />
+  <HelpKINode Title="PluginLoadException.PluginDirectory property" Url="html/761433952.htm" />
+  <HelpKINode Title="PluginLoadException.PluginLoadException constructor" Url="html/1327473834.htm" />
+  <HelpKINode Title="PluginManager(Of TPluginContract) class">
+    <HelpKINode Title="PluginManager(TPluginContract) Class" Url="html/821956432.htm" />
+    <HelpKINode Title="PluginManager(TPluginContract) Members" Url="html/1337780974.htm" />
+    <HelpKINode Title="about PluginManager(Of TPluginContract) class" Url="html/821956432.htm" />
+    <HelpKINode Title="all members" Url="html/1337780974.htm" />
+    <HelpKINode Title="constructor" Url="html/1419766191.htm" />
+    <HelpKINode Title="methods" Url="html/1236260492.htm" />
+    <HelpKINode Title="properties" Url="html/1211104969.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginManager(Of TPluginContract).LoadPlugin method" Url="html/789555596.htm" />
+  <HelpKINode Title="PluginManager(Of TPluginContract).LoadPluginNames method" Url="html/1751499260.htm" />
+  <HelpKINode Title="PluginManager(Of TPluginContract).LoadPlugins method" Url="html/2039337454.htm" />
+  <HelpKINode Title="PluginManager(Of TPluginContract).PluginDirectory property" Url="html/2139367269.htm" />
+  <HelpKINode Title="PluginManager(Of TPluginContract).PluginManager constructor" Url="html/1419766191.htm" />
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt; class">
+    <HelpKINode Title="PluginManager(TPluginContract) Class" Url="html/821956432.htm" />
+    <HelpKINode Title="PluginManager(TPluginContract) Members" Url="html/1337780974.htm" />
+    <HelpKINode Title="about PluginManager&lt;TPluginContract&gt; class" Url="html/821956432.htm" />
+    <HelpKINode Title="all members" Url="html/1337780974.htm" />
+    <HelpKINode Title="constructor" Url="html/1419766191.htm" />
+    <HelpKINode Title="methods" Url="html/1236260492.htm" />
+    <HelpKINode Title="properties" Url="html/1211104969.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt;.LoadPlugin method" Url="html/789555596.htm" />
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt;.LoadPluginNames method" Url="html/1751499260.htm" />
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt;.LoadPlugins method" Url="html/2039337454.htm" />
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt;.PluginDirectory property" Url="html/2139367269.htm" />
+  <HelpKINode Title="PluginManager&lt;TPluginContract&gt;.PluginManager constructor" Url="html/1419766191.htm" />
+  <HelpKINode Title="PluginName property" Url="html/1723885633.htm" />
+  <HelpKINode Title="PluginObject(Of TPluginContract) class">
+    <HelpKINode Title="PluginObject(TPluginContract) Class" Url="html/311544240.htm" />
+    <HelpKINode Title="PluginObject(TPluginContract) Members" Url="html/606036605.htm" />
+    <HelpKINode Title="about PluginObject(Of TPluginContract) class" Url="html/311544240.htm" />
+    <HelpKINode Title="all members" Url="html/606036605.htm" />
+    <HelpKINode Title="methods" Url="html/662116916.htm" />
+    <HelpKINode Title="properties" Url="html/156862350.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginObject(Of TPluginContract).Description property" Url="html/955205121.htm" />
+  <HelpKINode Title="PluginObject(Of TPluginContract).Name property" Url="html/2023353813.htm" />
+  <HelpKINode Title="PluginObject(Of TPluginContract).Plugin property" Url="html/1245424793.htm" />
+  <HelpKINode Title="PluginObject&lt;TPluginContract&gt; class">
+    <HelpKINode Title="PluginObject(TPluginContract) Class" Url="html/311544240.htm" />
+    <HelpKINode Title="PluginObject(TPluginContract) Members" Url="html/606036605.htm" />
+    <HelpKINode Title="about PluginObject&lt;TPluginContract&gt; class" Url="html/311544240.htm" />
+    <HelpKINode Title="all members" Url="html/606036605.htm" />
+    <HelpKINode Title="methods" Url="html/662116916.htm" />
+    <HelpKINode Title="properties" Url="html/156862350.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginObject&lt;TPluginContract&gt;.Description property" Url="html/955205121.htm" />
+  <HelpKINode Title="PluginObject&lt;TPluginContract&gt;.Name property" Url="html/2023353813.htm" />
+  <HelpKINode Title="PluginObject&lt;TPluginContract&gt;.Plugin property" Url="html/1245424793.htm" />
+  <HelpKINode Title="PluginReaderMessage class">
+    <HelpKINode Title="PluginReaderMessage Class" Url="html/1035131520.htm" />
+    <HelpKINode Title="PluginReaderMessage Members" Url="html/857450253.htm" />
+    <HelpKINode Title="about PluginReaderMessage class" Url="html/1035131520.htm" />
+    <HelpKINode Title="all members" Url="html/857450253.htm" />
+    <HelpKINode Title="methods" Url="html/1406783887.htm" />
+    <HelpKINode Title="properties" Url="html/897101373.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginReaderMessage.Key property" Url="html/1619119557.htm" />
+  <HelpKINode Title="PluginReaderMessage.Message property" Url="html/1896407679.htm" />
+  <HelpKINode Title="PluginReaderMessage.Type property" Url="html/1203004820.htm" />
+  <HelpKINode Title="PluginReaderResult class">
+    <HelpKINode Title="PluginReaderResult Class" Url="html/1689328687.htm" />
+    <HelpKINode Title="PluginReaderResult Members" Url="html/148884577.htm" />
+    <HelpKINode Title="about PluginReaderResult class" Url="html/1689328687.htm" />
+    <HelpKINode Title="all members" Url="html/148884577.htm" />
+    <HelpKINode Title="constructor" Url="html/1765270985.htm" />
+    <HelpKINode Title="methods" Url="html/507897270.htm" />
+    <HelpKINode Title="properties" Url="html/1624421758.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PluginReaderResult.Messages property" Url="html/246483111.htm" />
+  <HelpKINode Title="PluginReaderResult.PluginName property" Url="html/1723885633.htm" />
+  <HelpKINode Title="PluginReaderResult.PluginReaderResult constructor" Url="html/1765270985.htm" />
+  <HelpKINode Title="PluginReaderResult.ReadText property" Url="html/1649652376.htm" />
+  <HelpKINode Title="PluginReaderResult.Result property" Url="html/250539931.htm" />
+  <HelpKINode Title="PluginReaderResult.Success property" Url="html/810840693.htm" />
+  <HelpKINode Title="Plugins property" Url="html/593519568.htm" />
+  <HelpKINode Title="Post method" Url="html/2030890721.htm" />
+  <HelpKINode Title="Process method">
+    <HelpKINode Title="Process Method " Url="html/1724788647.htm" />
+    <HelpKINode Title="Process Method " Url="html/1424803541.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Read method">
+    <HelpKINode Title="Read Method " Url="html/1563589452.htm" />
+    <HelpKINode Title="Read Method " Url="html/73896067.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reader class">
+    <HelpKINode Title="Reader Class" Url="html/2110696397.htm" />
+    <HelpKINode Title="Reader Members" Url="html/964194914.htm" />
+    <HelpKINode Title="about Reader class" Url="html/2110696397.htm" />
+    <HelpKINode Title="all members" Url="html/964194914.htm" />
+    <HelpKINode Title="constructor" Url="html/800316843.htm" />
+    <HelpKINode Title="methods" Url="html/1765228932.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reader.GetAllPluginNames method" Url="html/1323702478.htm" />
+  <HelpKINode Title="Reader.GetReader method" Url="html/2054126292.htm" />
+  <HelpKINode Title="Reader.Reader constructor" Url="html/800316843.htm" />
+  <HelpKINode Title="ReaderExportAttribute class">
+    <HelpKINode Title="ReaderExportAttribute Class" Url="html/399460336.htm" />
+    <HelpKINode Title="ReaderExportAttribute Members" Url="html/1765054168.htm" />
+    <HelpKINode Title="about ReaderExportAttribute class" Url="html/399460336.htm" />
+    <HelpKINode Title="all members" Url="html/1765054168.htm" />
+    <HelpKINode Title="constructor" Url="html/149885673.htm" />
+    <HelpKINode Title="methods" Url="html/265548371.htm" />
+    <HelpKINode Title="properties" Url="html/1637618106.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReaderExportAttribute.Description property" Url="html/2064612034.htm" />
+  <HelpKINode Title="ReaderExportAttribute.Name property" Url="html/147358049.htm" />
+  <HelpKINode Title="ReaderExportAttribute.ReaderExportAttribute constructor" Url="html/149885673.htm" />
+  <HelpKINode Title="ReaderOperationException class">
+    <HelpKINode Title="ReaderOperationException Class" Url="html/913269177.htm" />
+    <HelpKINode Title="ReaderOperationException Members" Url="html/615064074.htm" />
+    <HelpKINode Title="about ReaderOperationException class" Url="html/913269177.htm" />
+    <HelpKINode Title="all members" Url="html/615064074.htm" />
+    <HelpKINode Title="constructor" Url="html/1620979426.htm" />
+    <HelpKINode Title="events" Url="html/1008023632.htm" />
+    <HelpKINode Title="methods" Url="html/66914206.htm" />
+    <HelpKINode Title="properties" Url="html/1099510869.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReaderOperationException.ReaderOperationException constructor" Url="html/1620979426.htm" />
+  <HelpKINode Title="ReadText property" Url="html/1649652376.htm" />
+  <HelpKINode Title="Register method">
+    <HelpKINode Title="Register Method " Url="html/1993993563.htm" />
+    <HelpKINode Title="Register Method " Url="html/1091880082.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Result property">
+    <HelpKINode Title="Result Property " Url="html/250539931.htm" />
+    <HelpKINode Title="Result Property " Url="html/1240498676.htm" />
+    <HelpKINode Title="Result Property " Url="html/36929124.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Rotate method">
+    <HelpKINode Title="Rotate Method " Url="html/924046135.htm" />
+    <HelpKINode Title="Rotate Method " Url="html/1598964631.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Settings property" Url="html/1285070376.htm" />
+  <HelpKINode Title="StatusCode property" Url="html/1830469432.htm" />
+  <HelpKINode Title="Success property" Url="html/810840693.htm" />
+  <HelpKINode Title="SupportedTypes property" Url="html/1380233375.htm" />
+  <HelpKINode Title="Surname property" Url="html/2114093648.htm" />
+  <HelpKINode Title="SwaggerConfig class">
+    <HelpKINode Title="SwaggerConfig Class" Url="html/1499272428.htm" />
+    <HelpKINode Title="SwaggerConfig Members" Url="html/1882679156.htm" />
+    <HelpKINode Title="about SwaggerConfig class" Url="html/1499272428.htm" />
+    <HelpKINode Title="all members" Url="html/1882679156.htm" />
+    <HelpKINode Title="methods" Url="html/1472655497.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SwaggerConfig.Register method" Url="html/1091880082.htm" />
+  <HelpKINode Title="Token property" Url="html/215537565.htm" />
+  <HelpKINode Title="Type property">
+    <HelpKINode Title="Type Property " Url="html/1203004820.htm" />
+    <HelpKINode Title="Type Property " Url="html/815242106.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebApiApplication class">
+    <HelpKINode Title="WebApiApplication Class" Url="html/47916236.htm" />
+    <HelpKINode Title="WebApiApplication Members" Url="html/1661492953.htm" />
+    <HelpKINode Title="about WebApiApplication class" Url="html/47916236.htm" />
+    <HelpKINode Title="all members" Url="html/1661492953.htm" />
+    <HelpKINode Title="events" Url="html/1839319373.htm" />
+    <HelpKINode Title="methods" Url="html/2036269224.htm" />
+    <HelpKINode Title="properties" Url="html/331584230.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebApiConfig class">
+    <HelpKINode Title="WebApiConfig Class" Url="html/372380492.htm" />
+    <HelpKINode Title="WebApiConfig Members" Url="html/1628729640.htm" />
+    <HelpKINode Title="about WebApiConfig class" Url="html/372380492.htm" />
+    <HelpKINode Title="all members" Url="html/1628729640.htm" />
+    <HelpKINode Title="methods" Url="html/970662341.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebApiConfig.Register method" Url="html/1993993563.htm" />
+  <HelpKINode Title="Width property" Url="html/193752446.htm" />
+  <HelpKINode Title="X property" Url="html/47010128.htm" />
+  <HelpKINode Title="Y property" Url="html/1519073813.htm" />
+</HelpKI>

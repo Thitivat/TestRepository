@@ -1,0 +1,48 @@
+﻿@using BND.Websites.BackOffice.SanctionListsManagement.Entities
+@{
+    ListType listType = (ListType)ViewBag.CurrentList;
+    ViewBag.Title = "Index";
+    ViewBag.Header = "Regulations - " + listType.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var selectRegulationsOptions = @Html.Raw(ViewBag.selectRegulationsOptions);
+    var currentList = '@listType.ListTypeId';
+</script>
+
+@Scripts.Render("~/Scripts/Kyc/sl_Regulation.js")
+
+<div class="" ng-app="regulationsApp">
+    @Html.Partial("~/Views/Shared/AlertManager.cshtml")
+    <div ng-controller="regulationsController">
+        <div class="row row-bottom-margin">
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-3 pull-right">
+                <select name="mySelect" class="form-control input-sm"
+                        ng-options="option.id as option.value for option in selectRegulationsOptions.availableOptions"
+                        ng-model="selectRegulationsOptions.selected" ng-change="listFilterChanged()"></select>
+            </div>
+        </div>
+        <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+        <table class="table table-condensed">
+            <tr>
+                <th>RegulationTitle</th>
+                <th>RegulationDate</th>
+                <th>PublicationTitle</th>
+                <th>PublicationDate</th>
+                <th>Programme</th>
+            </tr>
+            <tr ng-repeat="regulation in regulations | filter:regulationsFilter:strict ">
+                <td><a href="{{regulation.PublicationUrl}}" target="_blank">{{regulation.RegulationTitle}}</a></td>
+                <td>{{DateDisplay(regulation.RegulationDate)}}</td>
+                <td>{{regulation.PublicationTitle}}</td>
+                <td>{{DateDisplay(regulation.PublicationDate)}}</td>
+                <td>{{regulation.Programme}}</td>
+            </tr>
+        </table>
+
+        <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+    </div>
+</div>

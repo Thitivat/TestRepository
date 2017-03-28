@@ -1,0 +1,51 @@
+- Entity (Id*, subjectType(classificationCode(Type*(E|P)), code(person|enterprise)), remark, regulation(id, regulationType(amendment|regulation), organisationType(commission|council), publicationDate, legal_basis(numberTitle), reg_date(entryIntoForceDate), pdf_link(publicationUrl), programme))
+	- NAME+ (Id*, Entity_id*, regulation2(regulationLanguage, regulationType(amendment|regulation), legal_basis(numberTitle), reg_date(publicationDate), pdf_link(publicationUrl)))
+		- LASTNAME?
+		- FIRSTNAME?
+		- MIDDLENAME?
+		- WHOLENAME?
+		- GENDER?(F|M|?)
+		- TITLE?
+		- FUNCTION?
+		- LANGUAGE?(nameLanguage)
+		- strong(true|false)
+	- ADDRESS* (Id*, Entity_id*, regulation2(regulationLanguage, regulationType(amendment|regulation), legal_basis(numberTitle), reg_date(publicationDate), pdf_link(publicationUrl)))
+		- NUMBER?
+		- STREET?
+		- ZIPCODE?
+		- CITY?
+		- COUNTRY(countryIso3Code)?(countryIso2Code, countryDescription)
+		- OTHER?
+		- poBox
+		- region
+		- place
+		- asAtListingTime(true|false)
+		- contactinfo
+			- key (email|phone number|fax|website|..)
+			- value
+
+	- BIRTH* (Id*, Entity_id*, regulation2(regulationLanguage, regulationType(amendment|regulation), legal_basis(numberTitle), reg_date(publicationDate), pdf_link(publicationUrl)))
+		- DATE?(birthdate)
+		- PLACE?(city, zipCode, region, place)
+		- COUNTRY(countryIso3Code)?(countryIso2Code, countryDescription)
+		- circa(true|false)
+		- calendarType(GREGORIAN|ISLAMIC|BUDDHIST|COPTIC|ETHIOPIC)
+	- PASSPORT(identification)* (Id*, Entity_id*, regulation2(regulationLanguage, regulationType(amendment|regulation), legal_basis(numberTitle), reg_date(publicationDate), pdf_link(publicationUrl)))
+		- NUMBER?
+		- COUNTRY(countryIso3Code)?(countryIso2Code, countryDescription)
+		- diplomatic(true|false)
+		- knownExpired(true|false)
+		- knownFalse(true|false)
+		- reportedLost(true|false)
+		- revokedByIssuer(true|false)
+		- issuedBy
+		- latinNumber
+		- nameOnDocument
+		- identificationType
+			- Code (id|passport|other)
+			- Description (National identification card|National passport|Other identification number)
+		- remark
+		
+	- CITIZEN(citizenship)* (Id*, Entity_id*, regulation2(regulationLanguage, regulationType(amendment|regulation), legal_basis(numberTitle), reg_date(publicationDate), pdf_link(publicationUrl)))
+		- COUNTRY(countryIso3Code)?(countryIso2Code, countryDescription)
+		- region

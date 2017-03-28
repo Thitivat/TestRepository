@@ -1,0 +1,21 @@
+﻿@using BND.Websites.BackOffice.SanctionListsManagement.Entities
+@*@Html.Label(String.Empty, ((Bndb.Kyc.SanctionLists.Entities.ListType)Model).Name)*@
+
+<script>
+    var varListTypeId = @(((ListType)Model).ListTypeId)
+</script>
+<div class="row panel-body rss-panel" ng-controller="sanctionListsDetailsRssController">
+    <!-- Title Type -->
+    <div class="row">
+        <div class="col-md-10"><p>{{Rss.Title}} <h6>{{DateTimeDisplay(Rss.PubDate)}}</h6></p></div>
+        <div class="col-md-2"><button ng-click="refreshRss()" class="btn btn-info"><span class="glyphicon glyphicon-refresh"></span></button></div>
+    </div>
+    <!-- Rss data -->
+    <div class="row">
+        <div class="col-md-10 panel-body" ng-repeat="item in RssList">
+            <div><a href="{{item.Link}}" target="_blank">{{item.No}}. {{item.Title}}</a></div>
+            <div><p>{{item.Content}}</p></div>
+            <div><h6>{{DateTimeDisplay(item.PubDate)}}</h6></div>
+        </div>
+    </div>
+</div>

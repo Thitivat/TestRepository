@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Setting>
+    <EmailSetting>
+		<MailManComponentCode>BRANDNMAILQ_CZKwC83c5P3M</MailManComponentCode>
+		<EmailServer>smtp.gmail.com</EmailServer>
+		<EmailSmtpPort>465</EmailSmtpPort>
+		<EmailAccount>kobkiat.peace@gmail.com</EmailAccount>
+		<EmailPassword>qwerty@12345</EmailPassword>
+	</EmailSetting>
+</Setting>

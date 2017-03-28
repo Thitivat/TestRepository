@@ -1,0 +1,1133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BND.Services.Matrix.Proxy.NET4</name>
+    </assembly>
+    <members>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi">
+            <summary>
+            The statements api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IStatementsApi">
+            <summary>
+            The StatementsApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IStatementsApi.GetCustomerStatementByMessageId(System.Int32,System.String)">
+            <summary>
+            The get customer statement by message id.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi"/> class. 
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi.GetCustomerStatementByMessageId(System.Int32,System.String)">
+            <summary>
+            The get customer statement by message id.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi.CloseAccount(System.String,BND.Services.Matrix.Entities.ClosingPaymentItem,System.String)">
+            <summary>
+            The close account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="closingPaymentItem">
+            The closing payment item.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.AccountCloseResultsItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi.ThrowIfIbanEmpty(System.String)">
+            <summary>
+            Throws if iban is empty.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.StatementsApi.ThrowIfTokenEmpty(System.String)">
+            <summary>
+            Throws if token is empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi">
+            <summary>
+            The accounts api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi">
+            <summary>
+            The AccountsApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.CreateSavingsAccount(BND.Services.Matrix.Entities.SavingsFree,System.String)">
+            <summary>
+            Creates a savings account
+            </summary>
+            <param name="savingsFree"> The savings free. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The created account iban
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetInterestRate(System.String,BND.Services.Matrix.Entities.QueryStringModels.InterestRateOptions,System.String)">
+            <summary>
+            Gets an interest rate.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="options"> The options. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.InterestRate"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.UnblockAccount(System.String,System.String)">
+            <summary>
+            Unblock savings accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetAccruedInterest(System.String,System.DateTime,System.Boolean,System.String)">
+            <summary>
+            Gets the accrued interest.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="calculateTaxAction"> The calculate tax action. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The accrued interest
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetBalanceOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets the balance overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The balance overview
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetMovements(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Gets the movements overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="startDate"> The start date. </param>
+            <param name="endDate"> The end date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetAccountOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets a saving account overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The account overview
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.BlockAccount(System.String,System.String)">
+            <summary>
+            Block saving accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.ChangeStatusToFrozen(System.String,System.String)">
+            <summary>
+            Freeze saving accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.ChangeStatusToDormant(System.String,System.String)">
+            <summary>
+            The change status to dormant.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.CreateOutgoingPayment(System.String,BND.Services.Matrix.Entities.Payment,System.String)">
+            <summary>
+            Create outgoing payment.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="payment"> The payment. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The created outgoing payment id
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.CreateIncomingPayment(System.String,BND.Services.Matrix.Entities.Payment,System.String)">
+            <summary>
+            The create incoming.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="payment">
+            The payment.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The movement id.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.GetMovement(System.String,System.String,System.String)">
+            <summary>
+            The get movement.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.CloseAccount(System.String,BND.Services.Matrix.Entities.ClosingPaymentItem,System.String)">
+            <summary>
+            The close account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="closingPaymentItem">
+            The closing payment item.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.AccountCloseResultsItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.AddNominatedAccount(System.String,System.String,System.String)">
+            <summary>
+            The add nominated account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="nominatedAccountNumber">
+            The nominated account number.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IAccountsApi.RemoveNominatedAccount(System.String,System.String,System.String)">
+            <summary>
+            The delete nominated account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="nominatedAccountNumber">
+            The nominated account number.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.CreateSavingsAccount(BND.Services.Matrix.Entities.SavingsFree,System.String)">
+            <summary>
+            Creates a savings account
+            </summary>
+            <param name="savingsFree"> The savings free. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The created account iban
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetInterestRate(System.String,BND.Services.Matrix.Entities.QueryStringModels.InterestRateOptions,System.String)">
+            <summary>
+            Gets an interest rate.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="options"> The options. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.InterestRate"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.UnblockAccount(System.String,System.String)">
+            <summary>
+            Unblock savings accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetAccruedInterest(System.String,System.DateTime,System.Boolean,System.String)">
+            <summary>
+            Gets the accrued interest.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="calculateTaxAction"> The calculate tax action. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The accrued interest
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetBalanceOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets the balance overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The balance overview
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetMovements(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Gets the overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="startDate"> The start date. </param>
+            <param name="endDate"> The end date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetMovement(System.String,System.String,System.String)">
+            <summary>
+            The get movement.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.GetAccountOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets a saving account overview.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The account overview
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.BlockAccount(System.String,System.String)">
+            <summary>
+            Block saving accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.ChangeStatusToFrozen(System.String,System.String)">
+            <summary>
+            Freeze saving accounts.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="accessToken">The access token</param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.ChangeStatusToDormant(System.String,System.String)">
+            <summary>
+            The change status to dormant.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.CreateOutgoingPayment(System.String,BND.Services.Matrix.Entities.Payment,System.String)">
+            <summary>
+            Create outgoing payment.
+            </summary>
+            <param name="iban"> The iban. </param>
+            <param name="payment"> The payment. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The created outgoing payment id
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.CreateIncomingPayment(System.String,BND.Services.Matrix.Entities.Payment,System.String)">
+            <summary>
+            The create incoming.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="payment">
+            The payment.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Int32"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.CloseAccount(System.String,BND.Services.Matrix.Entities.ClosingPaymentItem,System.String)">
+            <summary>
+            The close account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="closingPaymentItem">
+            The closing payment item.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.AccountCloseResultsItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.AddNominatedAccount(System.String,System.String,System.String)">
+            <summary>
+            The add nominated account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="nominatedAccountNumber">
+            The nominated account number.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.RemoveNominatedAccount(System.String,System.String,System.String)">
+            <summary>
+            The delete nominated account.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+            <param name="nominatedAccountNumber">
+            The nominated account number.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.ThrowIfIbanEmpty(System.String)">
+            <summary>
+            Throws if iban is empty.
+            </summary>
+            <param name="iban">
+            The iban.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.AccountsApi.ThrowIfTokenEmpty(System.String)">
+            <summary>
+            Throws if token is empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.ApiConfig">
+            <summary>
+            The accounts api config.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig">
+            <summary>
+            The AccountsApiConfig interface.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig.ServiceUrl">
+            <summary>
+            Gets or sets the service url.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.ApiConfig.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.ApiConfig"/> class.
+            </summary>
+            <param name="serviceUrl">
+            The service url.
+            </param>
+            <exception cref="T:System.Exception"> 
+            The exception
+            </exception>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Implementations.ApiConfig.ServiceUrl">
+            <summary>
+            Gets or sets the service url.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi">
+            <summary>
+            The buckets api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IBucketsApi">
+            <summary>
+            The BucketsApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IBucketsApi.GetBuckets(BND.Services.Matrix.Entities.QueryStringModels.BucketItemFilters,BND.Services.Matrix.Entities.QueryStringModels.BucketExtraFields,System.String)">
+            <summary>
+            The get buckets.
+            </summary>
+            <param name="filter">
+            The filter.
+            </param>
+            <param name="field">
+            The field
+            </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IBucketsApi.GetBucket(System.String,System.String)">
+            <summary>
+            The get bucket.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.BucketItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi.GetBucket(System.String,System.String)">
+            <summary>
+            The get bucket.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.BucketItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi.GetBuckets(BND.Services.Matrix.Entities.QueryStringModels.BucketItemFilters,BND.Services.Matrix.Entities.QueryStringModels.BucketExtraFields,System.String)">
+            <summary>
+            The get buckets.
+            </summary>
+            <param name="filter">
+            The filter.
+            </param>
+            <param name="field">
+            The field
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.BucketsApi.ThrowIfTokenEmpty(System.String)">
+            <summary>
+            The throw if token empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <exception cref="T:BND.Services.Infrastructure.ErrorHandling.ProxyException">
+            </exception>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi">
+            <summary>
+            The center api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.ICenterApi">
+            <summary>
+            The CoreApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ICenterApi.GetCurrentCenter(System.String)">
+            <summary>
+            The get current center.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi.Version">
+            <summary>
+            The version.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi._client">
+            <summary>
+            The _client.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi._deserializer">
+            <summary>
+            The _deserializer.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi.GetCurrentCenter(System.String)">
+            <summary>
+            Ping service
+            </summary>
+            <param name="accessToken">The access token</param>
+            <returns>The specified <see cref="T:System.String"/> entity</returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.CenterApi.ThrowIfTokenEmpty(System.String)">
+            <summary>
+            The throw if token empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <exception cref="T:BND.Services.Infrastructure.ErrorHandling.ProxyException">
+            </exception>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.CoreApi">
+            <summary>
+            The CoreApi interface.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.ICoreApi">
+            <summary>
+            The CoreApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ICoreApi.Ping(System.String)">
+            <summary>
+            Ping service
+            </summary>
+            <param name="accessToken">The access token</param>
+            <returns>The specified <see cref="T:BND.Services.Matrix.Entities.ServiceInfo"/> entity</returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.CoreApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.CoreApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.CoreApi.Ping(System.String)">
+            <summary>
+            Ping service
+            </summary>
+            <param name="accessToken">The access token</param>
+            <returns>The specified <see cref="T:BND.Services.Matrix.Entities.ServiceInfo"/> entity</returns>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi">
+            <summary>
+            The messages api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IMessagesApi">
+            <summary>
+            The MessagesApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IMessagesApi.GetMessages(BND.Services.Matrix.Entities.QueryStringModels.MessageFilters,System.String)">
+            <summary>
+            The get messages.
+            </summary>
+            <param name="filters">
+            The filters.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.Message"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IMessagesApi.GetMessageDetails(System.Int32,BND.Services.Matrix.Enums.EnumMessageTypes,System.String)">
+            <summary>
+            Gets the message details.
+            </summary>
+            <param name="id"> The message id. </param>
+            <param name="msgType"> The <see cref="T:BND.Services.Matrix.Enums.EnumMessageTypes"/> </param>
+            <param name="accessToken"> The access token. </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MessageDetail"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IMessagesApi.GetMessageFile(System.Int32,System.String)">
+            <summary>
+            The get message file.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MessageFileContentItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi.GetMessages(BND.Services.Matrix.Entities.QueryStringModels.MessageFilters,System.String)">
+            <summary>
+            The get messages.
+            </summary>
+            <param name="filters">
+            The filters.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.Message"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi.GetMessageDetails(System.Int32,BND.Services.Matrix.Enums.EnumMessageTypes,System.String)">
+            <summary>
+            Gets the message details.
+            </summary>
+            <param name="id"> The message id. </param>
+            <param name="msgType"> The <see cref="T:BND.Services.Matrix.Enums.EnumMessageTypes"/> </param>
+            <param name="accessToken"> The access token. </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MessageDetail"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi.GetMessageFile(System.Int32,System.String)">
+            <summary>
+            The get message file.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:BND.Services.Matrix.Entities.MessageFileContentItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MessagesApi.ThrowIfTokenEmpty(System.String)">
+            <summary> 
+            The throw if token empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi">
+            <summary>
+            The movements api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.IMovementsApi">
+            <summary>
+            The movementsApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.IMovementsApi.GetPagedMovements(BND.Services.Matrix.Entities.QueryStringModels.PagedMovementsFilter,System.String)">
+            <summary>
+            The get movements by filter.
+            </summary>
+            <param name="filters">
+            The filters.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/> Where T is <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>.
+            </returns>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi.Version">
+            <summary>
+            The version.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi._client">
+            <summary>
+            The _client.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi._deserializer">
+            <summary>
+            The _deserializer.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi._exceptionHandler">
+            <summary>
+            The _exception handler.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi.GetPagedMovements(BND.Services.Matrix.Entities.QueryStringModels.PagedMovementsFilter,System.String)">
+            <summary>
+            The get movements by filter.
+            </summary>
+            <param name="filters">
+            The filters.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.List`1"/> Where T is <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.MovementsApi.ThrowIfTokenEmpty(System.String)">
+            <summary>
+            The throw if token empty.
+            </summary>
+            <param name="accessToken">
+            The access token.
+            </param>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi">
+            <summary>
+            The sys accounts api.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi">
+            <summary>
+            The SysAccountsApi interface.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.GetAccountOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets system accounts overviews.
+            </summary>
+            <param name="sysId">
+            The sys Ids.
+            </param>
+            <param name="valueDate">
+            The value date.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is <see cref="T:BND.Services.Matrix.Entities.AccountOverview"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.GetSystemAccounts(System.String)">
+            <summary>
+            Gets system accounts.
+            </summary>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is <see cref="T:BND.Services.Matrix.Entities.SystemAccount"/>..
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.GetMovements(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Gets movements.
+            </summary>
+            <param name="sysId">
+            The sys Id.
+            </param>
+            <param name="startDate">
+            The start date.
+            </param>
+            <param name="endDate">
+            The end date.
+            </param>
+            <param name="accessToken">
+            The access Token.
+            </param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.Sweep(BND.Services.Matrix.Entities.Sweep,System.String)">
+            <summary>
+            The sweep.
+            </summary>
+            <param name="sweep"> The sweep parameter. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A decimal
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.GetBalanceOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets system accounts balance.
+            </summary>
+            <param name="sysId">
+            The sys Id.
+            </param>
+            <param name="valueDate">
+            The value date.
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns>
+            The balance.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.ReturnPayment(BND.Services.Matrix.Entities.ReturnPayment,System.String)">
+            <summary>
+            Returns a payment.
+            </summary>
+            <param name="returnPayment">
+            The return payment.
+            </param>
+            <param name="accessToken"> The access token. </param>
+            <returns>
+            The <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Interfaces.ISysAccountsApi.CreateOutgoingReturnBucket(BND.Services.Matrix.Entities.ReturnBucketItem,System.String)">
+            <summary>
+            Create Outgoing Return bucket
+            </summary>
+            <param name="returnBucketItem">
+            The return bucket item
+            </param>
+            <param name="accessToken">
+            The access token. 
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.#ctor(BND.Services.Matrix.Proxy.NET4.Interfaces.IApiConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi"/> class.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.GetAccountOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets system accounts overviews.
+            </summary>
+            <param name="sysId"> The sys id. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is <see cref="T:BND.Services.Matrix.Entities.AccountOverview"/>.
+            </returns>
+            <exception cref="T:BND.Services.Infrastructure.ErrorHandling.ProxyException">
+            The proxy layer exception
+            </exception>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.GetSystemAccounts(System.String)">
+            <summary>
+            Gets system accounts.
+            </summary>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is <see cref="T:BND.Services.Matrix.Entities.SystemAccount"/>..
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.GetMovements(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Gets movements.
+            </summary>
+            <param name="sysId">The system account id</param>
+            <param name="startDate"> The start date. </param>
+            <param name="endDate"> The end date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.List`1"/> where T is of type <see cref="T:BND.Services.Matrix.Entities.MovementItem"/>
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.Sweep(BND.Services.Matrix.Entities.Sweep,System.String)">
+            <summary>
+            The sweep.
+            </summary>
+            <param name="sweep"> The sweep parameter. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            A decimal
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.GetBalanceOverview(System.String,System.DateTime,System.String)">
+            <summary>
+            Gets system accounts balance.
+            </summary>
+            <param name="sysId"> The sys id. </param>
+            <param name="valueDate"> The value date. </param>
+            <param name="accessToken">The access token</param>
+            <returns>
+            The balance.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.ReturnPayment(BND.Services.Matrix.Entities.ReturnPayment,System.String)">
+            <summary>
+            Returns a payment.
+            </summary>
+            <param name="returnPayment">
+            The return payment.
+            </param>
+            <param name="accessToken"> The access token. </param>
+            <returns>
+            The <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Implementations.SysAccountsApi.CreateOutgoingReturnBucket(BND.Services.Matrix.Entities.ReturnBucketItem,System.String)">
+            <summary>
+            Create Outgoing Return bucket
+            </summary>
+            <param name="returnBucketItem">
+            The return bucket item
+            </param>
+            <param name="accessToken">
+            The access token.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer">
+            <summary>
+            The rest sharp json net serializer.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer"/> class.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.#ctor(Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer"/> class.
+            </summary>
+            <param name="serializer">
+            The serializer.
+            </param>
+        </member>
+        <member name="M:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.Serialize(System.Object)">
+            <summary>
+            Serialize the object into a string.
+            </summary>
+            <param name="obj">
+            The obj.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.DateFormat">
+            <summary>
+            Gets or sets the date format.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.RootElement">
+            <summary>
+            Gets or sets the root element.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.Namespace">
+            <summary>
+            Gets or sets the namespace.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Matrix.Proxy.NET4.Serializers.RestSharpJsonNetSerializer.ContentType">
+            <summary>
+            Gets or sets the content type.
+            </summary>
+        </member>
+    </members>
+</doc>

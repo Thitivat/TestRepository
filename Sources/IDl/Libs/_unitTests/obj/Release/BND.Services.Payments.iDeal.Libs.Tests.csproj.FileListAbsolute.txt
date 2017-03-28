@@ -1,0 +1,9 @@
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\BND.Services.Payments.iDeal.Libs.Tests.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\BND.Services.Payments.iDeal.Libs.Tests.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\BND.Services.Payments.iDeal.Libs.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\nunit.framework.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\BND.Services.Payments.iDeal.Libs.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\bin\Release\nunit.framework.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\obj\Release\BND.Services.Payments.iDeal.Libs.Tests.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\obj\Release\BND.Services.Payments.iDeal.Libs.Tests.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Libs\_unitTests\obj\Release\BND.Services.Payments.iDeal.Libs.Tests.pdb

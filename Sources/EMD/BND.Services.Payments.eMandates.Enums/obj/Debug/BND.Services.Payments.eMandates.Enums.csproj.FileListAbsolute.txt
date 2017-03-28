@@ -1,0 +1,5 @@
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Enums\bin\Debug\BND.Services.Payments.eMandates.Enums.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Enums\bin\Debug\BND.Services.Payments.eMandates.Enums.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Enums\obj\Debug\BND.Services.Payments.eMandates.Enums.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Enums\obj\Debug\BND.Services.Payments.eMandates.Enums.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Enums\obj\Debug\BND.Services.Payments.eMandates.Enums.pdb

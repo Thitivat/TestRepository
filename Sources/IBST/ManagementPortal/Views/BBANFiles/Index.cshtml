@@ -1,0 +1,157 @@
+﻿@using BND.Services.IbanStore.Models
+@model List<BND.Services.IbanStore.Models.BbanFile>
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<script>
+    var currentpage = @ViewBag.CurrentPage;
+    var totalpage = @ViewBag.TotalPage;
+</script>
+<div class="row">
+    <h1>BBAN Files</h1>
+    <hr/>
+</div>
+
+<div ng-controller="bbanFileController" id="bbanFileController">
+    
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ChangedBy</th>
+                    <th>ChangedDate</th>
+                    <th>Current Status</th>
+                    <th>Context</th>
+                    <th style="width: 100px;">Remark</th>
+                    <th style="width: 200px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in Model)
+                {
+                    <tr>
+                        <td>@b.Name</td>
+                        <td>@b.CurrentStatus.ChangedBy</td>
+                        <td>@b.CurrentStatus.ChangedDate.ToString("dd/MM/yyyy hh:mm")</td>
+                        <td>
+                            @if (b.CurrentStatus.Status == EnumBbanFileStatus.UploadCanceled.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.VerifiedFailed.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.WaitingForApproval.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.ApprovalDenied.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.Importing.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.Imported.ToString() || b.CurrentStatus.Status == EnumBbanFileStatus.ImportFailed.ToString())
+                            {
+
+                                @b.CurrentStatus.Status
+                            }
+                            else
+                            {
+                                <a href="/BBANFiles/RedirectStatus?bbanFileId=@b.Id&status=@b.CurrentStatus.Status">@b.CurrentStatus.Status</a>
+                            }
+
+                        </td>
+                        <td>@b.CurrentStatus.Context</td>
+                        <td style="word-wrap: break-word">
+                            <div style="width: 300px">
+                                @b.CurrentStatus.Remark
+                            </div>
+                        </td>
+                        <td>
+                            @if (b.CurrentStatus.Status == EnumBbanFileStatus.Imported.ToString())
+                            {
+                                <button type="button" class="btn btn-default" ng-click="GetIBan(@b.Id)">IBAN</button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-default" disabled="true" data-dismiss="modal">IBAN</button>
+                            }
+                            <button type="button" class="btn btn-default" ng-click="History(@b.Id)">History</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    
+    <center>
+        <div id="page-selection"></div>
+    </center>
+    <div id="iBanListModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">IBAN List</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>IBAN</th>
+                            <th>Approved by</th>
+                            <th>IbanStatus</th>
+                            <th>StatusDate</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="i in IBans">
+                            <td>
+                                {{i.Code}}
+                            </td>
+                            <td>
+                                {{i.CurrentIbanHistory.ChangedBy}}
+                            </td>
+                            <td>
+                                {{i.CurrentIbanHistory.Status}}
+                            </td>
+                            <td>
+                                {{i.CurrentIbanHistory.ChangedDate | dateFilter | date:"dd/MM/yyyy hh:mm"}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <center>
+                        <div id="page-selection-Iban"></div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="historyModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">History</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Status </th>
+                            <th>ChangedDate</th>
+                            <th>ChangedBy </th>
+                            <th>Remark</th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="h in Histories">
+                            <td>
+                                {{h.Status}}
+                            </td>
+                            <td>
+                                {{h.ChangedDate | dateFilter | date:"dd/MM/yyyy hh:mm"}}
+                                <td>{{h.ChangedBy}}</td>
+                            </td>
+                            <td style="word-break: break-all;">{{h.Remark}}</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/Scripts/Application/Controller/bbanFile-Controller.js"></script>
+}

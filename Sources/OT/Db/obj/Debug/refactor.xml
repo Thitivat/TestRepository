@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="08af1f98-4146-4a80-a879-14aa39136668" ChangeDateTime="02/18/2016 06:31:20" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[SuId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Suid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dc46e594-58bf-41d9-b165-0e032b09c9b4" ChangeDateTime="02/19/2016 06:19:00" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[ApiKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SystemId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3abba9dd-aa41-41a1-9d65-9f79e0ab69c3" ChangeDateTime="02/19/2016 10:39:56" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[System].[Username]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[System]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="43b264a7-5f9c-4765-a837-09420b7c11c7" ChangeDateTime="02/19/2016 10:57:41" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[ChannelTypeCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChannelCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="86fb3939-6b5b-4c89-b40c-cc6e6b98615a" ChangeDateTime="02/19/2016 10:58:56" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[ChannelCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChannelType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8e81b8d4-2473-4052-a848-91ed35abb66c" ChangeDateTime="02/19/2016 10:59:02" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[EnumChannelType].[ChannelTypeCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[EnumChannelType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChannelType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="193a5dcf-c83e-4fa3-90e0-621166da9ec3" ChangeDateTime="03/01/2016 04:07:53" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[Expiration]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExpiralyDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e33a0db7-0aa7-4595-a2bd-9a029e4db0c2" ChangeDateTime="03/01/2016 04:08:24" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[ExpiralyDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExpiryDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c6460895-1de5-4c97-888c-0f42dfc17678" ChangeDateTime="03/01/2016 04:34:49" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[Account].[SystemId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[Account]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AccountId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="42f8642f-cdc4-44f9-9084-bc17bed26a88" ChangeDateTime="03/01/2016 04:35:02" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[otp].[OneTimePassword].[SystemId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[otp].[OneTimePassword]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AccountId" />
+  </Operation>
+</Operations>

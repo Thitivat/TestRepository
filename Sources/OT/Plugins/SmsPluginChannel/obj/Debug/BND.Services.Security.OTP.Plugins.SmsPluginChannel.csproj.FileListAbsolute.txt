@@ -1,0 +1,14 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\PluginSettings.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.dll.config
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\MessageBird.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\Newtonsoft.Json.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\bin\Debug\Newtonsoft.Json.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\obj\Debug\BND.Services.Security.OTP.Plugins.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.pdb

@@ -1,0 +1,9 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\BND.Services.Security.OTP.MefTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\BND.Services.Security.OTP.MefTest.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\BND.Services.Security.OTP.Mef.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\nunit.framework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\BND.Services.Security.OTP.Mef.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\bin\Debug\nunit.framework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\obj\Debug\BND.Services.Security.OTP.MefTest.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\obj\Debug\BND.Services.Security.OTP.MefTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Mef\_UnitTest\obj\Debug\BND.Services.Security.OTP.MefTest.pdb

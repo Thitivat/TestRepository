@@ -1,0 +1,886 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Header = "Add Entity - " + ViewBag.ListTypeName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var entity = @Html.Raw(ViewBag.Entity);
+    var listTypeId = @Html.Raw(ViewBag.ListTypeId);
+    var countriesEnum = @Html.Raw(ViewBag.Countries);
+    var identificationTypes = @Html.Raw(ViewBag.IdentificationTypes);
+    var contactInfoTypes = @Html.Raw(ViewBag.ContactInfoTypes);
+    var genders = @Html.Raw(ViewBag.Genders);
+    var languages = @Html.Raw(ViewBag.Languages);
+    var statuses = @Html.Raw(ViewBag.Statuses);
+    var subjectTypes = @Html.Raw(ViewBag.SubjectTypes);
+    var regulations = @Html.Raw(ViewBag.Regulations);
+</script>
+
+@Scripts.Render("~/Scripts/PsValidator.js")
+@Scripts.Render("~/Scripts/Kyc/sl_EntityAdd.js")
+
+
+<div class="" ng-app="entityApp">
+    <div ng-controller="entityController">
+        @Html.Partial("~/Views/Shared/AlertManager.cshtml")
+        <div class="row panel-group-header">
+            <div class="col-md-8"><h3>Entity</h3></div>
+            <div class="col-md-4 text-right"></div>
+        </div>
+
+        <!-- Entity section-->
+        <div class="entity-add-section">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Entity
+                </div>
+            
+                <div class="panel-body" ps-validator="validateEntity">
+                    <form class="form-horizontal form-group-small-spacing" ng-submit="processEntityForm()">
+                        <div class="form-group" ng-show="entity.EntityId">
+                            <label for="" class="col-sm-2 control-label">Original entity ID</label>
+                            <div class="col-sm-10">
+                                <span class="form-control no-border input-sm">{{entity.OriginalEntityId}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Regulation</label>
+                            <div class="col-sm-10">
+                                <select name="mySelect" class="form-control input-sm"
+                                        ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                        ng-model="entity.Regulation.RegulationId"
+                                        ps-validator-required="{{RequiredErrMsg}}"></select>
+                                <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Subject type</label>
+                            <div class="col-sm-10">
+                                <select name="mySelect" class="form-control input-sm"
+                                        ng-options="option.Name for option in SubjectTypesOptions.availableOptions track by option.SubjectTypeId"
+                                        ng-model="entity.SubjectType"
+                                        ps-validator-required="{{RequiredErrMsg}}"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-10">
+                                <select name="mySelect" class="form-control input-sm"
+                                        ng-options="option.Name for option in StatusesOptions.availableOptions track by option.StatusId"
+                                        ng-model="entity.Status"
+                                        ps-validator-required="{{RequiredErrMsg}}"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Remark</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control input-sm" ng-model="entity.Remark.Value"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary" ng-show="entity.EntityId == null" popover="Save new entity" popover-popup-delay="100" popover-trigger="mouseenter" ps-validator-submit>Save</button>
+                                <button type="submit" class="btn btn-primary" ng-show="entity.EntityId != null">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- // EO Entity-->
+
+        <!-- Edit mode sections-->
+        <div class="" ng-show="entity.EntityId != null">
+            <!-- Name Aliases section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Name Aliases <span class="collapsedMode">({{entity.NameAliases.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddNameAlias()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+                
+                <div class="panel panel-info" ng-repeat="nameAlias in entity.NameAliases" ng-animate="'animate'" ps-validator="{{nameAlias.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Name Alias <span class="collapsedMode">: {{nameAlias.WholeName}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeNameAlias($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processNameAliasForm($index, $element)">
+                            <div class="form-group" ng-show="nameAlias.NameAliasId">
+                                <label for="" class="col-sm-2 control-label">OriginalNameAliasId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{nameAlias.OriginalNameAliasId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="nameAlias.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Last name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.LastName" maxlength="256">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">First name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.FirstName" maxlength="256">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Middle name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.MiddleName" maxlength="256">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Whole name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.WholeName"
+                                           ps-validator-required="{{RequiredErrMsg}}" maxlength="512">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Prefix</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.PrefixName" maxlength="20">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Gender</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Name for option in GendersOptions.availableOptions track by option.GenderId"
+                                            ng-model="nameAlias.Gender"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.Title" maxlength="2048">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Language</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.Name for option in LanguagesOptions.availableOptions"
+                                            ng-model="nameAlias.Language.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Quality</label>
+                                <div class="col-sm-10">
+                                    <rating ng-model="nameAlias.Quality" max="3" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']"></rating>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Function</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="nameAlias.Function" maxlength="2048">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="nameAlias.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!nameAlias.NameAliasId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="nameAlias.NameAliasId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Name Aliases-->
+            <!-- Citizenship section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Citizenships <span class="collapsedMode">({{entity.Citizenships.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddCitizenship()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="citizenship in entity.Citizenships" ng-animate="'animate'" ps-validator="{{citizenship.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Citizenship <span class="collapsedMode">: {{GetCountryNiceName(citizenship.Country.Iso3)}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeCitizenship($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processCitizenshipForm($index)">
+                            <div class="form-group" ng-show="citizenship.CitizenshipId">
+                                <label for="" class="col-sm-2 control-label">OriginalCitizenshipId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{citizenship.OriginalCitizenshipId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="citizenship.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Country</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.NiceName for option in CountriesOptions.availableOptions"
+                                            ng-model="citizenship.Country.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="citizenship.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!citizenship.CitizenshipId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="citizenship.CitizenshipId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Citizenship-->
+            <!-- Addresses section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Addresses <span class="collapsedMode">({{entity.Addresses.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddAddress()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="address in entity.Addresses" ng-animate="'animate'" ps-validator="{{address.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Address <span class="collapsedMode">: {{address.City}} {{address.Street}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeAddress($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processAddressForm($index)">
+                            <div class="form-group" ng-show="address.AddressId">
+                                <label for="" class="col-sm-2 control-label">OriginalAddressId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{address.OriginalAddressId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="address.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Number</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="address.Number" maxlength="20">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Street</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="address.Street" maxlength="256">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Zipcode</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="address.Zipcode"
+                                           maxlength="20"
+                                           ps-validator-number="{{NumberErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">City</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="address.City" maxlength="128">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Country</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.NiceName for option in CountriesOptions.availableOptions"
+                                            ng-model="address.Country.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="address.Remark.Value" > </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!address.AddressId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="address.AddressId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Addresses-->
+            <!-- Identifications section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Identifications <span class="collapsedMode">({{entity.Identifications.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddIdentification()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="identification in entity.Identifications" ng-animate="'animate'" ps-validator="{{identification.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Identification <span class="collapsedMode">: {{GetIdentificationTypeName(identification.IdentificationType.IdentificationTypeId)}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeIdentification($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processIdentificationForm($index)">
+                            <div class="form-group" ng-show="identification.IdentificationId">
+                                <label for="" class="col-sm-2 control-label">OriginalIdentificationId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{identification.OriginalIdentificationId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="identification.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Identification type</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.IdentificationTypeId as option.Name for option in IdentificationTypesOptions.availableOptions"
+                                            ng-model="identification.IdentificationType.IdentificationTypeId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Document number</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="identification.DocumentNumber"
+                                           maxlength="2048"
+                                           ps-validator-required="{{RequiredErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">City of issue</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="identification.IssueCity" maxlength="256">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Country of issue</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.NiceName for option in CountriesOptions.availableOptions"
+                                            ng-model="identification.IssueCountry.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Date of issue</label>
+                                <div class="col-sm-10">
+                                    <p class="input-group">
+
+                                        <span class="form-control input-sm" ng-if="!identification.issueDateDp.opened">{{identification.IssueDate|date:DatePickerSettings.format}}</span>
+                                        <input type="text" class="form-control input-sm" ng-if="identification.issueDateDp.opened" datepicker-popup="{{DatePickerSettings.format}}"
+                                               ng-model="identification.IssueDate" is-open="identification.issueDateDp.opened"
+                                               datepicker-options="dateOptions" ng-required="true"
+                                               close-text="Close" />
+
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default input-sm" ng-click="openDatePicker($event, 'Identifications', $index, 'issueDateDp')">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Date of expiration</label>
+                                <div class="col-sm-10">
+                                    <p class="input-group">
+
+                                        <span class="form-control input-sm" ng-if="!identification.expiryDateDp.opened">{{identification.ExpiryDate|date:DatePickerSettings.format}}</span>
+                                        <input type="text" class="form-control input-sm" ng-if="identification.expiryDateDp.opened" datepicker-popup="{{DatePickerSettings.format}}"
+                                               ng-model="identification.ExpiryDate" is-open="identification.expiryDateDp.opened"
+                                               datepicker-options="dateOptions" ng-required="true"
+                                               close-text="Close" />
+
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default input-sm" ng-click="openDatePicker($event, 'Identifications', $index, 'expiryDateDp')">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="identification.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!identification.IdentificationId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="identification.IdentificationId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Identifications -->
+            <!-- ContactInfos section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Contact Infos <span class="collapsedMode">({{entity.ContactInfo.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddContactInfo()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="contactInfo in entity.ContactInfo" ng-animate="'animate'" ps-validator="{{contactInfo.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Contact Info <span class="collapsedMode">: {{GetContactInfoTypeName(contactInfo.ContactInfoType.ContactInfoTypeId)}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeContactInfo($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processContactInfosForm($index)">
+                            <div class="form-group" ng-show="contactInfo.ContactInfoId">
+                                <label for="" class="col-sm-2 control-label">OriginalContactInfoId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{contactInfo.OriginalContactInfoId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="contactInfo.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Contact Info Type</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.ContactInfoTypeId as option.Name for option in ContactInfoTypesOptions.availableOptions"
+                                            ng-model="contactInfo.ContactInfoType.ContactInfoTypeId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Value</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="contactInfo.Value"
+                                           maxlength="256"
+                                           ps-validator-required="{{RequiredErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="contactInfo.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!contactInfo.ContactInfoId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="contactInfo.ContactInfoId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Contacts -->
+            <!-- Births section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Births <span class="collapsedMode">({{entity.Births.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddBirth()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="birth in entity.Births" ng-animate="'animate'" ps-validator="{{birth.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Birth <span class="collapsedMode">: {{birth.Year}}/{{birth.Month}}/{{birth.Day}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeBirth($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processBirthsForm($index)">
+                            <div class="form-group" ng-show="birth.BirthId">
+                                <label for="" class="col-sm-2 control-label">OriginalBirthId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{birth.OriginalBirthId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Regulation</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.RegulationId as option.PublicationTitle for option in RegulationsOptions.availableOptions"
+                                            ng-model="birth.Regulation.RegulationId"
+                                            ps-validator-required="{{RequiredErrMsg}}"></select>
+                                    <a href="javascript:;" class="" ng-click="openModal()">Add new regulation <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Birth Date</label>
+                                <div class="col-sm-10">
+                                    <div class="form-inline">
+                                        <div style="display:inline-block; vertical-align:top">
+                                            <input type="text" class="form-control input-sm" ng-model="birth.Year" placeholder="Year (YYYY)"
+                                                   maxlength="4"
+                                                   ps-validator-string-range="4,4" ps-validator-string-range-message="{{StringRange4ErrMsg}}"
+                                                   ps-validator-number="{{NumberErrMsg}}"
+                                                   ps-validator-control-id="birthYear{{$index}}">
+                                            <div ps-validator-error-message-for="birthYear{{$index}}"></div>
+                                        </div>
+                                        <div style="display:inline-block; vertical-align:top">
+                                            <input type="text" class="form-control input-sm" ng-model="birth.Month" placeholder="Month (MM)"
+                                                   maxlength="2"
+                                                   ps-validator-number="{{NumberErrMsg}}"
+                                                   ps-validator-numeric-range="1,12" ps-validator-numeric-range-message="{{NumberRange1_12ErrMsg}}"
+                                                   ps-validator-control-id="birthMonth{{$index}}">
+                                            <div ps-validator-error-message-for="birthMonth{{$index}}"></div>
+                                        </div>
+                                        <div style="display:inline-block; vertical-align:top">
+                                            <input type="text" class="form-control input-sm" ng-model="birth.Day" placeholder="Day (DD)"
+                                                   maxlength="2"
+                                                   ps-validator-number="{{NumberErrMsg}}"
+                                                   ps-validator-numeric-range="1,31" ps-validator-numeric-range-message="{{NumberRange1_31ErrMsg}}"
+                                                   ps-validator-control-id="birthDay{{$index}}">
+                                            <div ps-validator-error-message-for="birthDay{{$index}}"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Birth Place</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="birth.Place"
+                                           maxlength="2048">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Country</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.NiceName for option in CountriesOptions.availableOptions"
+                                            ng-model="birth.Country.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="birth.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!birth.BirthId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="birth.BirthId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Births -->
+            <!-- Banks section-->
+            <div class="entity-add-section">
+                <div class="row panel-group-header">
+                    <div class="col-md-8"><h3><span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSection($event)" aria-hidden="true"></span> Banks <span class="collapsedMode">({{entity.Banks.length}})</span></h3></div>
+                    <div class="col-md-4 text-right"><a href="javascript:;" class="btn btn-primary" ng-click="AddBank()">Add new <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></div>
+                </div>
+
+                <div class="panel panel-info" ng-repeat="bank in entity.Banks" ng-animate="'animate'" ps-validator="{{bank.ValidationName}}">
+                    <div class="panel-heading " ng-dblclick="toggleSectionElement($event)">
+                        <span class="glyphicon glyphicon-chevron-down cursor-pointer" ng-click="toggleSectionElement($event)" aria-hidden="true"></span> Bank <span class="collapsedMode">: {{bank.AccountNumber}}</span>
+                        <div class="pull-right">
+                            <span class="glyphicon glyphicon-remove cursor-pointer" aria-hidden="true" ng-click="removeBank($index)"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-submit="processBanksForm($index)">
+                            <div class="form-group" ng-show="bank.BankId">
+                                <label for="" class="col-sm-2 control-label">OriginalBankId</label>
+                                <div class="col-sm-10">
+                                    <span class="form-control no-border input-sm">{{bank.OriginalBankId}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Bank name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="bank.BankName"
+                                           maxlength="256"
+                                           ps-validator-required="{{RequiredErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">SWIFT</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="bank.Swift"
+                                           maxlength="11">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Account Holder's Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="bank.AccountHolderName"
+                                           maxlength="512"
+                                           ps-validator-required="{{RequiredErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Account Number</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="bank.AccountNumber"
+                                           maxlength="20"
+                                           ps-validator-required="{{RequiredErrMsg}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">IBAN</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" ng-model="bank.Iban"
+                                           maxlength="40">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Country</label>
+                                <div class="col-sm-10">
+                                    <select name="mySelect" class="form-control input-sm"
+                                            ng-options="option.Iso3 as option.NiceName for option in CountriesOptions.availableOptions"
+                                            ng-model="bank.Country.Iso3"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">Remark</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control input-sm" ng-model="bank.Remark.Value"> </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" ng-show="!bank.BankId" ps-validator-submit>Save</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="bank.BankId" ps-validator-submit>Update</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- // EO Banks -->
+        </div> <!-- // EO Edit mode scetions-->
+
+        <!-- Add Regulation popup section-->
+        <script type="text/ng-template" id="addRegulationTemplate.html">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+                <h4>Add new regulation</h4>
+            </div>
+            <div class="modal-body" ps-validator="validateRegulation">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Regulation title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-sm" ng-model="newRegulation.RegulationTitle"
+                                   ps-validator-required="{{RequiredErrMsg}}"
+                                   maxlength="128"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Regulation date</label>
+                        <div class="col-sm-10">
+                            <p class="input-group">
+
+                                <span class="form-control input-sm" ng-if="!newRegulationDate.opened">{{newRegulation.RegulationDate|date:newRegulationDate.format}}</span>
+                                <input type="text" class="form-control input-sm" ng-if="newRegulationDate.opened" datepicker-popup="{{newRegulationDate.format}}"
+                                       ng-model="newRegulation.RegulationDate" is-open="newRegulationDate.opened"
+                                       datepicker-options="dateOptions" ng-required="true"
+                                       close-text="Close" />
+
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default input-sm" ng-click="open($event,'newRegulationDate')">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Publication date</label>
+                        <div class="col-sm-10">
+                            <p class="input-group">
+
+                                <span class="form-control input-sm" ng-if="!newPublicationDate.opened">{{newRegulation.PublicationDate|date:newPublicationDate.format}}</span>
+                                <input type="text" class="form-control input-sm" ng-if="newPublicationDate.opened" datepicker-popup="{{newPublicationDate.format}}"
+                                       ng-model="newRegulation.PublicationDate" is-open="newPublicationDate.opened"
+                                       datepicker-options="dateOptions"
+                                       close-text="Close"/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default input-sm" ng-click="open($event, 'newPublicationDate')">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                                </span>
+                                <div>
+                                    @*Add this hidden input because input with datepicker cannot use with ps-validator*@
+                                    <input hidden ng-model="newRegulation.PublicationDate" ps-validator-required="{{RequiredErrMsg}}" />
+                                </div>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Publication title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-sm" ng-model="newRegulation.PublicationTitle"
+                                   ps-validator-required="{{RequiredErrMsg}}"
+                                   maxlength="128" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Publication URL</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-sm" ng-model="newRegulation.PublicationUrl"
+                                   ps-validator-required="{{RequiredErrMsg}}"
+                                   maxlength="256" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Programme</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control input-sm" ng-model="newRegulation.Programme"
+                                   ps-validator-required="{{RequiredErrMsg}}"
+                                   maxlength="20" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">Remark</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control input-sm" ng-model="newRegulation.Remark.Value"> </textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" ng-click="processForm()" class="btn btn-primary" ps-validator-submit>Save</button>
+                            <button ng-click="cancel()" class="btn btn-primary">Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </script> <!-- // EO Add Regulation popup section-->
+
+    </div>
+</div>
+
+
+

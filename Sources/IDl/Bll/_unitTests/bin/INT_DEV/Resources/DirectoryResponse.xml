@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DirectoryRes xmlns="http://www.idealdesk.com/ideal/messages/mer-acq/3.3.1"
+version="3.3.1">
+  <createDateTimestamp>2008-11-14T09:30:47.0Z</createDateTimestamp>
+  <Acquirer>
+    <acquirerID>0001</acquirerID>
+  </Acquirer>
+  <Directory>
+    <directoryDateTimestamp>2004-11-10T10:15:12.145Z</directoryDateTimestamp>
+    <Country>
+      <countryNames>Nederland</countryNames>
+      <Issuer>
+        <issuerID>ABNANL2AXXX</issuerID>
+        <issuerName>ABN AMRO Bank</issuerName>
+      </Issuer>
+      <Issuer>
+        <issuerID>ASNNNL21XXX</issuerID>
+        <issuerName>ASN Bank</issuerName>
+      </Issuer>
+      <Issuer>
+        <issuerID>FRBKNL2LXXX</issuerID>
+        <issuerName>Friesland Bank</issuerName>
+      </Issuer>
+      <Issuer>
+        <issuerID>INGBNL2AXXX</issuerID>
+        <issuerName>ING</issuerName>
+      </Issuer>
+      <Issuer>
+        <issuerID>RABONL2UXXX</issuerID>
+        <issuerName>Rabobank</issuerName>
+      </Issuer>
+    </Country>
+    <Country>
+      <countryNames>België/Belgique</countryNames>
+      <Issuer>
+        <issuerID>KREDBE22XXX</issuerID>
+        <issuerName>KBC</issuerName>
+      </Issuer>
+    </Country>
+  </Directory>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <DigestValue>0R00+jQyZlSLrTA+1gSmsH9vtbzbNbIIoWzh9SDJXGc=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>
+      H5FBG+1ceWVginZdK1bT77g1HL0p8/OXJ1FTw2QWNBOzkKgg1q0L7OvbQTsW3i+RP1TVfvXr35X+C3KUQbZNrnm 59w6J765T+XMpNyPCU5MgN6aQTV1SqXQMFpDlsdxMxeDHamRwoKs+g9hga/mTUv5xEedkVhTZGuQ2aiUeAec=
+    </SignatureValue>
+    <KeyInfo>
+      <KeyName>7D665C81ABBE1A7D0E525BFC171F04D276F07BF2</KeyName>
+    </KeyInfo>
+  </Signature>
+</DirectoryRes>

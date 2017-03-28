@@ -1,0 +1,12 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\BND.Services.Security.OTP.Dal.dll.config
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\BND.Services.Security.OTP.Dal.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\BND.Services.Security.OTP.Dal.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\BND.Services.Security.OTP.Repositories.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\EntityFramework.SqlServer.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\BND.Services.Security.OTP.Repositories.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\bin\Release\EntityFramework.SqlServer.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\obj\Release\BND.Services.Security.OTP.Dal.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\obj\Release\BND.Services.Security.OTP.Dal.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Dal\obj\Release\BND.Services.Security.OTP.Dal.pdb

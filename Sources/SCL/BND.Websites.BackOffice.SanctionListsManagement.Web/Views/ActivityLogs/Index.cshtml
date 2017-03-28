@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Index";
+    ViewBag.Header = "Activity log";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var logs = @Html.Raw(ViewBag.Logs);
+    var selectLogsOptions = @Html.Raw(ViewBag.selectLogsOptions);
+    var currentList = @Html.Raw(ViewBag.CurrentList);
+    var logsCount = @Html.Raw(ViewBag.LogsCount);
+</script>
+
+@Scripts.Render("~/Scripts/Kyc/sl_ActivityLog.js")
+
+<div class="" ng-app="activityLogsApp">
+    @Html.Partial("~/Views/Shared/AlertManager.cshtml")
+    <div ng-controller="activityLogsController">
+        <div class="row row-bottom-margin">
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-3 pull-right">
+                <select name="mySelect" class="form-control input-sm"
+                        ng-options="option.id as option.value for option in selectLogsOptions.availableOptions"
+                        ng-model="selectLogsOptions.selected" ng-change="listFilterChanged()"></select>
+            </div>
+        </div>
+        <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+        <table class="table table-condensed">
+            <tr>
+                <th>List</th>
+                <th>Username</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+            <!--<tr>
+                <td></td>
+                <td><input class="form-control" type="text" ng-model="logsFilter.Username" placeholder="filter by username"/></td>
+                <td></td>
+                <td><input class="form-control" type="text" ng-model="logsFilter.Description" placeholder="filter by description" /></td>
+            </tr>-->
+            <tr ng-repeat="log in logs | filter:logsFilter:strict "> <!--| orderBy : '-LogDateParsed'-->
+                <td>{{log.ListType.Name}}</td>
+                <td>{{log.Username}}</td>
+                <td>{{DateTimeDisplay(log.LogDate)}}</td>
+                <td>{{log.Description}}</td>
+            </tr>
+        </table>
+
+        <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+    </div>
+</div>

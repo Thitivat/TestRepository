@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Sanction Lists";
+    ViewBag.Header = "Sanction Lists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    var sanctionLists = @Html.Raw(ViewBag.SanctionLists);
+</script>
+
+@Scripts.Render("~/Scripts/Kyc/sl_SanctionLists.js")
+
+<div class="" ng-app="sanctionListsApp">
+    <div ng-controller="sanctionListsController">
+
+        <div class="panel panel-primary" ng-repeat="sl in sanctionLists">
+            <div class="panel-body row sanctionlist-item">
+                <div class="col-md-6">
+                    <h3><a href="/SanctionLists/{{sl.ListType.ListTypeId}}">{{sl.ListType.Name}}</a></h3>
+                </div>
+                <div class="col-md-4">
+                    Last update: <b>{{DateTimeDisplay(sl.Update.UpdatedDate)}}</b><br />
+                    Number of entities: <b>{{sl.EntitiesCount}}</b>
+                </div>
+                <div class="col-md-2 text-right icon-bar">
+                    <a href="/SanctionLists/ActivityLog/{{sl.ListType.ListTypeId}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

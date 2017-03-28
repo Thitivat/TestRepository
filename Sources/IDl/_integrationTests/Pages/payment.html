@@ -1,0 +1,147 @@
+﻿<div ng-controller="paymentController">
+
+    <div ng-show="process == 1">
+
+        <div class="col-md-6">
+            <h1>I want to pay</h1>
+            <form name="paymentForm" novalidate>
+                <div class="form-group">
+                    <label>Amount : </label>
+                    <input id="txtAmount" name="amount" type="number" class="form-control" ng-model="payment.amount" step="0.001" />
+                </div>
+                <div class="form-group">
+                    <label>Description : </label>
+                    <input id="txtDesc" name="desc" type="text" class="form-control" ng-model="payment.desc" />
+                </div>
+                <div class="form-group">
+                    <label>Product : </label>
+                    <input id="txtProduct" name="product" type="text" class="form-control" ng-model="payment.product" />
+                </div>
+                <div class="form-group">
+                    <label>From Acc : </label>
+                    <input id="txtAcc" name="acc" type="text" class="form-control" ng-model="payment.acc" />
+                </div>
+
+                <button id="btnNext" class="btn btn-primary col-md-2" ng-click="updateProcess(2)">
+                    Pay
+                </button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <h1>Technical Parameters</h1>
+            <form>
+                <div class="form-group">
+                    <label>BNDIBAN : </label>
+                    <input id="txtBndIban" type="text" class="form-control" ng-model="payment.bndiban" />
+                </div>
+                <div class="form-group">
+                    <label>Currency : </label>
+                    <input id="txtCurrency" type="text" class="form-control" ng-model="payment.currency" />
+                </div>
+                <div class="form-group">
+                    <label>Language : </label>
+                    <input id="txtLanguage" type="text" class="form-control" ng-model="payment.language" />
+                </div>
+                <div class="form-group">
+                    <label>Expiration Period (sec) : </label>
+                    <input id="txtExpirationPeriod" type="number" class="form-control" ng-model="payment.expirationPeriod" />
+                </div>
+                <div class="form-group">
+                    <label>Merchant Return Url : </label>
+                    <input id="txtMerchantReturnUrl" type="text" class="form-control" ng-model="payment.merchantReturnUrl" />
+                </div>
+                <div class="form-group">
+                    <label>Purchase ID : </label>
+                    <input id="txtPurchaseId" type="text" class="form-control" ng-model="payment.purchaseId" />
+                </div>
+                <div class="form-group">
+                    <label>Api Token : </label>
+                    <input id="txtApiToken" type="text" class="form-control" ng-model="payment.apiToken" />
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div ng-show="process == 2">
+        <h1>Kies Betaal methode</h1>
+        <ul class="list-unstyled">
+            <li><a id="lnkIdeal" href="" ng-click="setPaymentType('iDeal')">iDeal</a></li>
+            <li><a id="lnkEmandate" href="" style="color:gray;cursor:not-allowed;text-decoration: none;">Emandate</a></li>
+            <li><a id="lnkBank" href="" style="color:gray;cursor:not-allowed;text-decoration: none;">Via bank</a></li>
+        </ul>
+    </div>
+
+    <div ng-show="process == 3">
+        <div>
+
+            <div ng-controller="idealController">
+
+                <h1>Via iDeal</h1>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label class="">Kies uw bank</label>
+                        <select id="ddlIssuer" ng-disabled="isReloading" class="form-control" ng-model="payment.issuer">
+                            <option value="">-- Kies uw bank --</option>
+                            <optgroup ng-repeat="country in Directories" label="{{country.CountryNames}}">
+                                <option ng-repeat="issuer in country.Issuers" value="{{issuer.IssuerID}}">{{issuer.IssuerName}}</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Issuer Id:</label>
+                        <input id="txtPaymentIssuer" type="text" class="form-control" ng-model="payment.issuer" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Payment Type:</label>
+                        <input id="txtPaymentType" type="text" class="form-control" ng-model="payment.paymentType" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-8 col-md-2 form-group">
+                        <button id="btnReload" ng-disabled="isReloading" class="form-control btn btn-warning" ng-click="reload()">
+                            <span ng-show="isReloading"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                            Reload
+                        </button>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <button id="btnPay" ng-disabled="isPaying" class="form-control btn btn-primary" ng-click="pay(payment)">
+                            <span ng-show="isPaying"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                            Pay
+                        </button>
+                    </div>
+                </div>
+
+                <div class="">
+                    <label class="">Response Result :</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea id="txtResponseResult" readonly class="form-control" style="resize:vertical; min-height:300px;">{{JsonResult}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <label class="">Latest Update : {{LastedUpdate}} </label>
+                </div>
+
+                <div ng-show="issuerUrl.length > 0">
+                    <hr />
+
+                    <label>Issuer Authentication URL: </label> <a id="lnkIssuerUrl" ng-href="{{issuerUrl}}">{{issuerUrl}}</a>
+                </div>
+
+                <div id="btnBack" class="btn btn-danger col-md-2" ng-click="updateProcess(1)">
+                    <i class="glyphicon glyphicon-chevron-left"></i> Back to first page
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

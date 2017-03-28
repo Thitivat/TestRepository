@@ -1,0 +1,79 @@
+﻿@model BND.Services.Security.OTP.ApiTest.Models.VerifyOtpModel
+
+<section ng-controller="VerifyCtrl" layout="column" ng-cloak class="md-inline-form" ng-init="otpVerify.ApiKey = '@Model.ApiKey';otpVerify.OtpId = '@Model.OtpId';otpVerify.AccountId = '@Model.AccountId' ">
+
+    @using (Html.BeginForm("ConfirmCode", "Home", FormMethod.Post, new
+    {
+        name = "VerifyForm"@*, onsubmit = "return false;"*@,
+        autocomplete = "off"
+    }))
+    {
+        <div class="otp-border">
+            <h2>@ViewBag.Title</h2>
+            <md-input-container class="md-block" layout="row" layout-align="center center">
+                <label>Code (Ref = @Model.RefCode)</label>
+                @Html.TextBoxFor(model => model.Code, new { ng_model = "otpVerify.Code", ng_required = true })
+                <div ng-messages="VerifyForm.Code.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                <md-button type="submit" class="md-raised">Submit</md-button>
+            </section>
+            @if (Model != null && Model.Error != null)
+            {
+                foreach (BND.Services.Security.OTP.Models.ErrorMessageModel message in Model.Error.Messages)
+                {
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            @message.Message <br />
+                        </div>
+                    </section>
+                }
+            }
+        </div>
+        <hr />
+        <h4>Debug Parameters:</h4>
+        <br />
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>ApiKey</label>
+            @Html.TextBoxFor(model => model.ApiKey, new { ng_model = "otpVerify.ApiKey", ng_required = true })
+            <div ng-messages="VerifyForm.ApiKey.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>AccountId</label>
+            @Html.TextBoxFor(model => model.AccountId, new { ng_model = "otpVerify.AccountId", ng_required = true })
+            <div ng-messages="VerifyForm.AccountId.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Otp Id</label>
+            @Html.TextBoxFor(model => model.OtpId, new { ng_model = "otpVerify.OtpId", ng_required = true })
+            <div ng-messages="VerifyForm.OtpId.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Code (Ref = @Model.RefCode)</label>
+            @Html.TextBoxFor(model => model.Code, new { ng_model = "otpVerify.Code", ng_required = true })
+            <div ng-messages="VerifyForm.Code.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        @Html.HiddenFor(model => model.RefCode)
+    }
+    <div ng-show="ResultMode">
+        <hr />
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Result</label>
+            <textarea rows="5" md-select-on-focus=""> {{otpVerify.Result}}</textarea>
+        </md-input-container>
+    </div>
+</section>
+
+<script src="@Url.Content("~/Scripts/otp.js")"></script>
+

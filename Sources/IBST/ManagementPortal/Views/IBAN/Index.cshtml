@@ -1,0 +1,121 @@
+﻿@model List<BND.Services.IbanStore.Models.Iban>
+
+    @{
+        ViewBag.Title = "title";
+        Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    }
+
+<script>
+    var model = @Html.Raw(Json.Encode(Model));
+    var currentpage = @ViewBag.CurrentPage;
+    var totalpage = @ViewBag.TotalPage;
+</script>
+<div class="row">
+    <h1>IBAN</h1>
+    <hr/>
+</div>
+                   <div ng-controller="ibanController" id="ibanController">
+
+                       <form class="form-inline" role="form">
+                           <div class="form-group">
+                               <label for="exampleInputEmail1">Status :</label>
+                               <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="Status" ng-options="c.Desc as c.Desc for c in Statuses"></select>
+                           </div>
+                           <div class="form-group">
+                               <label for="exampleInputEmail1">IBAN :</label>
+                               <input class="form-control" ng-model="Iban">
+                           </div>
+
+                           <div class="form-group">
+                               <input type="button" class="btn btn-default" ng-click="Search(@ViewBag.CurrentPage)" value="Search" />
+                           </div>
+                       </form>
+
+
+                       <hr />
+                       <div class="row">
+                           <table class="table">
+                               <thead>
+                                   <tr>
+                                       <th>IBAN</th>
+                                       <th>Approved by</th>
+                                       <th>IbanStatus</th>
+                                       <th>StatusDate</th>
+                                       <th>BbanFile</th>
+                                       <th>Uid</th>
+                                   </tr>
+                               </thead>
+
+                               <tbody>
+                                   <tr ng-repeat="i in IBans">
+                                       <td>
+                                           {{i.Code}}
+                                       </td>
+                                       <td>
+                                           {{i.CurrentIbanHistory.ChangedBy}}
+                                       </td>
+                                       <td>
+                                           {{i.CurrentIbanHistory.Status}}
+                                       </td>
+                                       <td>
+                                           {{i.CurrentIbanHistory.ChangedDate | dateFilter | date:"dd/MM/yyyy HH:mm"}}
+                                       </td>
+                                       <td>
+                                           {{i.BbanFileName}}
+                                       </td>
+                                       <td>
+                                           {{i.UidPrefix!=null?i.UidPrefix+'.'+i.Uid:''}}
+                                       </td>
+                                       <td><button type="button" class="btn btn-default" ng-click="GetHistory(i.IbanId)">History</button></td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <center>
+                               <div id="page-selection"></div>
+                           </center>
+                       </div>
+                       <div id="historyModal" class="modal fade" role="dialog">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                       <h4 class="modal-title">History</h4>
+                                   </div>
+                                   <div class="modal-body">
+                                       <table class="table">
+                                           <thead>
+                                               <tr>
+                                                   <th>Status </th>
+                                                   <th>ChangedDate</th>
+                                                   <th>ChangedBy </th>
+                                                   <th>Remark</th>
+
+
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               <tr ng-repeat="h in Histories">
+                                                   <td>
+                                                       {{h.Status}}
+                                                   </td>
+                                                   <td>
+                                                       {{h.ChangedDate | dateFilter | date:"dd/MM/yyyy HH:mm"}}
+                                                   <td>{{h.ChangedBy}}</td>
+                                                   </td>
+                                                   <td>{{h.Remark}}</td>
+
+                                               </tr>
+
+                                           </tbody>
+                                       </table>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   @section scripts{
+
+                       <script src="~/Scripts/Application/Controller/iban-Controller.js"></script>
+                   }

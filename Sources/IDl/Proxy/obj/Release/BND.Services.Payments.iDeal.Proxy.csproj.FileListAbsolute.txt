@@ -1,0 +1,11 @@
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\BND.Services.Payments.iDeal.Proxy.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\BND.Services.Payments.iDeal.Proxy.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\BND.Services.Payments.iDeal.Libs.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\Newtonsoft.Json.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\BND.Services.Payments.iDeal.Libs.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\bin\Release\Newtonsoft.Json.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\obj\Release\BND.Services.Payments.iDeal.Proxy.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\obj\Release\BND.Services.Payments.iDeal.Proxy.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\obj\Release\BND.Services.Payments.iDeal.Proxy.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\obj\Release\BND.Services.Payments.iDeal.Proxy.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\Proxy\obj\Release\BND.Services.Payments.iDeal.Proxy.pdb

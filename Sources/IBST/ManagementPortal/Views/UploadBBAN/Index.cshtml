@@ -1,0 +1,65 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_LayoutPage.cshtml";
+}
+<div class="row">
+    <h1>Upload BBAN Files</h1>
+    <hr />
+</div>
+<div ng-controller="uploadController">
+  
+        <div class="panel panel-default" class="col-lg-6">
+            <div class="panel-heading">Upload BBAN File</div>
+            <div class="panel-body">
+                <label class="control-label">Select File</label>
+                <input type="file" ng-file-select ng-model="file" onchange="upload()" multiple="false" accept=".csv" />
+                <br/>
+                <button class="btn btn-default" id="btnUpload" ng-click="upload()">Upload</button>
+            </div>
+
+        </div>
+    <div>
+
+        <div id="uploadModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Upload File..</h4>
+                    </div>
+                    <div class="modal-body">
+                        <br />
+                        <div class="windows8">
+                            <div class="wBall" id="wBall_1">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_2">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_3">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_4">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_5">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+@section scripts{
+<script src="~/Scripts/Application/Controller/upload-Controller.js"></script>
+}

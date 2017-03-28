@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BND.Services.Payments.PaymentIdInfo.WebService</name>
+    </assembly>
+    <members>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.ApiGlobalPrefixRouteProvider">
+            <summary>
+            Class ApiGlobalPrefixRouteProvider is a routing config provider to control any controller which use route attribute to go the same way.
+            This class provides base route for any action of any controller, so you just set route after base route + controller name following:
+            <br/>base route = "Api"<br/>
+            controller name = "TestController"<br/>
+            So if sets route attribute to be [Route("{id}/Foo")] on your action,
+            uri will be "http:your-domain.com/Api/Test/{id}/Foo", you dont need to set whole uri path on Route attribute like
+            [Route("Api/Test/{id}/Foo")]
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.ApiGlobalPrefixRouteProvider._globalPrefix">
+            <summary>
+            The global prefix route.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.ApiGlobalPrefixRouteProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.PaymentIdInfo.WebService.ApiGlobalPrefixRouteProvider"/> class.
+            </summary>
+            <param name="globalPrefix">The global prefix.</param>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.ApiGlobalPrefixRouteProvider.GetRoutePrefix(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the route prefix from the provided controller.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The route prefix or null.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.ErrorHandlerConfigAttribute">
+            <summary>
+            Class ErrorHandlerConfigAttribute is an Attribute of exception filter
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.ErrorHandlerConfigAttribute.ERROR_CODE_FORMAT">
+            <summary>
+            The error_code_format
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.ErrorHandlerConfigAttribute.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Raises the exception event for each possible exception.
+            </summary>
+            <param name="actionExecutedContext">The context for the action.</param>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.FilterConfig">
+            <summary>
+            Class FilterConfig is class for register filter.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.FilterConfig.Register(System.Web.Http.Filters.HttpFilterCollection)">
+            <summary>
+            Registers the specified filters.
+            </summary>
+            <param name="filters">The filters.</param>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.SecurityConfigAttribute">
+            <summary>
+            Class SecurityConfigAttribute is an Attribute of action filter
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.SecurityConfigAttribute._security">
+            <summary>
+            The security service
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.App_Start.SecurityConfigAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Call before the action method executes.
+            </summary>
+            <param name="actionContext">The action context.</param>
+            <exception cref="T:System.ArgumentNullException">Authorization;Authorization header is required, cannot be null.</exception>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig">
+            <summary>
+            Class SwaggerConfig is a class for intializing swagger component.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.Register">
+            <summary>
+            Registers swagger component to api.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Gets the XML comments path.
+            </summary>
+            <returns>The XML comments path.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter">
+            <summary>
+            Class SwaggerHeaderParameter for providing header in swagger.
+            <remarks>
+            How to create Header Parameters using Swashbuckle
+            See this http://analogcoder.com/2015/11/how-to-create-header-using-swashbuckle/
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Application.SwaggerDocsConfig)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="c">The swagger configuration.</param>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="schemaRegistry">The schema registry.</param>
+            <param name="apiDescription">The API description.</param>
+        </member>
+        <member name="P:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:BND.Services.Payments.PaymentIdInfo.WebService.SwaggerConfig.SwaggerHeaderParameter.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>The default value.</value>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig">
+            <summary>
+            Class WindsorConfig.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig._container">
+            <summary>
+            The _container install Ioc
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig"/> class.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Create(System.Net.Http.HttpRequestMessage,System.Web.Http.Controllers.HttpControllerDescriptor,System.Type)">
+            <summary>
+            register apicontroller
+            </summary>
+            <param name="request">The message request.</param>
+            <param name="controllerDescriptor">The HTTP controller descriptor.</param>
+            <param name="controllerType">The type of the controller.</param>
+            <returns>An <see cref="T:System.Web.Http.Controllers.IHttpController" /> object.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Release">
+            <summary>
+            Class Release.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Release._release">
+            <summary>
+            The _release
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Release.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Release"/> class.
+            </summary>
+            <param name="release">The release.</param>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.WindsorConfig.Release.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.ComponentInstaller">
+            <summary>
+            Class ComponentInstaller.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.ComponentInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Performs the installation in the <see cref="T:Castle.Windsor.IWindsorContainer" />.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="store">The configuration store.</param>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController">
+            <summary>
+            Class PaymentIdInfoController is controller to get data from iDeal, eMandate and Matrix.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController._paymentIdInfoManager">
+            <summary>
+            The PaymentIdInfo manager
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController.#ctor(BND.Services.Payments.PaymentIdInfo.Business.IPaymentIdInfoManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController"/> class.
+            </summary>
+            <param name="paymentIdInfoManager">The payment identifier information manager.</param>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController.GetFilterTypes">
+            <summary>
+            Gets the filter types.
+            </summary>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController.GetPaymentInfoByBndIban(System.String,System.String)">
+            <summary>
+            Gets the payment information by BND iban.
+            </summary>
+            <param name="bndIban">The BND iban.</param>
+            <param name="filterType">Type of the filter.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController.GetPaymentInfoBySourceIban(System.String,System.String)">
+            <summary>
+            Gets the payment information by source iban.
+            </summary>
+            <param name="sourceIban">The source iban.</param>
+            <param name="filterType">Type of the filter.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Controllers.PaymentIdInfosController.GetPaymentInfoByTransaction(System.String,System.String)">
+            <summary>
+            Gets the payment information by transaction.
+            </summary>
+            <param name="transactionId">The transaction identifier.</param>
+            <param name="filterType">Type of the filter.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.Helpers.ISecurity">
+            <summary>
+            Interface ISecurity provides the method to validate token
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Helpers.ISecurity.ValidateToken(System.String)">
+            <summary>
+            Validates the token.
+            </summary>
+            <param name="token">The token.</param>
+        </member>
+        <member name="T:BND.Services.Payments.PaymentIdInfo.WebService.Helpers.Security">
+            <summary>
+            Class Security is implements ISecurity for validate token
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.PaymentIdInfo.WebService.Helpers.Security.ValidateToken(System.String)">
+            <summary>
+            Validates the token.
+            </summary>
+            <param name="token">The token.</param>
+        </member>
+    </members>
+</doc>

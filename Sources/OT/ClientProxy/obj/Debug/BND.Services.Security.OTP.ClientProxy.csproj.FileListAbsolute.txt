@@ -1,0 +1,14 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.ClientProxy.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.ClientProxy.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Infrastructure.ErrorHandling.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\Newtonsoft.Json.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\Newtonsoft.Json.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\obj\Debug\BND.Services.Security.OTP.ClientProxy.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\obj\Debug\BND.Services.Security.OTP.ClientProxy.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\obj\Debug\BND.Services.Security.OTP.ClientProxy.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\obj\Debug\BND.Services.Security.OTP.ClientProxy.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\ClientProxy\obj\Debug\BND.Services.Security.OTP.ClientProxy.pdb

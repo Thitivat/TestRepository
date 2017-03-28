@@ -1,0 +1,26 @@
+﻿<div class="form-horizontal" ng-controller="informationController">
+    <div class="form-group">
+        <label class="col-sm-4 control-label">Updated</label>
+        <div class="col-sm-8">
+            <span class="form-control no-border">{{DateTimeDisplay(listDetails.Update.UpdatedDate)}}</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label">Rss Public Date</label>
+        <div class="col-sm-8">
+            <span class="form-control no-border">{{DateTimeDisplay(listDetails.Update.PublicDate)}}</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label">Updated by</label>
+        <div class="col-sm-8">
+            <span class="form-control no-border">{{listDetails.Update.Username}}</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label">Number of entities</label>
+        <div class="col-sm-8">
+            <span class="form-control no-border">{{listDetails.EntitiesCount}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\BND.Services.Payments.iDeal.JobQueue.dll.config
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\BND.Services.Payments.iDeal.JobQueue.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\BND.Services.Payments.iDeal.JobQueue.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\EntityFramework.SqlServer.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\EntityFramework.Utilities.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\THA_LOC\EntityFramework.SqlServer.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\obj\THA_LOC\BND.Services.Payments.iDeal.JobQueue.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\obj\THA_LOC\BND.Services.Payments.iDeal.JobQueue.pdb

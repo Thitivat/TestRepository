@@ -1,0 +1,76 @@
+﻿@using BND.Websites.BackOffice.SanctionListsManagement.Entities
+@{
+    ListType listType = (ListType)ViewBag.ListType;
+    IEnumerable<SelectListItem> listTypeItems = (IEnumerable<SelectListItem>)ViewData.Eval("ListTypeItems");
+    ViewBag.CurrentList = listType.ListTypeId;
+    ViewBag.Title = "Sanction Lists - " + listType.Name;
+    ViewBag.Header = "Sanction Lists - " + listType.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/Scripts/Kyc/sl_SanctionListsDetails.js")
+
+<script>
+    var entities = @Html.Raw(ViewBag.Entities);
+    var entitiesCount = @Html.Raw(ViewBag.EntitiesCount);
+    var currentList = @Html.Raw(ViewBag.CurrentList);
+    var listDetails = @Html.Raw(ViewBag.ListDetails);
+    var varAutoUpdate = @ViewBag.AutoUpdate;
+    var varManualUpdate = @ViewBag.ManualUpdate;
+</script>
+
+<div ng-app="sanctionListsDetailsApp" ng-controller="sanctionListsDetailsController">
+    <!-- Dropdown for list types -->
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-3 pull-right">
+            @Html.DropDownList("ddlListTypes", listTypeItems, new { @class = "form-control", onchange = "selectListChanged(this)" })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <!-- Information block -->
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <span><img src="~/Content/Images/ico-info.png" /></span>
+                    <span class="h4 text-vertical-middle">Information</span>
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("~/Views/SanctionLists/Information.cshtml", listType)
+                </div>
+            </div>
+        </div>
+
+        <!-- Rss block -->
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <span><img src="~/Content/Images/ico-rss.png" /></span>
+                    <span class="h4 text-vertical-middle">RSS</span>
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("~/Views/SanctionLists/Rss.cshtml", listType)
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <!-- Data grid block -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <span><img src="~/Content/Images/ico-list_items.png" /></span>
+                    <span class="h4 text-vertical-middle">Entities List</span>
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("~/Views/SanctionLists/EntitiesList.cshtml", listType)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

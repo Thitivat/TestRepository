@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BND.Services.Security.OTP.Api</name>
+    </assembly>
+    <members>
+        <member name="T:BND.Services.Security.OTP.Api.MapperConfig">
+            <summary>
+            Class MapperConfig is a class for initializing AutoMapper component.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.MapperConfig.Register">
+            <summary>
+            Initializes AutoMapper component.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.SwaggerConfig">
+            <summary>
+            Class SwaggerConfig is a class for intializing swagger component.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.SwaggerConfig.Register">
+            <summary>
+            Registers swagger component to api.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Gets the XML comments path.
+            </summary>
+            <returns>The XML comments path.</returns>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter">
+            <summary>
+            Class SwaggerHeaderParameter for providing header in swagger.
+            <remarks>
+            How to create Header Parameters using Swashbuckle
+            See this http://analogcoder.com/2015/11/how-to-create-header-using-swashbuckle/
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Application.SwaggerDocsConfig)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="c">The swagger configuration.</param>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="schemaRegistry">The schema registry.</param>
+            <param name="apiDescription">The API description.</param>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.SwaggerConfig.SwaggerHeaderParameter.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>The default value.</value>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.WebApiConfig">
+            <summary>
+            Class WebApiConfig is a class for initializing all api before run.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration to api.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase">
+            <summary>
+            Abstract class ApiControllerBase is a template class for all controllers of one time password api.
+            It provides some necessary properties such as api key and account id, some methods for reuse in every controllers.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.ApiManager">
+            <summary>
+            The api manager field providing all controllers to use.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources that are used by the object and, optionally, releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.Process(System.Func{System.Web.Http.IHttpActionResult})">
+            <summary>
+            This is a method providing work template for all actions of all controllers, thier actions do not need to try..catch,
+            log, or whatever that is the same processes so we can reuse anything here for all of them.
+            </summary>
+            <param name="work">The work.</param>
+            <returns>IHttpActionResult.</returns>
+            <exception cref="T:System.UnauthorizedAccessException"></exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.Error(System.Exception)">
+            <summary>
+            The method for responding error with proper http status code and error object.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns>An ErrorResult object.</returns>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.ApiKey">
+            <summary>
+            Gets the API key from header.
+            </summary>
+            <value>The API key.</value>
+            <exception cref="T:System.ArgumentException">When there is no api key on header.</exception>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.AccountId">
+            <summary>
+            Gets the account identifier from header.
+            </summary>
+            <value>The account identifier.</value>
+            <exception cref="T:System.ArgumentException">When there is no account id on header.</exception>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.ClientIp">
+            <summary>
+            Gets the client ip.
+            </summary>
+            <value>The client ip.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Controllers.ApiControllerBase.ClientUserAgent">
+            <summary>
+            Gets the client user agent.
+            </summary>
+            <value>The client user agent.</value>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Controllers.ChannelsController">
+            <summary>
+            ChannelsController class providing channel resource to client..
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.ChannelsController.Get">
+            <summary>
+            The action to get all channel names.
+            </summary>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Controllers.OneTimePasswordsController">
+            <summary>
+            OneTimePasswordsController class providing one time password resource to client.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.OneTimePasswordsController.Post(BND.Services.Security.OTP.Models.OtpRequestModel)">
+            <summary>
+            The action to creates a new <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code to system.
+            </summary>
+            <param name="otpRequest">A one time password request object.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Controllers.OneTimePasswordsController.Verify(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            The action to verifies the specified <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code.
+            </summary>
+            <param name="otpId">The <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> identifier.</param>
+            <param name="otpCode">The entered code.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.WebApiApplication">
+            <summary>
+            Class WebApiApplication is a root class for starting web api.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.WebApiApplication.Application_Start">
+            <summary>
+            Application start.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Models.ApiSettings">
+            <summary>
+            Class ApiSettings is a setting class for setting whole api.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.ApiKey">
+            <summary>
+            Gets or sets the API key.
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.AccountId">
+            <summary>
+            Gets or sets the account identifier.
+            </summary>
+            <value>The account identifier.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.ClientIp">
+            <summary>
+            Gets or sets the client ip.
+            </summary>
+            <value>The client ip.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.UserAgent">
+            <summary>
+            Gets or sets the user agent.
+            </summary>
+            <value>The user agent.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.ChannelPluginsPath">
+            <summary>
+            Gets or sets the channel plugins path.
+            </summary>
+            <value>The channel plugins path.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.OtpIdLength">
+            <summary>
+            Gets or sets the length of the otp identifier.
+            </summary>
+            <value>The length of the otp identifier.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.RefCodeLength">
+            <summary>
+            Gets or sets the length of the reference code.
+            </summary>
+            <value>The length of the reference code.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Models.ApiSettings.OtpCodeLength">
+            <summary>
+            Gets or sets the length of the otp code.
+            </summary>
+            <value>The length of the otp code.</value>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.DB_CONN_KEY">
+            <summary>
+              Looks up a localized string similar to OtpDb.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorAccountIsLocked">
+            <summary>
+              Looks up a localized string similar to This account has been locked, please contact administrator..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorArgNull">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; cannot be null..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorChannelNotFound">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; channel type could not be found..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorDuplicateSuid">
+            <summary>
+              Looks up a localized string similar to Suid cannot duplicate. please change suid then re-send again..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorHeaderRequired">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; header is required..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorNotFound">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; could not be found..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorOtpInvalid">
+            <summary>
+              Looks up a localized string similar to This otp code is invalid..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorOtpInvalidStatusActive">
+            <summary>
+              Looks up a localized string similar to This otp code has {0}..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorOtpInvalidStatusNotImplement">
+            <summary>
+              Looks up a localized string similar to We have to add new error message for status &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorOtpInvalidStatusNotSupport">
+            <summary>
+              Looks up a localized string similar to We have to add new  status &apos;{0}&apos; to &apos;OtpStatus&apos; enum..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorOtpInvalidStatusPassive">
+            <summary>
+              Looks up a localized string similar to This otp code has been {0}..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrorWrongHttpStatus">
+            <summary>
+              Looks up a localized string similar to Error result could not be &apos;{0}&apos; status code..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.ErrrorUnauthorized">
+            <summary>
+              Looks up a localized string similar to Account-Id and/or Api-key are wrong..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.HEADER_ACC_ID">
+            <summary>
+              Looks up a localized string similar to Account-Id.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.HEADER_AUTH">
+            <summary>
+              Looks up a localized string similar to Authorization.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Properties.Resources.PLUGIN_FOLDER">
+            <summary>
+              Looks up a localized string similar to ChannelPlugins.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Utils.ApiGlobalPrefixRouteProvider">
+            <summary>
+            Class ApiGlobalPrefixRouteProvider is a routing config provider to control any controller which use route attribute to go the same way.
+            This class provides base route for any action of any controller, so you just set route after base route + controller name following:
+            <br/>base route = "Api"<br/>
+            controller name = "TestController"<br/>
+            So if sets route attribute to be [Route("{id}/Foo")] on your action,
+            uri will be "http:your-domain.com/Api/Test/{id}/Foo", you dont need to set whole uri path on Route attribute like
+            [Route("Api/Test/{id}/Foo")]
+            </summary>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Utils.ApiGlobalPrefixRouteProvider._globalPrefix">
+            <summary>
+            The global prefix route.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiGlobalPrefixRouteProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Security.OTP.Api.Utils.ApiGlobalPrefixRouteProvider"/> class.
+            </summary>
+            <param name="globalPrefix">The global prefix.</param>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiGlobalPrefixRouteProvider.GetRoutePrefix(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the route prefix from the provided controller.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The route prefix or null.</returns>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Utils.ErrorResult">
+            <summary>
+            Class ErrorResult is an api response class which implements IHttpActionResult for respond error to client with error and specified
+            <a hrefe="https://msdn.microsoft.com/en-us/library/system.net.httpstatuscode(v=vs.110).aspx" target="_blank">http status code</a>.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ErrorResult.#ctor(System.Net.Http.HttpRequestMessage,BND.Services.Security.OTP.Models.ApiErrorModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Security.OTP.Api.Utils.ErrorResult"/> class.
+            </summary>
+            <param name="request">The http request.</param>
+            <param name="error">The error object.</param>
+            <exception cref="T:System.ArgumentNullException">
+            request
+            or
+            error
+            or
+            error.Messages
+            </exception>
+            <exception cref="T:System.ArgumentException">error.StatusCode</exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ErrorResult.Execute">
+            <summary>
+            Executes this instance.
+            </summary>
+            <returns>HttpResponseMessage.</returns>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ErrorResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Creates an <see cref="T:System.Net.Http.HttpResponseMessage" /> asynchronously.
+            </summary>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+            <returns>A task that, when completed, contains the <see cref="T:System.Net.Http.HttpResponseMessage" />.</returns>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Utils.ErrorResult.Request">
+            <summary>
+            Gets the http request.
+            </summary>
+            <value>The http request.</value>
+        </member>
+        <member name="P:BND.Services.Security.OTP.Api.Utils.ErrorResult.Error">
+            <summary>
+            Gets the error object.
+            </summary>
+            <value>The error object.</value>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Utils.ApiManager">
+            <summary>
+            Class ApiManager is a business logic layer of one time password api, it povides everything what any action needs.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Utils.IApiManager">
+            <summary>
+            Interface IApiManager represents all actions what api needs.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.IApiManager.VerifyAccount">
+            <summary>
+            Verifies an account by using api key and account id.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.IApiManager.AddOtp(BND.Services.Security.OTP.Models.OtpRequestModel)">
+            <summary>
+            Adds a new <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code to database.
+            </summary>
+            <param name="otpRequest">The <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> request.</param>
+            <returns>
+            An <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>
+            object representing output of api which response back to client.
+            </returns>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.IApiManager.VerifyOtp(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Verifies the <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code.
+            </summary>
+            <param name="otpId">The <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> identifier.</param>
+            <param name="enteredOtpCode">
+            The entered <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>
+            code as JObject which retrieved from client.
+            </param>
+            <returns>An <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> object as OtpModel.</returns>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.IApiManager.GetChannelNames">
+            <summary>
+            Gets all channel names.
+            </summary>
+            <returns>A collection of channel names.</returns>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Utils.ApiManager.Disposed">
+            <summary>
+            The disposed flag.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Utils.ApiManager._apiSettings">
+            <summary>
+            The api settings to store all settings of api.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Utils.ApiManager._otpUow">
+            <summary>
+            The _otpuow field to store one time password unit of work for manipulating data in database.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Security.OTP.Api.Utils.ApiManager._channelFactory">
+            <summary>
+            The _channelFactory field to store channel factory for providing any channel to send
+            <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code
+            </summary>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.#ctor(BND.Services.Security.OTP.Api.Models.ApiSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Security.OTP.Api.Utils.ApiManager"/> class.
+            </summary>
+            <param name="apiSettings">The api settings.</param>
+            <exception cref="T:System.ArgumentNullException"> settings or ApiKey or AccountId or ConnectionString or
+            DataDirectory or OtpIdLength or OtpCodeLength or RefCodeLength </exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.VerifyAccount">
+            <summary>
+            Verifies an account by using api key and account id.
+            </summary>
+            <exception cref="T:System.UnauthorizedAccessException">
+            When api key and/or account id are wrong
+            or
+            When account has been locked.
+            </exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.AddOtp(BND.Services.Security.OTP.Models.OtpRequestModel)">
+            <summary>
+            Adds a new <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code to database.
+            </summary>
+            <param name="otpRequest">The <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> request.</param>
+            <returns>
+            An <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>
+            object representing output of api which response back to client.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            otpRequest
+            or
+            otpRequest.Channel.Type
+            or
+            otpRequest.Channel.Sender
+            or
+            otpRequest.Channel.Address
+            or
+            otpRequest.Channel.Message
+            or
+            otpRequest.Suid
+            </exception>
+            <exception cref="T:BND.Services.Security.OTP.ChannelOperationException">Could not send OTP code, Error Code: 4</exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.VerifyOtp(System.String,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Verifies the <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code.
+            </summary>
+            <param name="otpId">The <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> identifier.</param>
+            <param name="enteredOtpCode">
+            The entered <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a>
+            code as JObject which retrieved from client.
+            </param>
+            <returns>An <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> object as OtpModel.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            otpId is null
+            or
+            otpId could not be found.
+            </exception>
+            <exception cref="T:System.UnauthorizedAccessException">
+            <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> code is invalid because of some reason.
+            </exception>
+            <exception cref="T:System.NotImplementedException">
+            There is a <a href="https://en.wikipedia.org/wiki/One-time_password" target="_blank">OTP</a> status which not implement yet in code.
+            </exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.GetChannelNames">
+            <summary>
+            Gets all channel names.
+            </summary>
+            <returns>A collection of channel names.</returns>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+            <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="M:BND.Services.Security.OTP.Api.Utils.ApiManager.Hash(System.String,System.String)">
+            <summary>
+            Hashes the specified api key.
+            </summary>
+            <param name="plainText">The api key.</param>
+            <param name="salt">The salt.</param>
+            <returns>A hashed api key.</returns>
+        </member>
+        <member name="T:BND.Services.Security.OTP.Api.Utils.ApiManager.OtpStatus">
+            <summary>
+            Enum OtpStatus is a enum representing EnumStatus table in database.
+            </summary>
+        </member>
+    </members>
+</doc>

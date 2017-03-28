@@ -1,0 +1,16 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\PluginSettings.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\MessageBird.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\nunit.framework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannel.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\nunit.framework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\SmsPluginChannel\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.SmsPluginChannelTest.dll.config

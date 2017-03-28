@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - KYC Console</title>
+    @{
+        ViewBag.Username = Request.RequestContext.HttpContext.User.Identity.Name;
+    }
+
+    @Styles.Render("/Content/Css/Bootstrap/bootstrap.css")
+    @Styles.Render("/Content/Css/Common.css")
+    @Styles.Render("/Content/Css/AngularJs/angular-block-ui.css")
+
+    @*@Scripts.Render("~/bundles/jsframeworks")*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @*@Scripts.Render("~/bundles/console")*@
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/ui-bootstrap-tpls-0.13.3.min.js"></script>
+    <script src="/Scripts/angular-animate.min.js"></script>
+    <script src="/Scripts/angular-messages.min.js"></script>
+    <script src="~/Scripts/angular-block-ui.js"></script>
+    <script src="/Scripts/Kyc/common.js"></script>
+    <script src="/Scripts/angular-sanitize.min.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <span class="title"><a href="/">KYC Console</a></span>
+        <div class="pull-right"><span class="UserInfo" style="display:flex;align-items:center">User: @ViewBag.Username</span></div>
+    </header>
+    <nav class="main">
+        <ul class="nav nav-pills">
+            <li class="dropdown">
+                <a href="/Dashboard">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sanction Lists <b class="caret"></b></a>
+                <ul class="dropdown-menu" id="menu1">
+                    <li>@Html.ActionLink("Maintenance", "Index", "SanctionLists")</li>
+                    <li>@Html.ActionLink("Search", "Search", "SanctionLists")</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    @RenderSection("scripts", required: false)
+
+    <div class="container container-fluid">
+        <div class="row">
+
+            <h1>@ViewBag.Header</h1>
+
+            @RenderBody()
+        </div>
+    </div>
+    @Html.Partial("~/Views/Shared/Footer.cshtml")
+</body>
+</html>

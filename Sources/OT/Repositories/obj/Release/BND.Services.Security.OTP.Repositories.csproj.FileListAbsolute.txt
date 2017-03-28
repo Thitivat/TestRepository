@@ -1,0 +1,8 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Release\BND.Services.Security.OTP.Repositories.dll.config
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Release\BND.Services.Security.OTP.Repositories.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Release\BND.Services.Security.OTP.Repositories.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Release\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Release\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\obj\Release\BND.Services.Security.OTP.Repositories.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\obj\Release\BND.Services.Security.OTP.Repositories.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\obj\Release\BND.Services.Security.OTP.Repositories.pdb

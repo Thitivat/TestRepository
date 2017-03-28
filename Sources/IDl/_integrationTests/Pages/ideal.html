@@ -1,0 +1,61 @@
+﻿<div ng-controller="idealController">
+
+    <h1>Via iDeal</h1>
+
+    <div class="">
+        <label class="">Kies uw bank</label>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <select ng-disabled="isReloading" class="form-control" ng-model="payment.issuer">
+                    <option value="">-- Kies uw bank --</option>
+                    <optgroup ng-repeat="country in Directories" label="{{country.CountryNames}}">
+                        <option ng-repeat="issuer in country.Issuers" value="{{issuer.IssuerID}}">{{issuer.IssuerName}}</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" ng-model="payment.issuer" />
+            </div>
+            <div class="col-md-2">
+                <button ng-disabled="isReloading" class="form-control btn btn-warning" ng-click="reload()">
+                    <span ng-show="isReloading"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                    Reload
+                </button>
+            </div>
+            <div class="col-md-2">
+                <button ng-disabled="isPaying" class="form-control btn btn-primary" ng-click="pay(payment)">
+                    <span ng-show="isPaying"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+                    Pay
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <label class="">Response Result :</label>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <textarea readonly class="form-control" style="resize:none; min-height:300px;">{{JsonResult}}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <label class="">Latest Update : {{LastedUpdate}} </label>
+    </div>
+
+    <div ng-show="issuerUrl.length > 0">
+        <hr />
+
+        <label>Issuer Authentication URL: </label> <a ng-href="{{issuerUrl}}">{{issuerUrl}}</a>
+    </div>
+
+    <div class="btn btn-danger col-md-2" ng-click="updateProcess(1)">
+        <i class="glyphicon glyphicon-chevron-left"></i> Back to first page
+    </div>
+
+</div>

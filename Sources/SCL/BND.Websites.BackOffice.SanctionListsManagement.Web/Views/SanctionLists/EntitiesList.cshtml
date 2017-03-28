@@ -1,0 +1,47 @@
+﻿@using BND.Websites.BackOffice.SanctionListsManagement.Entities
+<div ng-controller="entitiesListController">
+    <!-- Header -->
+    <div class="row row-bottom-margin">
+        <div class="col-md-12">
+            <button class="btn btn-info" ng-show="ManualUpdate==1" onclick="location.href = '@Url.Action("EntityAdd", "Entities", new { listTypeId = ((ListType)Model).ListTypeId })';"><span class="glyphicon glyphicon-plus"></span> Add</button>
+            <button class="btn btn-info" ng-show="AutoUpdate==1" onclick="location.href = '@Url.Action("EuUpdateList", "SanctionLists", new { listTypeId = ((ListType)Model).ListTypeId })';"><span class="glyphicon glyphicon-download-alt"></span> Run Update</button>
+            <button class="btn btn-info pull-right btn-space-left" onclick="location.href = '@Url.RouteUrl("ActivityLogById", new { listTypeId = ((ListType)Model).ListTypeId })';"><span class="glyphicon glyphicon-time"></span> Activity Log</button>
+            <button class="btn btn-info pull-right" onclick="location.href = '@Url.Action("Index", "Regulations", new { listTypeId = ((ListType)Model).ListTypeId })';"><span class="glyphicon glyphicon-registration-mark"></span> Regulations</button>
+        </div>
+    </div>
+    <div class="row" ng-controller="entitiesListController">
+        <div class="col-md-12">
+            <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+            <table class="table table-condensed">
+                <tr>
+                    <th>EntityId</th>
+                    <th>Gender</th>
+                    <th>Name</th>
+                    <th>BirthDate</th>
+                    <th>Regulation title</th>
+                    <th>Regulation date</th>
+                    <th>Status</th>
+                    <th ng-show="ManualUpdate==1">Action</th>
+                </tr>
+                <tr ng-repeat="entity in entityList ">
+                    <td>{{entity.OriginalEntityId}}</td>
+                    <td>{{entity.NameAliases[0].Gender.Name}}</td>
+                    <td>{{entity.NameAliases[0].WholeName}}</td>
+                    <td>
+                        @*<span>{{(entity.Births[0].Year != null && entity.Births[0].Year != '' ? entity.Births[0].Year : '-')}}</span>/<span>{{(entity.Births[0].Month != null && entity.Births[0].Month != '' ? entity.Births[0].Month : '-')}}</span>/<span>{{(entity.Births[0].Day != null && entity.Births[0].Day != '' ? entity.Births[0].Day : '-')}}</span>*@ 
+                        <span>{{DMYDisplay(entity.Births[0].Day, entity.Births[0].Month, entity.Births[0].Year)}}</span>
+                    </td>
+                    <td><a href="{{entity.Regulation.PublicationUrl}}" target="_blank">{{entity.Regulation.PublicationTitle}}</a></td>
+                    <td>{{DateDisplay(entity.Regulation.PublicationDate)}}</td>
+                    <td>{{entity.Status.Name}}</td>
+                    <td ng-show="ManualUpdate==1"><span class="glyphicon glyphicon-pencil cursor-pointer" ng-click="EntityEdit(entity.EntityId)" aria-hidden="true"></span></td>
+                </tr>
+            </table>
+
+            <data-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" max-size="maxSize" class="pagination-sm" ng-change="pageChanged()" boundary-links="true" rotate="false" num-pages="numPages"></data-pagination>
+        </div>
+    </div>
+    <br />
+</div>
+
+

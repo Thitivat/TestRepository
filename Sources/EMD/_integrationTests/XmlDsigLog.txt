@@ -1,0 +1,400 @@
+2016-09-22T13:16:12.8793322+07:00 [   8] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-22T13:16:12.9043475+07:00 [   8] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-22T13:16:12.9073518+07:00 [   8] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-22T13:16:13.4398375+07:00 [   8] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-22T13:16:13.4428385+07:00 [   8] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#01d94969, SigningReference] Hashing reference Reference#02dc5bee, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#02dc5bee, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-22T13:16:12.928Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-22T13:16:13.4969449+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-22T13:16:13.5009491+07:00 [   8] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\13.500-DirectoryReq.xml
+2016-09-22T13:16:13.5039500+07:00 [   8] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:15.4019104+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-22T13:16:15.5405121+07:00 [   8] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\15.540-DirectoryRes.xml
+2016-09-22T13:16:15.5520194+07:00 [   8] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:15.5630282+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-22T13:16:15.5660297+07:00 [   8] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#03fa643a, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#03fa643a, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#03fa643a, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03fa643a, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03fa643a, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03fa643a, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#03fa643a, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#03fa643a, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#03fa643a, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>66PnJtjZE/wR4Z04dCiYYBog5/+93NEhG8AulMdkjmw=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#03fa643a, VerifySignedInfo] Verifying SignedInfo using key RSACng#03307c64, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#03fa643a, VerifySignedInfo] Actual hash value: 5efd3188be4983da1b2e616f4ed5c1e86606fa1cd1cca8c7ee7cf7e7fe5d826f
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#03fa643a, VerifySignedInfo] Raw signature: bdc9815da8eb8bf620046c3da0fb41ba89272332a8ab9cd4fbdc6ff931da8bb57e23fed6393f038c1aa006f3f06c6cd86b7884cd6954a8886dbd4410786976107938d8581ac7125dcfebcdcbaf1038d63f97f0bc2228d5dda0bad0e744fa55703d73204673e5cec869641a89c33485e4597f0293b70acdeca7413f94f8c217b172b1387ed8a917be12ff508bc332d1baf44d056637351150ade75706b29e07778e46c8fb79b103508bd771d46b488fb4723f0561dfd834b413d43bd6672cdd301258d59e3cb16e7761d193324fef61534ddb266f82af8c15379cf10871f55a092a5d8761935d8a850c97236944a20a8250d5250139663dcb7892c08550081894
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#03fa643a, VerifyReference] Processing reference Reference#0201fa80, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#0201fa80, ReferenceData] Transformed reference contents: <ns2:DirectoryRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-22T06:16:16.738Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Directory>
+        <ns2:directoryDateTimestamp>2016-09-22T06:16:16.738Z</ns2:directoryDateTimestamp>
+        <ns2:Country>
+            <ns2:countryNames>Nederland</ns2:countryNames>
+            <ns2:Issuer>
+                <ns2:issuerID>ABNANL2A</ns2:issuerID>
+                <ns2:issuerName>BVN Test - AAB</ns2:issuerName>
+            </ns2:Issuer>
+        </ns2:Country>
+    </ns2:Directory>
+</ns2:DirectoryRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#03fa643a, VerifyReference] Reference Reference#0201fa80 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value eba3e726d8d913fc11e19d38742898601a20e7ffbddcd1211bc02e94c7648e6c, expected hash value eba3e726d8d913fc11e19d38742898601a20e7ffbddcd1211bc02e94c7648e6c.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#03fa643a, SignatureVerificationResult] Verification with key RSACng#03307c64 was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#03fa643a, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-22T13:16:16.0205367+07:00 [   8] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-22T13:16:16.0250395+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-22T13:16:37.2353149+07:00 [   5] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-22T13:16:37.2393169+07:00 [   5] [Debug] CoreCommunicator.NewMandate() - sending new eMandate transaction
+2016-09-22T13:16:37.2443217+07:00 [   5] [Debug] CoreCommunicator.NewMandate() - building eMandate
+2016-09-22T13:16:37.4829949+07:00 [   5] [Debug] CoreCommunicator.NewMandate() - building idx message
+2016-09-22T13:16:37.6371433+07:00 [   5] [Debug] CoreCommunicator.NewMandate() - signing message
+2016-09-22T13:16:37.6401461+07:00 [   5] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#002368d1, SigningReference] Hashing reference Reference#03868950, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#03868950, ReferenceData] Transformed reference contents: <AcquirerTrxReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-22T13:16:37.485Z</createDateTimestamp><Issuer><issuerID>ABNANL2A</issuerID></Issuer><Merchant><merchantID>0030000621</merchantID><subID>0</subID><merchantReturnURL>http://localhost:8081/Products/Status</merchantReturnURL></Merchant><Transaction><expirationPeriod>P6D</expirationPeriod><language>en</language><entranceCode>76cd6d15221245cf9968dc5e0932ba84</entranceCode><container><Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.009.001.04"><MndtInitnReq><GrpHdr><MsgId>messageId</MsgId><CreDtTm>2016-09-22T13:16:37.248Z</CreDtTm></GrpHdr><Mndt><MndtId>emandateId</MndtId><MndtReqId>NOTPROVIDED</MndtReqId><Tp><SvcLvl><Cd>SEPA</Cd></SvcLvl><LclInstrm><Cd>CORE</Cd></LclInstrm></Tp><Ocrncs><SeqTp>OOFF</SeqTp></Ocrncs><Cdtr></Cdtr><Dbtr><Id><PrvtId><Othr><Id>test</Id></Othr></PrvtId></Id></Dbtr><DbtrAgt><FinInstnId><BICFI>ABNANL2A</BICFI></FinInstnId></DbtrAgt><RfrdDoc><Tp><CdOrPrtry><Prtry>0000000001</Prtry></CdOrPrtry></Tp></RfrdDoc></Mndt></MndtInitnReq></Document></container></Transaction></AcquirerTrxReq>
+2016-09-22T13:16:37.6561558+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-22T13:16:37.6581572+07:00 [   5] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\37.658-AcquirerTrxReq.xml
+2016-09-22T13:16:37.6621608+07:00 [   5] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:38.9154004+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-22T13:16:38.9194046+07:00 [   5] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\38.919-AcquirerTrxRes.xml
+2016-09-22T13:16:38.9234073+07:00 [   5] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:38.9514266+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-22T13:16:38.9564289+07:00 [   5] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#0272e89e, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#0272e89e, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#0272e89e, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#0272e89e, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#0272e89e, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#0272e89e, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#0272e89e, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#0272e89e, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#0272e89e, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>i0LvGV86O0y26aP8q4nyWeT52jjRbq3ZNL3hfh6QsWw=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#0272e89e, VerifySignedInfo] Verifying SignedInfo using key RSACng#0138b783, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#0272e89e, VerifySignedInfo] Actual hash value: ebc93d0bd715f80603c5645a9224f7eef94e2e011b71c5588ac4033c3a041f29
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#0272e89e, VerifySignedInfo] Raw signature: bdffc2fc6df93bb859e8d41a5557f311835633e2614ed8a9c4322bad41b6c36044162746d08e3726b8fddf098f4415609a4b25f0575f4e16bb4ba3177a933cc500411ba2092fd14ae0864cc18325c06a0842ebc26ae65c5f66d441674f0ccf6fea6433436e62bbbf0827dee9073abd82a358f1bc882938c300513dbb5a0e6e775b041039f129d28f162136fed7ac73ebe2f02eb33f04b9fb9017ef89bf025ad1aff267f007754050b7c782616bf3b7ca5da23768a82e44762ee1189e75a278f5929c0c7f48f1bcb496f46d58c0b8bf3d23f5b2097567707a5c12b2dd91747f511130e41afde823c2e7917ecc2a757a845f57d1dce594a3e2c58b222084687f69
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#0272e89e, VerifyReference] Processing reference Reference#0289ebe1, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#0289ebe1, ReferenceData] Transformed reference contents: <ns2:AcquirerTrxRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-22T06:16:40.224Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Issuer>
+        <ns2:issuerAuthenticationURL>https://abnamro-test.incassomachtigen.de/bvn-idx-routing/consumerAuthenticationSim?hash=HUSqzsUyImPgJnolasBpWRfZzbygr2UPynhgBw5uwQc%3D</ns2:issuerAuthenticationURL>
+    </ns2:Issuer>
+    <ns2:Transaction>
+        <ns2:transactionID>0030000001543223</ns2:transactionID>
+        <ns2:transactionCreateDateTimestamp>2016-09-22T06:16:40.224Z</ns2:transactionCreateDateTimestamp>
+    </ns2:Transaction>
+</ns2:AcquirerTrxRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#0272e89e, VerifyReference] Reference Reference#0289ebe1 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 8b42ef195f3a3b4cb6e9a3fcab89f259e4f9da38d16eadd934bde17e1e90b16c, expected hash value 8b42ef195f3a3b4cb6e9a3fcab89f259e4f9da38d16eadd934bde17e1e90b16c.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#0272e89e, SignatureVerificationResult] Verification with key RSACng#0138b783 was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#0272e89e, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-22T13:16:39.0005299+07:00 [   5] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-22T13:16:39.0035320+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-22T13:16:44.0093839+07:00 [   5] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-22T13:16:44.0143871+07:00 [   5] [Debug] CoreCommunicator.GetStatus() - sending new status request
+2016-09-22T13:16:44.0173905+07:00 [   5] [Debug] CoreCommunicator.GetStatus() - building idx message
+2016-09-22T13:16:44.1810153+07:00 [   5] [Debug] CoreCommunicator.GetStatus() - signing message
+2016-09-22T13:16:44.1830170+07:00 [   5] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#02c105a1, SigningReference] Hashing reference Reference#02fd7b1a, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#02fd7b1a, ReferenceData] Transformed reference contents: <AcquirerStatusReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-22T13:16:44.022Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant><Transaction><transactionID>0030000001543223</transactionID></Transaction></AcquirerStatusReq>
+2016-09-22T13:16:44.1980259+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-22T13:16:44.2000285+07:00 [   5] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\44.200-AcquirerStatusReq.xml
+2016-09-22T13:16:44.2020314+07:00 [   5] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:45.7051825+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-22T13:16:45.7101863+07:00 [   5] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\13\16\45.710-AcquirerStatusRes.xml
+2016-09-22T13:16:45.7141887+07:00 [   5] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\13\16
+2016-09-22T13:16:45.7211939+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-22T13:16:45.7251981+07:00 [   5] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#013ec020, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#013ec020, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#013ec020, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#013ec020, NamespacePropagation] Propagating namespace xmlns:awidxma="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#013ec020, NamespacePropagation] Propagating namespace xmlns:awvsdsig="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#013ec020, NamespacePropagation] Propagating namespace xmlns:awvsp12="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#013ec020, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#013ec020, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#013ec020, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>cQH/Pw3d42OHThIvI8WHVY3lIxIbUAIvMksQ5/m0TLw=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#013ec020, VerifySignedInfo] Verifying SignedInfo using key RSACng#0320c332, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#013ec020, VerifySignedInfo] Actual hash value: 6a9c66fc302b2d9a6089404baace45890dba4fba1061a67da189d1ba9c5f8b17
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#013ec020, VerifySignedInfo] Raw signature: 3058f142cbded66c32bb78c2cb3a18c089a6307b5746af62835effa607f5d42718e9c336ae4e60b8561d99cf1da367d7440e6bb197e3749278ded6b778f543e38af45257c32a492b995259565da7b2432bddfa3b9407ba592a3c36075ce1eb248868f660dac87be43c91b4003477430f59edd0ab4ce30dd6c4fb871db77a9e202e47f95ccc8e667ba58bd821148fcf319310b6cce519ba188b4e935f18cb98198a9fd0adad78c7bb8c02b4b44283e910b1a51f085d64a7cea2b8f7dbfc12b41a05079161b93e4cb257fcb557cd886ab0c9556d2a9e6cf3800f665e3898dc572e4fafb3559a545c832b10bc6c7949ef811ab532bc25b5fce4d298922483b421a9
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#013ec020, VerifyReference] Processing reference Reference#02330ff5, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#02330ff5, ReferenceData] Transformed reference contents: <awidxma:AcquirerStatusRes xmlns:awidxma="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <awidxma:createDateTimestamp>2016-09-22T06:16:46.805Z</awidxma:createDateTimestamp>
+    <awidxma:Acquirer>
+        <awidxma:acquirerID>0030</awidxma:acquirerID>
+    </awidxma:Acquirer>
+    <awidxma:Transaction>
+        <awidxma:transactionID>0030000001543223</awidxma:transactionID>
+        <awidxma:status>Success</awidxma:status>
+        <awidxma:statusDateTimestamp>2016-09-22T04:16:46.726Z</awidxma:statusDateTimestamp>
+        <awidxma:container><awvsp12:Document xmlns:awvsp12="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04"><awvsp12:MndtAccptncRpt><awvsp12:GrpHdr><awvsp12:MsgId>Message0053098115</awvsp12:MsgId><awvsp12:CreDtTm>2016-09-22T06:16:46.726Z</awvsp12:CreDtTm><awvsp12:Authstn><awvsp12:Prtry>07367119</awvsp12:Prtry></awvsp12:Authstn></awvsp12:GrpHdr><awvsp12:UndrlygAccptncDtls><awvsp12:OrgnlMsgInf><awvsp12:MsgId>messageId</awvsp12:MsgId><awvsp12:MsgNmId>Issuing</awvsp12:MsgNmId></awvsp12:OrgnlMsgInf><awvsp12:AccptncRslt><awvsp12:Accptd>1</awvsp12:Accptd></awvsp12:AccptncRslt><awvsp12:OrgnlMndt><awvsp12:OrgnlMndt><awvsp12:MndtId>emandateId</awvsp12:MndtId><awvsp12:MndtReqId>0030000001543223</awvsp12:MndtReqId><awvsp12:Tp><awvsp12:SvcLvl><awvsp12:Cd>SEPA</awvsp12:Cd></awvsp12:SvcLvl><awvsp12:LclInstrm><awvsp12:Cd>CORE</awvsp12:Cd></awvsp12:LclInstrm></awvsp12:Tp><awvsp12:Ocrncs><awvsp12:SeqTp>OOFF</awvsp12:SeqTp></awvsp12:Ocrncs><awvsp12:CdtrSchmeId><awvsp12:Id><awvsp12:PrvtId><awvsp12:Othr><awvsp12:Id>NL33ZZZ302631050000</awvsp12:Id><awvsp12:SchmeNm><awvsp12:Cd>SEPA</awvsp12:Cd></awvsp12:SchmeNm></awvsp12:Othr></awvsp12:PrvtId></awvsp12:Id></awvsp12:CdtrSchmeId><awvsp12:Cdtr><awvsp12:Nm>Brand New Day Vermogensopbouw N.V.</awvsp12:Nm><awvsp12:PstlAdr><awvsp12:Ctry>NL</awvsp12:Ctry><awvsp12:AdrLine>Hoogoorddreef 15</awvsp12:AdrLine><awvsp12:AdrLine>1101 BA Amsterdam</awvsp12:AdrLine></awvsp12:PstlAdr></awvsp12:Cdtr><awvsp12:Dbtr><awvsp12:Nm>John Doe</awvsp12:Nm><awvsp12:Id><awvsp12:PrvtId><awvsp12:Othr><awvsp12:Id>test</awvsp12:Id></awvsp12:Othr></awvsp12:PrvtId></awvsp12:Id></awvsp12:Dbtr><awvsp12:DbtrAcct><awvsp12:Id><awvsp12:IBAN>NL13TEST0123456789</awvsp12:IBAN></awvsp12:Id></awvsp12:DbtrAcct><awvsp12:DbtrAgt><awvsp12:FinInstnId><awvsp12:BICFI>ABNANL2A</awvsp12:BICFI></awvsp12:FinInstnId></awvsp12:DbtrAgt><awvsp12:UltmtDbtr><awvsp12:Nm>Signer Name</awvsp12:Nm></awvsp12:UltmtDbtr></awvsp12:OrgnlMndt></awvsp12:OrgnlMndt></awvsp12:UndrlygAccptncDtls><awvsp12:SplmtryData><awvsp12:Envlp><awvsdsig:Signature xmlns:awvsdsig="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>ZAFETnThOknVMChPrVMZLGmqOl+wrx3MFX4VyIICWoo=</DigestValue></Reference></SignedInfo><SignatureValue xmlns="http://www.w3.org/2000/09/xmldsig#">l5LYmHxtaWvYHWCVv4mePmx/j2588ql/PnjHv24FjsPBllUGf/a3knu/rMMgMoa/FHe1dg5nARFH8OasnoRMqzmbdddcGxDectbGvlSxI1EIy98TKcAMO9Oay/NO/WoNmK8idUXVWojzUkyx1ZgP+ql0chkbzYBNdVWCgaV7WMVcZ2JzDNdKaE1pFIAf/NA/vgPyhfQ/4HUytHMq84flHLmwNnxmSxcWWj03oJcqQH2IeY+cCXUpN6oEQ84ZW3eq1NaIjAPKHmafnZ/LjrfNWrxy2c/HMkkCv/j/6Sa9iE/WqvtNcWeXCSAHT77KKLvPbAq3Kob/IlHYTn8LJy/EYg==</SignatureValue><KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><X509Data><X509Certificate>MIIDbzCCAlegAwIBAgIEeCuDtTANBgkqhkiG9w0BAQsFADBoMQswCQYDVQQGEwJERTEMMAoGA1UECBMDTlJXMQ8wDQYDVQQHEwZBYWNoZW4xEjAQBgNVBAoTCVdvcmxkbGluZTESMBAGA1UECxMJV29ybGRsaW5lMRIwEAYDVQQDEwlXb3JsZGxpbmUwHhcNMTQwNzA4MTQwNDU1WhcNMTkwNzA3MTQwNDU1WjBoMQswCQYDVQQGEwJERTEMMAoGA1UECBMDTlJXMQ8wDQYDVQQHEwZBYWNoZW4xEjAQBgNVBAoTCVdvcmxkbGluZTESMBAGA1UECxMJV29ybGRsaW5lMRIwEAYDVQQDEwlXb3JsZGxpbmUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmCC1wb07Zza4csVSMWJNhkZttvAjNYFPtlsHI6aZdLHy04BMx27lXFYexs8ZhNtyhniIaB8O3OV1cP03cI3tWa2Q55eX1BysvmDnTYMprHiFktYvSuXdN1PFa8NNswNSLMsgja3Tp+SrHYka0MtsgVM79Rk16ExvSaGmYO0OV5dx666yKVUCBV/lU/8tyIhHQAdTM4KGdWggfPbcI/KkJeSk3YPHY1LbmdpdGDS8UJcBwuOw3JII8cXj3oDPGQWuXVfKVE2iS9IiEjAipTlfvrA1yZqwfq6PcUSrVEWa++kr/zTzSUAwlIHXL8OpLzi0cGRgdtVEjcvO1DkUuQrdBAgMBAAGjITAfMB0GA1UdDgQWBBQfp6FTr4Fw6bVeVGY0XvVtEsEu6DANBgkqhkiG9w0BAQsFAAOCAQEAFrD2fcNCyKM346xYRJ84PDaLA2MagOy9pC0j18iFGsR+LZpALkYQQweM2Xu9IWs+IJdTC6gnuQzCedAAFF+ovXs5r0bwwG7cmtOfdYQh0tjDk515MbVeVSXSnROJLPJVjcNeeHfdSAfKhJE3bmDtfVsPVtkjbuh5waisKbswb53+aM63PgNHdHt9X5la0HhY1Ggdxd2UicSl5+6ffEmSMQ9jTh4JcUMMvhi4bZeVM4renRWjF5v8VITl6lLZy3lKDzip5Mw8g8mtaj1GsY55/Q60vFSvLJztwuQw249zImAZ4JAINmrIPfpDT6wnwnprRXwgvE4o3AAFYCyJuHTZmg==</X509Certificate></X509Data></KeyInfo></awvsdsig:Signature></awvsp12:Envlp></awvsp12:SplmtryData></awvsp12:MndtAccptncRpt></awvsp12:Document></awidxma:container>
+    </awidxma:Transaction>
+</awidxma:AcquirerStatusRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#013ec020, VerifyReference] Reference Reference#02330ff5 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 7101ff3f0ddde363874e122f23c587558de523121b50022f324b10e7f9b44cbc, expected hash value 7101ff3f0ddde363874e122f23c587558de523121b50022f324b10e7f9b44cbc.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#013ec020, SignatureVerificationResult] Verification with key RSACng#0320c332 was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#013ec020, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-22T13:16:45.7592519+07:00 [   5] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-22T13:16:45.7612564+07:00 [   5] [Debug] XmlProcessor.VerifySignature() - checking eMandate signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#02d3298e, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#02d3298e, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#02d3298e, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#02d3298e, NamespacePropagation] Propagating namespace xmlns:awvsp12="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#02d3298e, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#02d3298e, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#02d3298e, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>ZAFETnThOknVMChPrVMZLGmqOl+wrx3MFX4VyIICWoo=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#02d3298e, VerifySignedInfo] Verifying SignedInfo using key RSACryptoServiceProvider#029f0ee5, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#02d3298e, VerifySignedInfo] Actual hash value: 5c81b02ed0d4d82e933d37eb249b3cc0b8d9b9d8bfb40557d834a1cfdf11a988
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#02d3298e, VerifySignedInfo] Raw signature: 9792d8987c6d696bd81d6095bf899e3e6c7f8f6e7cf2a97f3e78c7bf6e058ec3c19655067ff6b7927bbfacc3203286bf1477b5760e67011147f0e6ac9e844cab399b75d75c1b10de72d6c6be54b1235108cbdf1329c00c3bd39acbf34efd6a0d98af227545d55a88f3524cb1d5980ffaa97472191bcd804d75558281a57b58c55c6762730cd74a684d6914801ffcd03fbe03f285f43fe07532b4732af387e51cb9b0367c664b17165a3d37a0972a407d88798f9c09752937aa0443ce195b77aad4d6888c03ca1e669f9d9fcb8eb7cd5abc72d9cfc7324902bff8ffe926bd884fd6aafb4d7167970920074fbeca28bbcf6c0ab72a86ff2251d84e7f0b272fc462
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#02d3298e, VerifyReference] Processing reference Reference#01887467, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#01887467, ReferenceData] Transformed reference contents: <awvsp12:Document xmlns:awvsp12="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04"><awvsp12:MndtAccptncRpt><awvsp12:GrpHdr><awvsp12:MsgId>Message0053098115</awvsp12:MsgId><awvsp12:CreDtTm>2016-09-22T06:16:46.726Z</awvsp12:CreDtTm><awvsp12:Authstn><awvsp12:Prtry>07367119</awvsp12:Prtry></awvsp12:Authstn></awvsp12:GrpHdr><awvsp12:UndrlygAccptncDtls><awvsp12:OrgnlMsgInf><awvsp12:MsgId>messageId</awvsp12:MsgId><awvsp12:MsgNmId>Issuing</awvsp12:MsgNmId></awvsp12:OrgnlMsgInf><awvsp12:AccptncRslt><awvsp12:Accptd>1</awvsp12:Accptd></awvsp12:AccptncRslt><awvsp12:OrgnlMndt><awvsp12:OrgnlMndt><awvsp12:MndtId>emandateId</awvsp12:MndtId><awvsp12:MndtReqId>0030000001543223</awvsp12:MndtReqId><awvsp12:Tp><awvsp12:SvcLvl><awvsp12:Cd>SEPA</awvsp12:Cd></awvsp12:SvcLvl><awvsp12:LclInstrm><awvsp12:Cd>CORE</awvsp12:Cd></awvsp12:LclInstrm></awvsp12:Tp><awvsp12:Ocrncs><awvsp12:SeqTp>OOFF</awvsp12:SeqTp></awvsp12:Ocrncs><awvsp12:CdtrSchmeId><awvsp12:Id><awvsp12:PrvtId><awvsp12:Othr><awvsp12:Id>NL33ZZZ302631050000</awvsp12:Id><awvsp12:SchmeNm><awvsp12:Cd>SEPA</awvsp12:Cd></awvsp12:SchmeNm></awvsp12:Othr></awvsp12:PrvtId></awvsp12:Id></awvsp12:CdtrSchmeId><awvsp12:Cdtr><awvsp12:Nm>Brand New Day Vermogensopbouw N.V.</awvsp12:Nm><awvsp12:PstlAdr><awvsp12:Ctry>NL</awvsp12:Ctry><awvsp12:AdrLine>Hoogoorddreef 15</awvsp12:AdrLine><awvsp12:AdrLine>1101 BA Amsterdam</awvsp12:AdrLine></awvsp12:PstlAdr></awvsp12:Cdtr><awvsp12:Dbtr><awvsp12:Nm>John Doe</awvsp12:Nm><awvsp12:Id><awvsp12:PrvtId><awvsp12:Othr><awvsp12:Id>test</awvsp12:Id></awvsp12:Othr></awvsp12:PrvtId></awvsp12:Id></awvsp12:Dbtr><awvsp12:DbtrAcct><awvsp12:Id><awvsp12:IBAN>NL13TEST0123456789</awvsp12:IBAN></awvsp12:Id></awvsp12:DbtrAcct><awvsp12:DbtrAgt><awvsp12:FinInstnId><awvsp12:BICFI>ABNANL2A</awvsp12:BICFI></awvsp12:FinInstnId></awvsp12:DbtrAgt><awvsp12:UltmtDbtr><awvsp12:Nm>Signer Name</awvsp12:Nm></awvsp12:UltmtDbtr></awvsp12:OrgnlMndt></awvsp12:OrgnlMndt></awvsp12:UndrlygAccptncDtls><awvsp12:SplmtryData><awvsp12:Envlp></awvsp12:Envlp></awvsp12:SplmtryData></awvsp12:MndtAccptncRpt></awvsp12:Document>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#02d3298e, VerifyReference] Reference Reference#01887467 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 6401444e74e13a49d530284fad53192c69aa3a5fb0af1dcc157e15c882025a8a, expected hash value 6401444e74e13a49d530284fad53192c69aa3a5fb0af1dcc157e15c882025a8a.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#02d3298e, SignatureVerificationResult] Verification with key RSACryptoServiceProvider#029f0ee5 was successful.
+2016-09-22T13:16:45.8383071+07:00 [   5] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-22T15:06:59.4099699+07:00 [   6] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-22T15:06:59.4149684+07:00 [   6] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-22T15:06:59.4169701+07:00 [   6] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-22T15:06:59.7992473+07:00 [   6] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-22T15:06:59.8022491+07:00 [   6] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#016202e9, SigningReference] Hashing reference Reference#037ef745, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#037ef745, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-22T15:06:59.474Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-22T15:06:59.8702952+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-22T15:06:59.8742988+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\15\06\59.874-DirectoryReq.xml
+2016-09-22T15:06:59.8763001+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\15\06
+2016-09-22T15:07:01.5712515+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-22T15:07:01.5842582+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-22\15\07\01.584-DirectoryRes.xml
+2016-09-22T15:07:01.5902625+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-22\15\07
+2016-09-22T15:07:01.6037771+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-22T15:07:01.6362995+07:00 [   6] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#00097674, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#00097674, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#00097674, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#00097674, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#00097674, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#00097674, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#00097674, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#00097674, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#00097674, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>F03zNPR7x1IAjuT930hR7BPvxC5Tq526wayu4dYrEp0=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#00097674, VerifySignedInfo] Verifying SignedInfo using key RSACng#01126b2d, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#00097674, VerifySignedInfo] Actual hash value: 4606714bc2eea68b28be3936a7031adfafa739b2059b8cab8763c9eeda19b593
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#00097674, VerifySignedInfo] Raw signature: 83b8b23d8a05726e2f6d0fb1f3b000e1638486e8c248274ac7322440081568e4b7f0126cb8b942b0ed9ece642545630478f7d30e53bfe03efd5b0ecb6e003edd9279d557dcc32d91de701648233ad74070ea5b18ae0655bf404c6ddf42ef150e089cd812a9b430abebe111fa3254e36c179a1ce7f69d961378e73cb6ebabe21e062a2ee9a1d6e856f01bb499969f27a3c5612be5749c3ecdbf11cade2a9ed7a6a7c82644abd6bad7fbce7876586b54e4e7261f2414d7b68d7c38261caf18de0d8da65e49af658cc51cf119ea9c7e6d749194d85e741b119061f5632afe258fb7d30fff4809aba6a2ea21bd9f8773a6b853c1f28299f00ce1b573a426bb6edd53
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#00097674, VerifyReference] Processing reference Reference#03162428, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#03162428, ReferenceData] Transformed reference contents: <ns2:DirectoryRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-22T08:07:02.995Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Directory>
+        <ns2:directoryDateTimestamp>2016-09-22T08:07:02.994Z</ns2:directoryDateTimestamp>
+        <ns2:Country>
+            <ns2:countryNames>Nederland</ns2:countryNames>
+            <ns2:Issuer>
+                <ns2:issuerID>ABNANL2A</ns2:issuerID>
+                <ns2:issuerName>BVN Test - AAB</ns2:issuerName>
+            </ns2:Issuer>
+        </ns2:Country>
+    </ns2:Directory>
+</ns2:DirectoryRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#00097674, VerifyReference] Reference Reference#03162428 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 174df334f47bc752008ee4fddf4851ec13efc42e53ab9dbac1acaee1d62b129d, expected hash value 174df334f47bc752008ee4fddf4851ec13efc42e53ab9dbac1acaee1d62b129d.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#00097674, SignatureVerificationResult] Verification with key RSACng#01126b2d was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#00097674, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-22T15:07:01.8995732+07:00 [   6] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-22T15:07:01.9025760+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-23T12:38:04.4535920+07:00 [   6] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-23T12:38:04.4868127+07:00 [   6] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-23T12:38:04.4888128+07:00 [   6] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-23T12:38:04.9518407+07:00 [   6] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-23T12:38:04.9538390+07:00 [   6] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#02e6ed39, SigningReference] Hashing reference Reference#03f64ecd, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#03f64ecd, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-23T12:38:04.512Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-23T12:38:05.0927744+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-23T12:38:05.0977751+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\12\38\05.096-DirectoryReq.xml
+2016-09-23T12:38:05.0997780+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\12\38
+2016-09-23T12:38:06.9089104+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-23T12:38:06.9164157+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\12\38\06.916-DirectoryRes.xml
+2016-09-23T12:38:06.9229213+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\12\38
+2016-09-23T12:38:06.9354279+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-23T12:38:06.9514386+07:00 [   6] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#03eec3c8, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#03eec3c8, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#03eec3c8, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03eec3c8, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03eec3c8, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#03eec3c8, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#03eec3c8, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#03eec3c8, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#03eec3c8, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>00H1GItVv+QrQdblSIPQUAIJo9rmt/A1yOWi5lCIEHU=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#03eec3c8, VerifySignedInfo] Verifying SignedInfo using key RSACng#020c2db2, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#03eec3c8, VerifySignedInfo] Actual hash value: 252ad79abbed20c47c4427d00665b5086bbc1a10c590da32d77c3165c242a7f7
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#03eec3c8, VerifySignedInfo] Raw signature: a68de6c0adf109b528f3736426780b72d62d690e55e3086d03d5972aa315030aa740b3a6612d59c3caf0f65df08689e11be40ad4b954e12166ca1a4dd3c1632ba895248f536e3b93c85d7be6fc04955b797f6388d0398b796acd9d1b888319b811a5620b029808dd3c985a573b4827a0a0d98cf9ad178027fb85da391278b2de2d0f2ceb82aafb9e238e8c4ebe93a7829fb569a1e525a54b12b8ab37cb4efc6f562be79c5d50765cf186d5fa18eb0a6ff706a8a0433791fd5cc93f4e67a0e04ad82eff97edb367daf1701273647fe6c028d018ba3a87de3a6f6ee26b81fb66dd0068c554dcab8c220b3c726446907cbf8f40375c8264eb3bcf9bbe777908adfb
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#03eec3c8, VerifyReference] Processing reference Reference#03612d43, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#03612d43, ReferenceData] Transformed reference contents: <ns2:DirectoryRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-23T05:38:09.892Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Directory>
+        <ns2:directoryDateTimestamp>2016-09-23T05:38:09.891Z</ns2:directoryDateTimestamp>
+        <ns2:Country>
+            <ns2:countryNames>Nederland</ns2:countryNames>
+            <ns2:Issuer>
+                <ns2:issuerID>ABNANL2A</ns2:issuerID>
+                <ns2:issuerName>BVN Test - AAB</ns2:issuerName>
+            </ns2:Issuer>
+        </ns2:Country>
+    </ns2:Directory>
+</ns2:DirectoryRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#03eec3c8, VerifyReference] Reference Reference#03612d43 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value d341f5188b55bfe42b41d6e54883d0500209a3dae6b7f035c8e5a2e650881075, expected hash value d341f5188b55bfe42b41d6e54883d0500209a3dae6b7f035c8e5a2e650881075.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#03eec3c8, SignatureVerificationResult] Verification with key RSACng#020c2db2 was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#03eec3c8, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-23T12:38:07.3156826+07:00 [   6] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-23T12:38:07.3251886+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-23T12:39:09.3688775+07:00 [   6] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-23T12:39:18.7771431+07:00 [   6] [Debug] CoreCommunicator.NewMandate() - sending new eMandate transaction
+2016-09-23T12:39:23.2035468+07:00 [   6] [Debug] CoreCommunicator.NewMandate() - building eMandate
+2016-09-23T12:39:28.2520591+07:00 [   6] [Debug] CoreCommunicator.NewMandate() - building idx message
+2016-09-23T12:39:33.2043430+07:00 [   6] [Debug] CoreCommunicator.NewMandate() - signing message
+2016-09-23T12:39:37.0774858+07:00 [   6] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#001b6b48, SigningReference] Hashing reference Reference#025938aa, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#025938aa, ReferenceData] Transformed reference contents: <AcquirerTrxReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-23T12:39:33.057Z</createDateTimestamp><Issuer><issuerID>ABNANL2A</issuerID></Issuer><Merchant><merchantID>0030000621</merchantID><subID>0</subID><merchantReturnURL>http://localhost:8081/Products/Status</merchantReturnURL></Merchant><Transaction><expirationPeriod>P6D</expirationPeriod><language>en</language><entranceCode>76cd6d15221245cf9968dc5e0932ba84</entranceCode><container><Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.009.001.04"><MndtInitnReq><GrpHdr><MsgId>messageId</MsgId><CreDtTm>2016-09-23T12:39:28.053Z</CreDtTm></GrpHdr><Mndt><MndtId>emandateId</MndtId><MndtReqId>NOTPROVIDED</MndtReqId><Tp><SvcLvl><Cd>SEPA</Cd></SvcLvl><LclInstrm><Cd>CORE</Cd></LclInstrm></Tp><Ocrncs><SeqTp>OOFF</SeqTp></Ocrncs><Cdtr></Cdtr><Dbtr><Id><PrvtId><Othr><Id>test</Id></Othr></PrvtId></Id></Dbtr><DbtrAgt><FinInstnId><BICFI>ABNANL2A</BICFI></FinInstnId></DbtrAgt></Mndt></MndtInitnReq></Document></container></Transaction></AcquirerTrxReq>
+2016-09-23T12:39:41.4480536+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-23T12:39:43.1374983+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\12\39\43.136-AcquirerTrxReq.xml
+2016-09-23T12:39:46.3424486+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\12\39
+2016-09-23T12:39:50.5573770+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-23T12:39:52.8977446+07:00 [   6] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\12\39\52.896-AcquirerTrxRes.xml
+2016-09-23T12:40:00.8401195+07:00 [   6] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\12\39
+2016-09-23T12:40:02.9937684+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-23T12:40:04.5678468+07:00 [   6] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#02137233, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#02137233, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#02137233, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#02137233, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#02137233, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#02137233, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#02137233, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#02137233, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#02137233, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>fP0/hhFDq1t8ngMpy7q5fiDTXWoOYdVCsuj+t/PzuR8=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#02137233, VerifySignedInfo] Verifying SignedInfo using key RSACng#0033efdd, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#02137233, VerifySignedInfo] Actual hash value: dccdf2b96fa632ff5fb377e7e0f72156b55bd24934c48e3035d1e359823697b0
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#02137233, VerifySignedInfo] Raw signature: 81601112da4dbd24d6984a498c4e595e4bbad7144fdbd779259e2f9536dc6f75cdb0c4d076d43d0b875ddc067aa12a17d43a1bd5941b285bcfca015b622a7700f44dded9f57fad0ec6648b405a922440b3464b23687807c028ccfb885a22e35bb6031b241b85275a863dbf3c9b100fb81cc739f95fa5c64d4e17ed250d70f988cc7c1375590d5475a2840a7a11c4d5cecd7dd186293acc80cfce20981d139f3b57a0805d1c60cd7a9d30f8da6651db20176e601026459f569861b5eb95324a410ccd3b70a3708b4a8373fa8088907897d8f76419c5e0318c4b0bd2bc3670d3f772e9d9e92611c9b6d960a61995df571725cd098137456b1f1a4521cf9a519e5f
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#02137233, VerifyReference] Processing reference Reference#01e22c1c, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#01e22c1c, ReferenceData] Transformed reference contents: <ns2:AcquirerTrxRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-23T05:39:53.455Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Issuer>
+        <ns2:issuerAuthenticationURL>https://abnamro-test.incassomachtigen.de/bvn-idx-routing/consumerAuthenticationSim?hash=YapXOn1Vyj22gidxZG8Jxpc9u9BodlehA6Dl5JE2Lgk%3D</ns2:issuerAuthenticationURL>
+    </ns2:Issuer>
+    <ns2:Transaction>
+        <ns2:transactionID>0030000001544057</ns2:transactionID>
+        <ns2:transactionCreateDateTimestamp>2016-09-23T05:39:53.455Z</ns2:transactionCreateDateTimestamp>
+    </ns2:Transaction>
+</ns2:AcquirerTrxRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#02137233, VerifyReference] Reference Reference#01e22c1c hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 7cfd3f861143ab5b7c9e0329cbbab97e20d35d6a0e61d542b2e8feb7f3f3b91f, expected hash value 7cfd3f861143ab5b7c9e0329cbbab97e20d35d6a0e61d542b2e8feb7f3f3b91f.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#02137233, SignatureVerificationResult] Verification with key RSACng#0033efdd was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#02137233, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-23T12:40:06.6872030+07:00 [   6] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-23T12:40:08.3914881+07:00 [   6] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-23T19:23:28.5174173+07:00 [   7] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-23T19:23:33.1848609+07:00 [   7] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-23T19:23:33.1878625+07:00 [   7] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-23T19:23:33.4816364+07:00 [   7] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-23T19:23:33.4839223+07:00 [   7] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#026ead04, SigningReference] Hashing reference Reference#026071d9, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#026071d9, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-23T19:23:33.191Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-23T19:23:33.5279511+07:00 [   7] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-23T19:23:33.5319535+07:00 [   7] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\19\23\33.531-DirectoryReq.xml
+2016-09-23T19:23:33.5349575+07:00 [   7] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\19\23
+2016-09-23T19:23:35.0909816+07:00 [   7] [Debug] CoreCommunicator.PerformRequest() - result status: OK
+2016-09-23T19:23:35.0929807+07:00 [   7] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-23\19\23\35.092-DirectoryRes.xml
+2016-09-23T19:23:35.0949836+07:00 [   7] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-23\19\23
+2016-09-23T19:23:35.0989848+07:00 [   7] [Debug] CoreCommunicator.PerformRequest() - Response XML schema is valid.
+2016-09-23T19:23:35.1019891+07:00 [   7] [Debug] XmlProcessor.VerifySignature() - checking iDx signature...
+System.Security.Cryptography.Xml.SignedXml Information: 1 : [SignedXml#021e4dc1, BeginCheckSignatureFormat] Checking signature format using format validator "[System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a] System.Security.Cryptography.Xml.SignedXml.DefaultSignatureFormatValidator".
+System.Security.Cryptography.Xml.SignedXml Information: 6 : [SignedXml#021e4dc1, FormatValidationResult] Signature format validation was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 2 : [SignedXml#021e4dc1, BeginCheckSignedInfo] Checking signature on SignedInfo with id "(null)".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#021e4dc1, NamespacePropagation] Propagating namespace xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#021e4dc1, NamespacePropagation] Propagating namespace xmlns="http://www.w3.org/2000/09/xmldsig#".
+System.Security.Cryptography.Xml.SignedXml Information: 7 : [SignedXml#021e4dc1, NamespacePropagation] Propagating namespace xmlns:ns3="urn:iso:std:iso:20022:tech:xsd:pain.012.001.04".
+System.Security.Cryptography.Xml.SignedXml Information: 0 : [SignedXml#021e4dc1, BeginCanonicalization] Beginning canonicalization using "http://www.w3.org/2001/10/xml-exc-c14n#" (XmlDsigExcC14NTransform).
+System.Security.Cryptography.Xml.SignedXml Verbose: 0 : [SignedXml#021e4dc1, BeginCanonicalization] Canonicalization transform is using resolver System.Xml.XmlSecureResolver and base URI "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 5 : [SignedXml#021e4dc1, CanonicalizedData] Output of canonicalization transform: <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>GDDtpPNaBcxD0svoIiRddzLzBreXc2w3BgLMcsOYTCU=</DigestValue></Reference></SignedInfo>
+System.Security.Cryptography.Xml.SignedXml Information: 14 : [SignedXml#021e4dc1, VerifySignedInfo] Verifying SignedInfo using key RSACng#01e805fa, signature description RSAPKCS1SHA256SignatureDescription, hash algorithm SHA256Managed, and asymmetric signature deformatter RSAPKCS1SignatureDeformatter.
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#021e4dc1, VerifySignedInfo] Actual hash value: 06b944c37258078d97ae4b1b6bf9dcc6358024df26dfdf53dc00742c794930da
+System.Security.Cryptography.Xml.SignedXml Verbose: 14 : [SignedXml#021e4dc1, VerifySignedInfo] Raw signature: ae945434e4bbb2a9bb7ed499b42a5e2fc3c65d10b58a93263a241066d9645dbb3161574acbf69d2a428a9e16e3c6d7c675cf3ac8e1c1cabc8020fbf0de487398d3d52f7e4c488501f5b6c37d1ca81506df22c2b7328beaff6e195cd9c941ce74138ecc8d58a5a854beb8dc0a7f44b411659b2ea4a068d290f6d8a70bef0e41d850dd5b83a3aaf9e640f79c30113eb16a3851bd7f80fb2143cf7b379b8d9529350883813b81a2cbe0e53f0a645e42eda26c88b0a52b9362304ec762a3d9b184998ae86b73a272e39ecabc1df68a3109317fa0c8857faa46c5859f1de574808e446a9ddf920aa96944da1761c75e269388c95649f6053bf37bcee8cee881a86151
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#021e4dc1, VerifyReference] Processing reference Reference#02e8c543, Uri "", Id "", Type "".
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#02e8c543, ReferenceData] Transformed reference contents: <ns2:DirectoryRes xmlns:ns2="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0">
+    <ns2:createDateTimestamp>2016-09-23T12:23:34.874Z</ns2:createDateTimestamp>
+    <ns2:Acquirer>
+        <ns2:acquirerID>0030</ns2:acquirerID>
+    </ns2:Acquirer>
+    <ns2:Directory>
+        <ns2:directoryDateTimestamp>2016-09-23T12:23:34.874Z</ns2:directoryDateTimestamp>
+        <ns2:Country>
+            <ns2:countryNames>Nederland</ns2:countryNames>
+            <ns2:Issuer>
+                <ns2:issuerID>ABNANL2A</ns2:issuerID>
+                <ns2:issuerName>BVN Test - AAB</ns2:issuerName>
+            </ns2:Issuer>
+        </ns2:Country>
+    </ns2:Directory>
+</ns2:DirectoryRes>
+System.Security.Cryptography.Xml.SignedXml Verbose: 13 : [SignedXml#021e4dc1, VerifyReference] Reference Reference#02e8c543 hashed with "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed) has hash value 1830eda4f35a05cc43d2cbe822245d7732f306b797736c370602cc72c3984c25, expected hash value 1830eda4f35a05cc43d2cbe822245d7732f306b797736c370602cc72c3984c25.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#021e4dc1, SignatureVerificationResult] Verification with key RSACng#01e805fa was successful.
+System.Security.Cryptography.Xml.SignedXml Information: 9 : [SignedXml#021e4dc1, SignatureVerificationResult] Verification with key X509Certificate2#"Atos Worldline GmbH" was successful.
+2016-09-23T19:23:35.3616750+07:00 [   7] [Debug] XmlProcessor.CheckIdxSignature() - signature is valid
+2016-09-23T19:23:35.3636769+07:00 [   7] [Debug] CoreCommunicator.PerformRequest() - signature is valid: True
+2016-09-26T11:43:06.8908125+07:00 [   8] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-26T11:43:06.9218349+07:00 [   8] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-26T11:43:06.9238353+07:00 [   8] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-26T11:43:07.2565775+07:00 [   8] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-26T11:43:07.2595806+07:00 [   8] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#01fcac43, SigningReference] Hashing reference Reference#00296c70, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#00296c70, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-26T11:43:06.925Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-26T11:43:07.3316396+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-26T11:43:07.3366434+07:00 [   8] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-26\11\43\07.336-DirectoryReq.xml
+2016-09-26T11:43:07.3386444+07:00 [   8] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-26\11\43
+2016-09-26T11:43:08.4383776+07:00 [   8] [Debug] CoreCommunicator.Directory() - error : System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at eMandates.Merchant.Library.CoreCommunicator.PerformRequest(String xml, String url)
+   at eMandates.Merchant.Library.CoreCommunicator.Directory()
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2016-09-26T11:44:01.4002781+07:00 [   8] [Debug] CoreCommunicator..ctor() - communicator initialized
+2016-09-26T11:44:06.1303795+07:00 [   8] [Debug] CoreCommunicator.Directory() - sending new directory request
+2016-09-26T11:44:08.0489977+07:00 [   8] [Debug] CoreCommunicator.Directory() - building idx message
+2016-09-26T11:44:08.0530059+07:00 [   8] [Debug] CoreCommunicator.Directory() - signing message
+2016-09-26T11:44:08.0585108+07:00 [   8] [Debug] XmlProcessor.AddSignature() - signing xml...
+System.Security.Cryptography.Xml.SignedXml Verbose: 11 : [PrefixedSignedXml#01fadc98, SigningReference] Hashing reference Reference#0106c7b1, Uri "", Id "", Type "" with hash algorithm "http://www.w3.org/2001/04/xmlenc#sha256" (SHA256Managed).
+System.Security.Cryptography.Xml.SignedXml Verbose: 8 : [Reference#0106c7b1, ReferenceData] Transformed reference contents: <DirectoryReq xmlns="http://www.betaalvereniging.nl/iDx/messages/Merchant-Acquirer/1.0.0" productID="NL:BVN:eMandatesCore:1.0" version="1.0.0"><createDateTimestamp>2016-09-26T11:44:08.052Z</createDateTimestamp><Merchant><merchantID>0030000621</merchantID><subID>0</subID></Merchant></DirectoryReq>
+2016-09-26T11:44:08.0811758+07:00 [   8] [Debug] CoreCommunicator.PerformRequest() - sending request to https://abnamro-test.incassomachtigen.de/bvn-idx-routing/bvnGateway
+2016-09-26T11:44:08.0831787+07:00 [   8] [Debug] Logger.LogXmlMessage() - writing to: ..\eMandate\2016-09-26\11\44\08.083-DirectoryReq.xml
+2016-09-26T11:44:08.0851794+07:00 [   8] [Debug] Logger.LogXmlMessage() - creating: C:\Program Files (x86)\eMandate\2016-09-26\11\44
+2016-09-26T11:44:08.7186001+07:00 [   8] [Debug] CoreCommunicator.Directory() - error : System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at eMandates.Merchant.Library.CoreCommunicator.PerformRequest(String xml, String url)
+   at eMandates.Merchant.Library.CoreCommunicator.Directory()
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+

@@ -1,0 +1,13 @@
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Proxy.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Proxy.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Entities.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Enums.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\Newtonsoft.Json.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Entities.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\BND.Services.Payments.eMandates.Enums.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\bin\Debug\Newtonsoft.Json.xml
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\obj\Debug\BND.Services.Payments.eMandates.Proxy.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\obj\Debug\BND.Services.Payments.eMandates.Proxy.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\obj\Debug\BND.Services.Payments.eMandates.Proxy.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\obj\Debug\BND.Services.Payments.eMandates.Proxy.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Proxy\obj\Debug\BND.Services.Payments.eMandates.Proxy.pdb

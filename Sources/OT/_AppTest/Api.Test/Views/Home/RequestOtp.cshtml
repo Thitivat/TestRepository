@@ -1,0 +1,132 @@
+﻿@model BND.Services.Security.OTP.ApiTest.Models.HomeViewModel
+
+<section ng-controller="RequestCtrl" layout="column" ng-cloak class="md-inline-form">
+
+    @using (Html.BeginForm("VerifyRequest", "Home", FormMethod.Post, new { name = "RequestForm" }))
+    {
+        <div class="otp-border">
+            <h2>@ViewBag.Title</h2>
+            <md-input-container class="md-block" layout="row" layout-align="center center" >
+                <label>Channel</label>
+                <md-select name="channelType" ng-model="channel" ng-change="onChangeSelect(channel)" ng-required="true" required>
+                    <md-option ng-repeat="channel in channels" value="{{channel}}">{{channel}}</md-option>
+                </md-select>
+                <div ng-messages="RequestForm.channelType.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+            <br />
+            <!-- Email Textbox-->
+            <div id="emailTxtBox" style="display:none">
+                <md-input-container class="md-block" layout="row" layout-align="center center">
+                    <label>Email Address</label>
+                    <input name="Email" type="email" ng-model="otpRequest.Email" ng-change="update({{otpRequest.Email}})" ng-required="true">
+                    <div ng-messages="RequestForm.Email.$error">
+                        <div ng-message="required">Please enter a valid email address.</div>
+                    </div>
+                </md-input-container>
+            </div>
+            <!-- Mobile Textbox-->
+            <div id="mobileTxtBox" style="display:none">
+                <md-input-container class="md-block" layout="row" layout-align="center center">
+                    <label>Mobile Number (country-code with mobile number. ex thailand: 0812345678 -> 66812345678)</label>
+                    <input name="Mobile" ng-pattern="/^(\+?(\d{1}|\d{2}|\d{3})[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{4}$/" ng-model="otpRequest.Mobile" ng-change="update({{otpRequest.Mobile}})" ng-required="true">
+                    <div ng-messages="RequestForm.Mobile.$error">
+                        <div ng-message="required">Please enter a valid mobile number.</div>
+                    </div>
+                </md-input-container>
+            </div>
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                <md-button type="submit" class="md-raised" ng-disabled="RequestForm.$invalid">Submit</md-button>
+            </section>
+            @if (Model != null && Model.Error != null)
+            {
+                if (Model.Error.Messages != null)
+                {
+                    foreach (BND.Services.Security.OTP.Models.ErrorMessageModel message in Model.Error.Messages)
+                    {
+                        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                            <div class="alert alert-danger">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                @message.Message <br />
+                            </div>
+                        </section>
+                    }
+                }
+                else
+                {
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                        <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            Internal server error, please check internet connection. <br />
+                        </div>
+                    </section>
+                }
+            }
+        </div>
+        <hr />
+        <h4>Debug Parameters:</h4>
+        <br />
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Api Key (Header)</label>
+            <input name="ApiKey" ng-model="otpRequest.ApiKey" type="text" autocomplete="off" ng-required="true">
+            <div ng-messages="RequestForm.ApiKey.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>AccountId (Header)</label>
+            <input required name="AccountId" ng-model="otpRequest.AccountId" autocomplete="off" ng-required="true">
+            <div ng-messages="RequestForm.AccountId.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            @Html.LabelFor(model => model.OtpRequest.Suid)
+            <input name="Suid" ng-model="otpRequest.Suid" autocomplete="off" ng-required="true">
+            <div ng-messages="RequestForm.Suid.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Channel.Type</label>
+            <input value="{{channel}}">
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Channel.Sender</label>
+            <input name="Sender" ng-model="otpRequest.Sender">
+        </md-input-container>
+        <div id="emailAddressTxtBox">
+            <md-input-container class="md-block" layout="row" layout-align="center center">
+                <label>Channel.Address</label>
+                <input name="Address" ng-model="otpRequest.Email" ng-required="true">
+            </md-input-container>
+        </div>
+        <div id="mobileAddressTxtBox" style="display:none">
+            <md-input-container class="md-block" layout="row" layout-align="center center">
+                <label>Channel.Address</label>
+                <input name="Address" ng-model="otpRequest.Mobile" ng-required="true">
+            </md-input-container>
+        </div>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Channel.Message (Instruction: The message must contains {Otp} for replace with otp code and {RefCode} for replace with reference code.)</label>
+            <textarea name="Message" ng-model="otpRequest.Message" md-select-on-focus="" rows="5" style="height:100px" ng-required="true"> </textarea>
+            <div ng-messages="RequestForm.Message.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" layout="row" layout-align="center center">
+            <label>Payload</label>
+            <textarea name="OtpRequest.Payload" ng-model="otpRequest.Payload" rows="5" md-select-on-focus="" style="height:100px"> </textarea>
+        </md-input-container>
+
+        @Html.Hidden(Html.NameFor(model => model.OtpRequest.Channel.Type).ToHtmlString(), "{{channel}}")
+        @Html.Hidden(Html.NameFor(model => model.OtpRequest.Channel.Message).ToHtmlString(), "{{otpRequest.Message}}")
+        @Html.Hidden(Html.NameFor(model => model.OtpRequest.Channel.Address).ToHtmlString(), "{{otpRequest.Address}}")
+        @Html.Hidden(Html.NameFor(model => model.OtpRequest.Channel.Sender).ToHtmlString(), "{{otpRequest.Sender}}")
+        @Html.Hidden(Html.NameFor(model => model.OtpRequest.Suid).ToHtmlString(), "{{otpRequest.Suid}}")
+        @Html.Hidden(Html.NameFor(model => model.Mobile).ToHtmlString(), "{{otpRequest.Mobile}}")
+        @Html.Hidden(Html.NameFor(model => model.Email).ToHtmlString(), "{{otpRequest.Email}}")
+    }
+</section>
+<script src="@Url.Content("~/Scripts/otp.js")"></script>

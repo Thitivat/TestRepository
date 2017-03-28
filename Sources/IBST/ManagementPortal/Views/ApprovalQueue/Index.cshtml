@@ -1,0 +1,131 @@
+﻿@using BND.Services.IbanStore.ManagementPortal.Helper
+@using BND.Services.IbanStore.Models
+@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<script>
+    var currentpage = @ViewBag.CurrentPage;
+    var totalpage = @ViewBag.TotalPage;
+</script>
+<div class="row">
+    <h1>Approval Queue</h1>
+    <hr />
+</div>
+<div ng-controller="approveController" id="approveController">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>FileName</th>
+                <th>SentBy</th>
+                <th>SentDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    @if (b.CurrentStatus.ChangedBy == UserHelper.GetUserName())
+                    {
+                        <td>
+                            @b.Name
+                        </td>
+                    }
+                    else
+                    {
+                        <td><a href="#" ng-click="Approve(@b.Id)">@b.Name</a></td>
+                    }
+
+                    <td>@b.CurrentStatus.ChangedBy</td>
+                    <td>@b.CurrentStatus.ChangedDate.ToString("dd/MM/yyyy hh:mm")</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <center>
+        <div id="page-selection"></div>
+    </center>
+
+
+    <div id="bbanListModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <form class="form" role="form">
+                        <div class="form-group">
+                            <label> File A>BBAN List</label>
+                        </div>
+
+                        <div class="form-group">
+
+
+                            <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="Status" ng-options="c.Desc as c.Desc for c in Statuses"></select>
+
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Remark" ng-model="Remark" cols="50" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-primary" ng-click="Save()" value="Approve" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>BBAN </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="h in BBAN">
+                                    <td>
+                                        {{h.BbanCode}}
+                                    </td>
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <center>
+                            <div id="page-selection-Bban"></div>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="approveSuccessModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="titleUploadFile">Success...</h4>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="Success()" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+@section scripts{
+    
+<script src="~/Scripts/Application/Controller/approv-Controller.js"></script>
+}

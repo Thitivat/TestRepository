@@ -1,0 +1,6 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\obj\Debug\BND.Services.Security.OTP.Plugins.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\obj\Debug\BND.Services.Security.OTP.Plugins.Libs.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\obj\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\obj\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb

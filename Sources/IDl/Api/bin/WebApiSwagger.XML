@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BND.Services.Payments.iDeal.Api</name>
+    </assembly>
+    <members>
+        <member name="T:BND.Services.Payments.iDeal.Api.ApiGlobalPrefixRouteProvider">
+            <summary>
+            Class ApiGlobalPrefixRouteProvider is a routing config provider to control any controller which use route attribute to go the same way.
+            This class provides base route for any action of any controller, so you just set route after base route + controller name following:
+            <br/>base route = "Api"<br/>
+            controller name = "TestController"<br/>
+            So if sets route attribute to be [Route("{id}/Foo")] on your action,
+            uri will be "http:your-domain.com/Api/Test/{id}/Foo", you dont need to set whole uri path on Route attribute like
+            [Route("Api/Test/{id}/Foo")]
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.ApiGlobalPrefixRouteProvider._globalPrefix">
+            <summary>
+            The global prefix route.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.ApiGlobalPrefixRouteProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.iDeal.Api.ApiGlobalPrefixRouteProvider"/> class.
+            </summary>
+            <param name="globalPrefix">The global prefix.</param>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.ApiGlobalPrefixRouteProvider.GetRoutePrefix(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the route prefix from the provided controller.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The route prefix or null.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.ErrorHandlerConfigAttribute">
+            <summary>
+            Class ErrorHandlerConfigAttribute is an Attribute of exception filter
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.ErrorHandlerConfigAttribute.ERROR_CODE_FORMAT">
+            <summary>
+            The error_code_format
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.ErrorHandlerConfigAttribute.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Raises the exception event for each possible exception.
+            </summary>
+            <param name="actionExecutedContext">The context for the action.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.FilterConfig">
+            <summary>
+            Class FilterConfig is class for register filter.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.FilterConfig.Register(System.Web.Http.Filters.HttpFilterCollection)">
+            <summary>
+            Registers the specified filters.
+            </summary>
+            <param name="filters">The filters.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.ModelStateValidationConfigAttribute">
+            <summary>
+            Class ModelStateValidationConfig is an Attribute of action filter
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.ModelStateValidationConfigAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The context for the action.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.RouteConfig">
+            <summary>
+            Class RouteConfig.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registers the routes api.
+            </summary>
+            <param name="routes">The routes.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.SecurityConfigAttribute">
+            <summary>
+            Class SecurityConfigAttribute is an Attribute of action filter
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.SecurityConfigAttribute._security">
+            <summary>
+            The security service
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.SecurityConfigAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Call before the action method executes.
+            </summary>
+            <param name="actionContext">The action context.</param>
+            <exception cref="T:System.ArgumentNullException">Authorization;Authorization header is required, cannot be null.</exception>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.SwaggerConfig">
+            <summary>
+            Class SwaggerConfig is a class for intializing swagger component.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.SwaggerConfig.Register">
+            <summary>
+            Registers swagger component to api.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Gets the XML comments path.
+            </summary>
+            <returns>The XML comments path.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter">
+            <summary>
+            Class SwaggerHeaderParameter for providing header in swagger.
+            <remarks>
+            How to create Header Parameters using Swashbuckle
+            See this http://analogcoder.com/2015/11/how-to-create-header-using-swashbuckle/
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Application.SwaggerDocsConfig)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="c">The swagger configuration.</param>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="schemaRegistry">The schema registry.</param>
+            <param name="apiDescription">The API description.</param>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.SwaggerConfig.SwaggerHeaderParameter.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>The default value.</value>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.WebApiConfig">
+            <summary>
+            Class WebApiConfig.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration Routes.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.WindsorConfig">
+            <summary>
+            Class WindsorConfig.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.WindsorConfig._container">
+            <summary>
+            The _container install Ioc
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WindsorConfig.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.iDeal.Api.WindsorConfig"/> class.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WindsorConfig.Create(System.Net.Http.HttpRequestMessage,System.Web.Http.Controllers.HttpControllerDescriptor,System.Type)">
+            <summary>
+            register apicontroller
+            </summary>
+            <param name="request">The message request.</param>
+            <param name="controllerDescriptor">The HTTP controller descriptor.</param>
+            <param name="controllerType">The type of the controller.</param>
+            <returns>An <see cref="T:System.Web.Http.Controllers.IHttpController" /> object.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.WindsorConfig.Release">
+            <summary>
+            Class Release.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.WindsorConfig.Release._release">
+            <summary>
+            The _release
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WindsorConfig.Release.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.iDeal.Api.WindsorConfig.Release"/> class.
+            </summary>
+            <param name="release">The release.</param>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WindsorConfig.Release.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.ComponentInstaller">
+            <summary>
+            Class ComponentInstaller.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.ComponentInstaller.Install(Castle.Windsor.IWindsorContainer,Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore)">
+            <summary>
+            Performs the installation in the <see cref="T:Castle.Windsor.IWindsorContainer" />.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="store">The configuration store.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController">
+            <summary>
+            Class DirectoriesController is a controller representing directories resource for performing directories
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController._idealService">
+            <summary>
+            The ideal service
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController._logger">
+            <summary>
+            The logger service
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController.#ctor(BND.Services.Payments.iDeal.Interfaces.IiDealService,BND.Services.Payments.iDeal.Interfaces.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController"/> class.
+            </summary>
+            <param name="iDealService">The ideal service.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Controllers.DirectoriesController.Get">
+            <summary>
+            Gets all available issuer bank list and return
+            </summary>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController">
+            <summary>
+            Class TransactionsController is a controller representing transactions resource for performing transactions
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController._idealService">
+            <summary>
+            The ideal service
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController._logger">
+            <summary>
+            The logger service
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController.#ctor(BND.Services.Payments.iDeal.Interfaces.IiDealService,BND.Services.Payments.iDeal.Interfaces.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController"/> class.
+            </summary>
+            <param name="iDealService">The i deal service.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController.Post(BND.Services.Payments.iDeal.Models.TransactionRequestModel)">
+            <summary>
+            Posts the specified transaction request model.
+            </summary>
+            <param name="transactionRequestModel">The transaction request model.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Controllers.TransactionsController.GetStatus(System.String,System.String)">
+            <summary>
+            Gets transaction status.
+            </summary>
+            <param name="transactionID">The transaction identifier.</param>
+            <param name="entranceCode">The entrance code.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.WebApiApplication">
+            <summary>
+            Class WebApiApplication.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.WebApiApplication.Application_Start">
+            <summary>
+            Application_s the start.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Helpers.Concurrence">
+            <summary>
+            Class Concurrence is a helper class for solving concurrent issue.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.iDeal.Api.Helpers.Concurrence.lockObj">
+            <summary>
+            The lock object for using in lock statement.
+            </summary>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Helpers.ExtensionValidate">
+            <summary>
+            Class ExtensionValidate is a extension class for validate modelstate.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Helpers.ExtensionValidate.Validate(System.Web.Http.ModelBinding.ModelStateDictionary,System.String)">
+            <summary>
+            Validate model extension.
+            </summary>
+            <param name="modelState">State of the model.</param>
+            <param name="paramName">Name of the parameter.</param>
+            <exception cref="T:System.ArgumentException">invalid model</exception>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Helpers.ISecurity">
+            <summary>
+            Interface ISecurity provides the method to validate token
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Helpers.ISecurity.ValidateToken(System.String)">
+            <summary>
+            Validates the token.
+            </summary>
+            <param name="token">The token.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Helpers.Security">
+            <summary>
+            Class Security is implements ISecurity for validate token
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.iDeal.Api.Helpers.Security.ValidateToken(System.String)">
+            <summary>
+            Validates the token.
+            </summary>
+            <param name="token">The token.</param>
+        </member>
+        <member name="T:BND.Services.Payments.iDeal.Api.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.Properties.Resources.ErrorWrongHttpStatus">
+            <summary>
+              Looks up a localized string similar to Error result could not be &apos;{0}&apos; status code..
+            </summary>
+        </member>
+        <member name="P:BND.Services.Payments.iDeal.Api.Properties.Resources.HEADER_TOKEN">
+            <summary>
+              Looks up a localized string similar to Token.
+            </summary>
+        </member>
+    </members>
+</doc>

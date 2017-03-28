@@ -1,0 +1,11 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.LibsTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.LibsTest.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\nunit.framework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\BND.Services.Security.OTP.Plugins.Libs.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\bin\Debug\nunit.framework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.LibsTest.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.LibsTest.Properties.Resources.resources
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.LibsTest.csproj.GenerateResource.Cache
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.LibsTest.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\Libs\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.LibsTest.pdb

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BND.Services.Payments.eMandates.WebService</name>
+    </assembly>
+    <members>
+        <member name="T:BND.Services.Payments.eMandates.WebService.SwaggerConfig">
+            <summary>
+            Class SwaggerConfig.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.SwaggerConfig.Register">
+            <summary>
+            Registers this instance.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Gets the XML comments path.
+            </summary>
+            <returns>The XML comments path.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter">
+            <summary>
+            Class SwaggerHeaderParameter for providing header in swagger.
+            <remarks>
+            How to create Header Parameters using Swashbuckle
+            See this http://analogcoder.com/2015/11/how-to-create-header-using-swashbuckle/
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Application.SwaggerDocsConfig)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="c">The swagger configuration.</param>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Applies header to swagger.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="schemaRegistry">The schema registry.</param>
+            <param name="apiDescription">The API description.</param>
+        </member>
+        <member name="P:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:BND.Services.Payments.eMandates.WebService.SwaggerConfig.SwaggerHeaderParameter.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>The default value.</value>
+        </member>
+        <member name="T:BND.Services.Payments.eMandates.WebService.WebApiConfig">
+            <summary>
+            Class WebApiConfig.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:BND.Services.Payments.eMandates.WebService.Controllers.TransactionsController">
+            <summary>
+            Class TransactionsController.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.eMandates.WebService.Controllers.TransactionsController._eMandatesManager">
+            <summary>
+            eMandates manager class.
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.Controllers.TransactionsController.#ctor(BND.Services.Payments.eMandates.Business.Interfaces.IEMandatesManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.eMandates.WebService.Controllers.TransactionsController"/> class.
+            </summary>
+            <param name="eMandatesManager">The e mandates manager.</param>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.Controllers.TransactionsController.CreateTransaction(BND.Services.Payments.eMandates.Entities.NewTransactionModel)">
+            <summary>
+            Creates the transaction.
+            </summary>
+            <param name="newTransactionModel">The new transaction model.</param>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="T:BND.Services.Payments.eMandates.WebService.Controllers.DirectoriesController">
+            <summary>
+            Class DirectoriesController.
+            </summary>
+        </member>
+        <member name="F:BND.Services.Payments.eMandates.WebService.Controllers.DirectoriesController._eMandatesManager">
+            <summary>
+            The _e mandates manager
+            </summary>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.Controllers.DirectoriesController.#ctor(BND.Services.Payments.eMandates.Business.Interfaces.IEMandatesManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BND.Services.Payments.eMandates.WebService.Controllers.DirectoriesController"/> class.
+            </summary>
+            <param name="eMandatesManager">The e mandates manager.</param>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.Controllers.DirectoriesController.GetCurrent">
+            <summary>
+            Gets the current.
+            </summary>
+            <returns>IHttpActionResult.</returns>
+        </member>
+        <member name="M:BND.Services.Payments.eMandates.WebService.WebApiApplication.Application_Start">
+            <summary>
+            Application start section.
+            </summary>
+        </member>
+    </members>
+</doc>

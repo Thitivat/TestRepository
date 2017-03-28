@@ -1,0 +1,38 @@
+﻿GO
+USE [Bndb.IBanStore.Db.Test];
+
+BEGIN /* REGION [ BbanFile ]*/
+	DELETE FROM [ib].[BbanFile]
+	INSERT INTO [ib].[BbanFile] ([Name], RawFile, Hash,CurrentStatusHistoryId) VALUES
+	(N'BBanFileTest1.csv', 0x3131303332323734360D0A3833333130323638300D0A313738313134363334, N'Yb3dVcUTxfZGZG/NyBOwPtnST6/DvJyZ5Nzs4dQwo2Y=', 1),
+	(N'BBanFileTest2.csv', 0x3532353834333235360D0A3132303233353730360D0A323837373333383538, N'QkUsrWBkdTY/+/IBw7DYd3MZQ8NuaFq/0LPFFKFh5fc=', 2),
+	(N'BBanFileTest3.csv', 0x3532353731373535320D0A3633303836383730300D0A373034383432303638, N'rUbAl4WxNJz5Zmu95gl7Xirw/m3HOkqSjb/Ls7Z4w+U=', 3),
+	(N'BBanFileTest4.csv', 0x3233303432333032370D0A3732313736353633370D0A383138303235353232, N'fDs9p2YdvC2TsPbzbD6JPJBZP2PxvohAT7KtDCnZvxc=', 4)
+END
+GO
+BEGIN /* REGION [ BbanFileHistory ]*/
+	DELETE FROM [ib].[BbanFileHistory]
+	INSERT INTO [ib].[BbanFileHistory] (BbanFileId, BbanFileStatusId, Remark,Context, ChangedDate, ChangedBy) VALUES
+	(1, 11, null, N'Context', N'2016-03-18 09:41:48.223', N'Token'),
+	(2, 14, null, N'Context', N'2016-03-18 09:43:56.827', N'Token'),
+	(3, 16, null, N'Context', N'2016-03-18 09:44:36.860', N'Token'),
+	(4, 11, null, N'Context', N'2016-03-18 09:44:58.500', N'Token')
+END
+GO
+BEGIN /* REGION [ BbanImport ]*/
+	DELETE FROM [ib].[BbanImport]
+	INSERT INTO [ib].[BbanImport] (BbanFileId, Bban, IsImported) VALUES
+	(1, 110322746, 0),	
+	(1, 833102680, 0),
+	(1, 178114634, 0),
+	(2, 525843256, 0),
+	(2, 120235706, 0),
+	(2, 287733858, 0),
+	(3, 525717552, 0),
+	(3, 630868700, 0),
+	(3, 704842068, 0),
+	(4, 230423027, 0),
+	(4, 721765637, 0),
+	(4, 818025522, 0)
+END
+GO

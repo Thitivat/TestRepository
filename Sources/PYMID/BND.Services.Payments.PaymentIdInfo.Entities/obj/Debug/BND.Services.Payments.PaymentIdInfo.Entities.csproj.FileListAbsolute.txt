@@ -1,0 +1,5 @@
+D:\BrandNewDay_NL\paymentIdInfo\BND.Services.Payments.PaymentIdInfo.Entities\bin\Debug\BND.Services.Payments.PaymentIdInfo.Entities.dll
+D:\BrandNewDay_NL\paymentIdInfo\BND.Services.Payments.PaymentIdInfo.Entities\bin\Debug\BND.Services.Payments.PaymentIdInfo.Entities.pdb
+D:\BrandNewDay_NL\paymentIdInfo\BND.Services.Payments.PaymentIdInfo.Entities\obj\Debug\BND.Services.Payments.PaymentIdInfo.Entities.csprojResolveAssemblyReference.cache
+D:\BrandNewDay_NL\paymentIdInfo\BND.Services.Payments.PaymentIdInfo.Entities\obj\Debug\BND.Services.Payments.PaymentIdInfo.Entities.dll
+D:\BrandNewDay_NL\paymentIdInfo\BND.Services.Payments.PaymentIdInfo.Entities\obj\Debug\BND.Services.Payments.PaymentIdInfo.Entities.pdb

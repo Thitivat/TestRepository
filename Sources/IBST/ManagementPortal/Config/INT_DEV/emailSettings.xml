@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Setting>
+  <EmailSetting>
+    <MailManComponentCode>BRANDNMAILQ_CZKwC83c5P3M</MailManComponentCode>
+    <EmailServer>smtp.sendgrid.net</EmailServer>
+    <EmailSmtpPort>465</EmailSmtpPort>
+    <EmailSmtpAccount>Brandnewday</EmailSmtpAccount>
+    <EmailAccount>ibanstore@brandnewday.nl</EmailAccount>
+    <EmailPassword>jeT6uqavege7as9r2sTu</EmailPassword>
+    <EmailFromName>Brand New Day</EmailFromName>
+  </EmailSetting>
+</Setting>

@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+
+<script type="text/javascript">
+    var searchEntity = @Html.Raw(ViewBag.SearchEntity);
+    var listTypeItems = @Html.Raw(ViewBag.ListType);
+</script>
+
+@Scripts.Render("~/Scripts/Kyc/sl_SanctionListsSearch.js")
+
+<h2>Search - Sanction Lists</h2>
+
+<div ng-app="sanctionListsSearchApp" block-ui="main" class="block-ui-main">
+    <div ng-controller="sanctionListsSearchController">
+        <!-- criteria block -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <span class="h4 text-vertical-middle">Criteria</span>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" name="criteriaForm" ng-submit="SearchAll()">
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">Last name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="LastName" class="form-control input-sm" ng-model="searchEntity.LastName" ng-required="true" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">First name</label>
+                                <div class="col-sm-8">
+
+                                    <input type="text" name="FirstName" class="form-control input-sm" ng-model="searchEntity.FirstName"
+                                           ng-required="(searchEntity.BirthDate)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label">Birth Date</label>
+                                <div class="col-sm-4">
+                                    <p class="input-group">
+                                        <input type="text" name="BirthDate" class="form-control" datepicker-popup ng-model="searchEntity.BirthDate" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" close-text="Close" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="openDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label"></label>
+                                <div class="col-sm-4">
+                                    <select ng-model="searchEntity.SanctionListType" name="" required="required" data-send="true" class="form-control">
+                                        <option value="" disabled="disabled">List Type</option>
+                                        <option ng-repeat="answerOption in SanctionListTypes" value={{answerOption.ListTypeId}}>{{answerOption.Name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-3 control-label"></label>
+                                <div class="col-sm-6">
+                                    <button type="submit" ng-disabled="!criteriaForm.$valid" class="btn btn-primary" popover-popup-delay="100" popover-trigger="mouseenter">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                        @*<button type="button" name="hSubmit" value="Export" ng-click="exportSanctionList()">Export</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="nav nav-tabs" ng-show="ResultVisible">
+                <div class="col-lg-12">
+                    <div id="tab1" ng-show="showList == 'show1' || showList == 'show2' || showList == 'show3'" ng-class="{'col-lg-12': showList == 'show1','col-lg-6': showList == 'show2', 'col-lg-4': showList == 'show3'}">
+                        <div class="active">Search Result I</div>
+                        <div class="tab-content clearfix">
+                            <div class="row tab-pane active">
+                                @Html.Partial("SearchPartial/Result1", 0)
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab2" ng-show="showList == 'show2' || showList == 'show3'" ng-class="{'col-lg-6': showList == 'show2', 'col-lg-4': showList == 'show3'}">
+                        <div class="active">
+                            <a>Search Result II</a>
+                        </div>
+                        <div class="tab-content clearfix">
+                            <div class="row tab-pane active">
+                                @Html.Partial("SearchPartial/Result1", 1)
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab3" ng-show="showList == 'show3'" ng-class="{'col-lg-4': showList == 'show3'}">
+                        <div class="active">
+                            <a>Search Result III</a>
+                        </div>
+                        <div class="tab-content clearfix">
+                            <div class="row tab-pane active">
+                                @Html.Partial("SearchPartial/Result1", 2)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Entity Details</h3>
+        </div>
+        <div class="modal-body" style="height:500px;overflow-y:scroll;" ng-bind-html="content">
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
+        </div>
+    </script>
+</div>

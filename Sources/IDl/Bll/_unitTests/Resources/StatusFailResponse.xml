@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AcquirerStatusRes
+    xmlns="http://www.idealdesk.com/ideal/messages/mer-acq/3.3.1"
+    xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" version="3.3.1">
+  <createDateTimestamp>2016-05-19T10:42:37.623Z</createDateTimestamp>
+  <Acquirer>
+    <acquirerID>0030</acquirerID>
+  </Acquirer>
+  <Transaction>
+    <transactionID>0030000041871818</transactionID>
+    <status>Cancelled</status>
+    <statusDateTimestamp>2016-05-19T12:42:37.597Z</statusDateTimestamp>
+    <consumerName>Hr E G H Küppers en/of MW M.J. Küppers-Veeneman</consumerName>
+    <consumerIBAN>NL53INGB0654422370</consumerIBAN>
+    <consumerBIC>INGBNL2A</consumerBIC>
+    <amount>1.00</amount>
+    <currency>EUR</currency>
+  </Transaction>
+  <Signature
+      xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <DigestValue>KwK0XBMGyieT7ti+dbDtLB1et2TIZUSQHm8hE3C57jI=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>
+      dURjfvVoeVX8nTV7HNvk7yxptO+3IftOtJCTRJG+btn86053lf297vGuCMAU/2o8newUubyounAV
+      9j3zKwHtqwU/uMXrz0A9wc8ZN/c38xjybVybGwttWndZwgI2/W0e3jHNFANCSvdv4zO0xY6/AdSk
+      oFGAYY+GzWKzcLEMciyStRRgpNs/O0ZFDO/Mp0D/14kfRKweVIvk9ULvQVN7L+cktVT9V1ERFOV7
+      mBIjufDrT+AosSOzeHjMecxLK11fLGLlsLoNBNPQ+pgcXhIThldXTFWsz3mwzvHC3qRJq8UZASXT
+      gOLWeuF+OyIYOThpgdmfyvg4dug7jVybSOdL9g==
+    </SignatureValue>
+    <KeyInfo>
+      <KeyName>00CDA7F82E4CBA8F5A3F2736BE02DC23204485C3</KeyName>
+    </KeyInfo>
+  </Signature>
+</AcquirerStatusRes>

@@ -1,0 +1,24 @@
+﻿@model BND.Services.Security.OTP.Models.ApiErrorModel
+
+<div layout="column" ng-cloak class="md-inline-form">
+    <h3>@ViewBag.Title</h3>
+    <br />
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => @Model.StatusCode, new { })
+        @Html.TextBoxFor(model => model.StatusCode, new { })
+    </md-input-container>
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => @Model.ErrorCode, new { })
+        @Html.TextBoxFor(model => model.ErrorCode, new { })
+    </md-input-container>
+
+    <md-input-container class="md-block" layout="row" layout-align="center center">
+        @Html.LabelFor(model => @Model.Messages, new { })
+        @{
+            if (@Model != null && @Model.Messages != null)
+            {
+                @Html.TextArea("Messages", String.Join( Environment.NewLine, @Model.Messages) , new { @class = "form-control", style = "height:200px; resize: none;" })
+            }
+        }
+    </md-input-container>
+</div>

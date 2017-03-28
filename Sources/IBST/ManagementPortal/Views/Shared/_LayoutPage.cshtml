@@ -1,0 +1,91 @@
+﻿@using BND.Services.IbanStore.ManagementPortal.Helper
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IBAN STORE</title>
+
+
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <!-- /.container -->
+    <!-- jQuery Version 1.11.1 -->
+    <script src="@Url.Content("~/Content/js/jquery.js")"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+    <link href="@Url.Content("~/Content/css/loading.css")" rel="stylesheet"/>
+
+    <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/ngUpload/angular-file-upload-all.js")"></script>
+    <script src="@Url.Content("~/Scripts/ngUpload/angular-file-upload-shim.js")"></script>
+    <script src="@Url.Content("~/Scripts/ngUpload/angular-file-upload.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/ngUpload/FileAPI.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/Jquery.bootpage.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/Application/App.js")"></script>
+    <script src="@Url.Content("~/Scripts/Util.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment.js")"></script>
+
+    @*<script src="~/Scripts/JqueryPaging.js")"></script>*@
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        var bndAppGlobals = {
+            baseUrl: '@Url.Content("~/")'
+        }
+    </script>
+
+
+</head>
+<body ng-app="IBANStore">
+    @Html.Partial("~/Views/Shared/FailModal.cshtml")
+    @Html.Partial("~/Views/Shared/LoadingModal.cshtml")
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">IBAN STORE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="@Url.Action("Index", "UploadBBAN")">Upload BBAN Files</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "BBANFiles")">BBAN Files</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "ApprovalQueue")">Approve Queue</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "IBAN")">IBAN</a>
+                    </li>
+                    
+                </ul>
+                <div style="float: right;margin-top: 20px"> <a href="#"> @UserHelper.GetUserName()</a></div>    
+            </div>
+            <!-- /.navbar-collapse -->
+            
+        </div>
+        <!-- /.container -->
+    </nav>
+<div class="container">
+    @RenderBody()
+</div>    
+</body>
+@RenderSection("scripts", required: false)
+</html>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "European Union Sanctions List";
+    ViewBag.Header = "European Union Sanctions List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/Scripts/Kyc/sl_EuUpdateList.js")
+
+<script type="text/javascript">
+    var varListTypeId = '@ViewBag.ListTypeId';
+    var varIsUpdting =  '@ViewBag.IsUpdating';
+</script>
+
+<div ng-app="euUpdateApp" ng-controller="euUpdateController" class="row">
+   <div class="col-md-12">
+       <p>Status : {{ProgressStatus}} </p>
+       <progressbar animate="true" max="100" value="progressValue" type="success">
+           <i> {{progressValue}} / 100</i>
+       </progressbar>
+       <button class="btn btn-info" ng-show="@ViewBag.IsUpdating!='Updating'" ng-disabled="IsUpdating=='Y'" ng-click="UpdateList(@ViewBag.ListTypeId)">Update List</button>
+
+   </div>
+</div>
+

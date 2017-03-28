@@ -1,0 +1,11 @@
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\BND.Services.Payments.iDeal.JobQueue.dll.config
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\BND.Services.Payments.iDeal.JobQueue.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\BND.Services.Payments.iDeal.JobQueue.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\EntityFramework.SqlServer.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\EntityFramework.Utilities.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\bin\INT_DEV\EntityFramework.SqlServer.xml
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\obj\INT_DEV\BND.Services.Payments.iDeal.JobQueue.dll
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\obj\INT_DEV\BND.Services.Payments.iDeal.JobQueue.pdb
+D:\BrandNewDay\VO\Services\Payments\iDeal_NL\Source\JobQueue\obj\INT_DEV\BND.Services.Payments.iDeal.JobQueue.csprojResolveAssemblyReference.cache

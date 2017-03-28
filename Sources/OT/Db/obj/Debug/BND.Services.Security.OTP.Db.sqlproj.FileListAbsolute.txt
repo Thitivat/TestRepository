@@ -1,0 +1,9 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\bin\Output\BND.Services.Security.OTP.dacpac
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\bin\Output\BND.Services.Security.OTP.Db.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\bin\Output\BND.Services.Security.OTP.Db.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\Model.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\refactor.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\postdeploy.sql
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\predeploy.sql
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\BND.Services.Security.OTP.Db.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Db\obj\Debug\BND.Services.Security.OTP.Db.pdb

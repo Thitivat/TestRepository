@@ -1,0 +1,91 @@
+﻿@model List<BND.Services.IbanStore.Models.Bban>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<script>
+    
+    var currentpage = @ViewBag.CurrentPage;
+    var totalpage = @ViewBag.TotalPage;
+</script>
+<div ng-controller="bbanListController">
+    <div class="modal-header">
+
+        <h4 class="modal-title">BBAN List</h4>
+    </div>
+    <div>
+        <div >
+            <table class="table">
+                <thead>
+                <tr>
+                    
+                    <th>BBAN</th>
+
+                </tr>
+                </thead>
+                <tbody id="myTable">
+                @for (int i = 1; i <= Model.Count; i++)
+                {
+
+                    <tr>
+                        <td>@Model[i - 1].BbanCode</td>
+
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+            <center>
+                <div id="page-selection"></div>
+            </center>
+        </div>
+            @*<div class="col-md-12 text-center">
+                <ul class="pagination pagination-lg pager" id="myPager"></ul>
+            </div>*@
+        </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="btnVerifyBban" data-dismiss="modal" ng-click="Verify()">Verify</button>
+        <button type="button" class="btn btn-default" ng-click="CancelVerify()">Cancel</button>
+    </div>
+
+    <div id="checkingModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Checking File..</h4>
+                </div>
+                <div class="modal-body">
+                    <br />
+                    <div class="windows8">
+                        <div class="wBall" id="wBall_1">
+                            <div class="wInnerBall"></div>
+                        </div>
+                        <div class="wBall" id="wBall_2">
+                            <div class="wInnerBall"></div>
+                        </div>
+                        <div class="wBall" id="wBall_3">
+                            <div class="wInnerBall"></div>
+                        </div>
+                        <div class="wBall" id="wBall_4">
+                            <div class="wInnerBall"></div>
+                        </div>
+                        <div class="wBall" id="wBall_5">
+                            <div class="wInnerBall"></div>
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts{
+    
+    <script src="~/Scripts/Application/Controller/bbanList-Controller.js"></script>
+}

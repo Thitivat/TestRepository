@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="12e290fd-1fab-4180-9e25-7de143526277" Title="Bndb.Kyc.Common.Mef Namespace" Url="html/1594105422.htm">
+    <HelpTOCNode Id="a64da202-de3e-44fb-a8e2-3e08ab4cff42" Title="IPluginManager Interface" Url="html/197228586.htm">
+      <HelpTOCNode Title="IPluginManager Members" Url="html/178654733.htm" />
+      <HelpTOCNode Id="017b0d9b-f411-4887-b917-2ce5078a78b3" Title="IPluginManager Methods" Url="html/1193966127.htm">
+        <HelpTOCNode Title="LoadPlugin Method " Url="html/502120091.htm" />
+        <HelpTOCNode Title="LoadPluginNames Method " Url="html/1276034575.htm" />
+        <HelpTOCNode Title="LoadPlugins Method " Url="html/2064597293.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="487c1639-c211-4c62-94ec-be866c3c18e0" Title="IPluginManager Properties" Url="html/1418716409.htm">
+        <HelpTOCNode Title="PluginDirectory Property " Url="html/83176023.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1bc93e77-8477-4d40-8f11-07a7c1efdde0" Title="IPluginMetaData Interface" Url="html/550271533.htm">
+      <HelpTOCNode Title="IPluginMetaData Members" Url="html/1064617698.htm" />
+      <HelpTOCNode Title="IPluginMetaData Methods" Url="html/695086256.htm" />
+      <HelpTOCNode Id="711d94b1-932f-4565-a80d-c849a03d353f" Title="IPluginMetaData Properties" Url="html/1123320635.htm">
+        <HelpTOCNode Title="Description Property " Url="html/1929529372.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/1282742566.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="780b0636-8cc1-481c-bc06-d9eab38b33a5" Title="PluginLoadException Class" Url="html/2041348796.htm">
+      <HelpTOCNode Title="PluginLoadException Members" Url="html/544293041.htm" />
+      <HelpTOCNode Id="0806d5f8-fc21-4f0d-88e2-823d5def002c" Title="PluginLoadException Constructor " Url="html/1327473834.htm">
+        <HelpTOCNode Title="PluginLoadException Constructor (String, Type)" Url="html/1233223088.htm" />
+        <HelpTOCNode Title="PluginLoadException Constructor (String, Type, String)" Url="html/2054988157.htm" />
+        <HelpTOCNode Title="PluginLoadException Constructor (String, Type, String, Exception)" Url="html/65069064.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PluginLoadException Methods" Url="html/780407556.htm" />
+      <HelpTOCNode Id="516a119c-f3d5-4049-b831-05fc29a69a88" Title="PluginLoadException Properties" Url="html/188634761.htm">
+        <HelpTOCNode Title="PluginContractType Property " Url="html/1671569039.htm" />
+        <HelpTOCNode Title="PluginDirectory Property " Url="html/761433952.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PluginLoadException Events" Url="html/1157206243.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b6c96d96-fdcf-4e70-b3a0-cac8cd4ebe3f" Title="PluginManager(TPluginContract) Class" Url="html/821956432.htm">
+      <HelpTOCNode Title="PluginManager(TPluginContract) Members" Url="html/1337780974.htm" />
+      <HelpTOCNode Title="PluginManager(TPluginContract) Constructor " Url="html/1419766191.htm" />
+      <HelpTOCNode Id="b4441284-9f38-4280-b890-3bb995552c3c" Title="PluginManager(TPluginContract) Methods" Url="html/1236260492.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/2064602932.htm" />
+        <HelpTOCNode Title="LoadPlugin Method " Url="html/789555596.htm" />
+        <HelpTOCNode Title="LoadPluginNames Method " Url="html/1751499260.htm" />
+        <HelpTOCNode Title="LoadPlugins Method " Url="html/2039337454.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cf233b53-26fe-4923-a4eb-78f37fc82238" Title="PluginManager(TPluginContract) Properties" Url="html/1211104969.htm">
+        <HelpTOCNode Title="PluginDirectory Property " Url="html/2139367269.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="87bc42dd-75f1-4128-95a3-ca35bdf51d2a" Title="PluginObject(TPluginContract) Class" Url="html/311544240.htm">
+      <HelpTOCNode Title="PluginObject(TPluginContract) Members" Url="html/606036605.htm" />
+      <HelpTOCNode Title="PluginObject(TPluginContract) Methods" Url="html/662116916.htm" />
+      <HelpTOCNode Id="d92b00ac-1060-4703-a79d-537a5eb9cecb" Title="PluginObject(TPluginContract) Properties" Url="html/156862350.htm">
+        <HelpTOCNode Title="Description Property " Url="html/955205121.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/2023353813.htm" />
+        <HelpTOCNode Title="Plugin Property " Url="html/1245424793.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ea3cdaa8-82d6-496a-9a54-5c6a2201dd2d" Title="Bndb.Kyc.DocReader Namespace" Url="html/2045524141.htm">
+    <HelpTOCNode Id="dd7144b4-667a-4f3f-9564-5078ea2cd353" Title="DocReaderException Class" Url="html/687757292.htm">
+      <HelpTOCNode Title="DocReaderException Members" Url="html/805758447.htm" />
+      <HelpTOCNode Id="95e3c010-2a08-4cb8-bca7-fcbffbbd6326" Title="DocReaderException Constructor " Url="html/910595477.htm">
+        <HelpTOCNode Title="DocReaderException Constructor (Int32)" Url="html/1420443889.htm" />
+        <HelpTOCNode Title="DocReaderException Constructor (Int32, String)" Url="html/233256056.htm" />
+        <HelpTOCNode Title="DocReaderException Constructor (Int32, String, Exception)" Url="html/1562564519.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DocReaderException Methods" Url="html/965271533.htm" />
+      <HelpTOCNode Id="a8f45946-c5da-4271-9bb1-12b1fb0d0406" Title="DocReaderException Properties" Url="html/1431849439.htm">
+        <HelpTOCNode Title="ErrorCode Property " Url="html/382787345.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DocReaderException Events" Url="html/1446894985.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="e6480d13-9ec7-4152-bdbd-55228202adb1" Title="ImageModifier Class" Url="html/1661185793.htm">
+      <HelpTOCNode Title="ImageModifier Members" Url="html/2021902789.htm" />
+      <HelpTOCNode Id="4a609dbd-c6b9-4ab6-a8f1-0fd22c61ec0f" Title="ImageModifier Constructor " Url="html/1308719656.htm">
+        <HelpTOCNode Title="ImageModifier Constructor (String, ImageSettings)" Url="html/150828090.htm" />
+        <HelpTOCNode Title="ImageModifier Constructor (, ImageSettings)" Url="html/610500227.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="318a0aa6-5943-4685-8c9c-916d5e822c82" Title="ImageModifier Methods" Url="html/929691303.htm">
+        <HelpTOCNode Title="AutoBrightness Method " Url="html/1575600442.htm" />
+        <HelpTOCNode Title="Crop Method " Url="html/85905627.htm" />
+        <HelpTOCNode Title="DecreaseBrightness Method " Url="html/1965078493.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/918434579.htm" />
+        <HelpTOCNode Title="IncreaseBrightness Method " Url="html/1611543898.htm" />
+        <HelpTOCNode Title="Rotate Method " Url="html/1598964631.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="762143e6-5b6a-4303-96f8-f4c7c85d8036" Title="ImageModifier Properties" Url="html/1892738796.htm">
+        <HelpTOCNode Title="Image Property " Url="html/1074977177.htm" />
+        <HelpTOCNode Title="Settings Property " Url="html/1285070376.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6a218b1a-7e9a-4b8a-b96b-896e3e2b6a5c" Title="ImageOperationException Class" Url="html/1997448271.htm">
+      <HelpTOCNode Title="ImageOperationException Members" Url="html/1962406030.htm" />
+      <HelpTOCNode Id="69fbf725-aafe-45bb-b622-32a7e161c6d5" Title="ImageOperationException Constructor " Url="html/1840042048.htm">
+        <HelpTOCNode Title="ImageOperationException Constructor (Int32)" Url="html/1098020994.htm" />
+        <HelpTOCNode Title="ImageOperationException Constructor (Int32, String)" Url="html/1977559716.htm" />
+        <HelpTOCNode Title="ImageOperationException Constructor (Int32, String, Exception)" Url="html/509033766.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ImageOperationException Methods" Url="html/228656139.htm" />
+      <HelpTOCNode Title="ImageOperationException Properties" Url="html/396158489.htm" />
+      <HelpTOCNode Title="ImageOperationException Events" Url="html/439588586.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="665e0b94-de63-4fb4-987e-938adbfbee61" Title="ImageSettings Class" Url="html/846628162.htm">
+      <HelpTOCNode Title="ImageSettings Members" Url="html/1189909992.htm" />
+      <HelpTOCNode Id="d872da8b-d86f-4832-a581-83bdc6b10221" Title="ImageSettings Methods" Url="html/1113721492.htm">
+        <HelpTOCNode Title="Load Method " Url="html/1166083737.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7052f952-ed49-4a5b-9224-c547e769e3f5" Title="ImageSettings Properties" Url="html/1116476119.htm">
+        <HelpTOCNode Title="MaxFileSize Property " Url="html/1125664402.htm" />
+        <HelpTOCNode Title="MaxResolution Property " Url="html/864873096.htm" />
+        <HelpTOCNode Title="MinFileSize Property " Url="html/720755062.htm" />
+        <HelpTOCNode Title="MinResolution Property " Url="html/1609101968.htm" />
+        <HelpTOCNode Title="SupportedTypes Property " Url="html/1380233375.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d3b15f4f-79ad-4eb1-8acb-60301b4c1d78" Title="OcrEngine Class" Url="html/472580056.htm">
+      <HelpTOCNode Title="OcrEngine Members" Url="html/807950840.htm" />
+      <HelpTOCNode Id="0483dc3e-3d5e-4d5f-a55f-8a30bf8a3d08" Title="OcrEngine Constructor " Url="html/669294339.htm">
+        <HelpTOCNode Title="OcrEngine Constructor (String, String, String)" Url="html/1033368787.htm" />
+        <HelpTOCNode Title="OcrEngine Constructor (, String, String)" Url="html/2115505398.htm" />
+        <HelpTOCNode Title="OcrEngine Constructor (Bitmap, String, String)" Url="html/1004069157.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="22c1f2fd-70f2-4219-b4ee-2c3e9bbfb584" Title="OcrEngine Methods" Url="html/1377632232.htm">
+        <HelpTOCNode Title="ConvertToGrayScale Method " Url="html/290739926.htm" />
+        <HelpTOCNode Title="DeSkew Method " Url="html/1649701784.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/2101073745.htm" />
+        <HelpTOCNode Title="Process Method " Url="html/1724788647.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8f1c5f32-d207-4e0c-b4f7-f3271e34b746" Title="OcrEngine Properties" Url="html/899052029.htm">
+        <HelpTOCNode Title="Confidence Property " Url="html/1984403939.htm" />
+        <HelpTOCNode Title="Image Property " Url="html/772710909.htm" />
+        <HelpTOCNode Title="Language Property " Url="html/1304878408.htm" />
+        <HelpTOCNode Title="LanguagePath Property " Url="html/1675894090.htm" />
+        <HelpTOCNode Title="Result Property " Url="html/1240498676.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="19d76c71-18e4-4135-93c1-20b1d9f693c4" Title="OcrOperationException Class" Url="html/564814390.htm">
+      <HelpTOCNode Title="OcrOperationException Members" Url="html/898881331.htm" />
+      <HelpTOCNode Id="b86efbaf-4c83-48b2-89b8-2cc6e8314662" Title="OcrOperationException Constructor " Url="html/1733301978.htm">
+        <HelpTOCNode Title="OcrOperationException Constructor (Int32)" Url="html/1694547278.htm" />
+        <HelpTOCNode Title="OcrOperationException Constructor (Int32, String)" Url="html/744818147.htm" />
+        <HelpTOCNode Title="OcrOperationException Constructor (Int32, String, Exception)" Url="html/1768709991.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="OcrOperationException Methods" Url="html/617611835.htm" />
+      <HelpTOCNode Title="OcrOperationException Properties" Url="html/1366647378.htm" />
+      <HelpTOCNode Title="OcrOperationException Events" Url="html/1123701987.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="7f8b5b8c-bd37-4735-88b2-d8b3559be753" Title="Reader Class" Url="html/2110696397.htm">
+      <HelpTOCNode Title="Reader Members" Url="html/964194914.htm" />
+      <HelpTOCNode Title="Reader Constructor " Url="html/800316843.htm" />
+      <HelpTOCNode Id="1edbd6e8-c9b0-416b-aba5-3fb289b608af" Title="Reader Methods" Url="html/1765228932.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/1508328844.htm" />
+        <HelpTOCNode Title="GetAllPluginNames Method " Url="html/1323702478.htm" />
+        <HelpTOCNode Title="GetReader Method " Url="html/2054126292.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b62520fa-3a0c-4542-88b2-3c50543bc4f2" Title="ReaderOperationException Class" Url="html/913269177.htm">
+      <HelpTOCNode Title="ReaderOperationException Members" Url="html/615064074.htm" />
+      <HelpTOCNode Id="0077379a-666b-45ac-ac53-de0831e24c86" Title="ReaderOperationException Constructor " Url="html/1620979426.htm">
+        <HelpTOCNode Title="ReaderOperationException Constructor (Int32)" Url="html/1383229723.htm" />
+        <HelpTOCNode Title="ReaderOperationException Constructor (Int32, String)" Url="html/845877253.htm" />
+        <HelpTOCNode Title="ReaderOperationException Constructor (Int32, String, Exception)" Url="html/1441506344.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ReaderOperationException Methods" Url="html/66914206.htm" />
+      <HelpTOCNode Title="ReaderOperationException Properties" Url="html/1099510869.htm" />
+      <HelpTOCNode Title="ReaderOperationException Events" Url="html/1008023632.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="28c2923f-8467-4ab1-bdc1-2e52adde8107" Title="Bndb.Kyc.DocReader.Api Namespace" Url="html/815795850.htm">
+    <HelpTOCNode Id="a4aa5cee-4bef-412a-8d34-6a061a6aed1e" Title="SwaggerConfig Class" Url="html/1499272428.htm">
+      <HelpTOCNode Title="SwaggerConfig Members" Url="html/1882679156.htm" />
+      <HelpTOCNode Id="a3dac513-1245-42da-a17e-8e294e01aa70" Title="SwaggerConfig Methods" Url="html/1472655497.htm">
+        <HelpTOCNode Title="Register Method " Url="html/1091880082.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="74fdeb39-accb-4d23-b6ce-ed867367c15a" Title="WebApiApplication Class" Url="html/47916236.htm">
+      <HelpTOCNode Title="WebApiApplication Members" Url="html/1661492953.htm" />
+      <HelpTOCNode Title="WebApiApplication Methods" Url="html/2036269224.htm" />
+      <HelpTOCNode Title="WebApiApplication Properties" Url="html/331584230.htm" />
+      <HelpTOCNode Title="WebApiApplication Events" Url="html/1839319373.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="6d6315b9-53f2-402e-8df5-caf3b375a317" Title="WebApiConfig Class" Url="html/372380492.htm">
+      <HelpTOCNode Title="WebApiConfig Members" Url="html/1628729640.htm" />
+      <HelpTOCNode Id="8b3ca771-48d9-4091-9948-378596dbec47" Title="WebApiConfig Methods" Url="html/970662341.htm">
+        <HelpTOCNode Title="Register Method " Url="html/1993993563.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4facaff5-fa6b-4dab-a9ab-8ce60a242851" Title="Bndb.Kyc.DocReader.Api.Controllers Namespace" Url="html/915759824.htm">
+    <HelpTOCNode Id="d29d4e3f-b66b-4ea4-b162-2415cf2eaa8e" Title="DocReaderController Class" Url="html/39579566.htm">
+      <HelpTOCNode Title="DocReaderController Members" Url="html/1814659369.htm" />
+      <HelpTOCNode Id="775cb7f5-27e2-4bcb-8a63-2c8af6982f2c" Title="DocReaderController Methods" Url="html/1423124932.htm">
+        <HelpTOCNode Title="Post Method " Url="html/2030890721.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DocReaderController Properties" Url="html/337205075.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="67a30e88-f4c1-4969-b16d-6c03a50734cd" Title="MainApiControllerBase Class" Url="html/531490996.htm">
+      <HelpTOCNode Title="MainApiControllerBase Members" Url="html/1830452679.htm" />
+      <HelpTOCNode Title="MainApiControllerBase Methods" Url="html/243417068.htm" />
+      <HelpTOCNode Title="MainApiControllerBase Properties" Url="html/1649084873.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="0b075666-7aae-4300-9f5f-6592a8e36e33" Title="PluginController Class" Url="html/634194544.htm">
+      <HelpTOCNode Title="PluginController Members" Url="html/51657340.htm" />
+      <HelpTOCNode Id="7753e8c6-1452-4866-8520-3ac9e8ec4a45" Title="PluginController Methods" Url="html/1119252176.htm">
+        <HelpTOCNode Title="Get Method " Url="html/2005523383.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PluginController Properties" Url="html/336391892.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="d3071777-9d8a-4cd1-897a-0daee83849b2" Title="Bndb.Kyc.DocReader.Api.Models Namespace" Url="html/1505061345.htm">
+    <HelpTOCNode Id="1b73dbaf-eb4e-4e21-b66e-321b8864b97f" Title="ApiErrorModel Class" Url="html/1110336347.htm">
+      <HelpTOCNode Title="ApiErrorModel Members" Url="html/908386307.htm" />
+      <HelpTOCNode Title="ApiErrorModel Methods" Url="html/2140069007.htm" />
+      <HelpTOCNode Id="4f1b1f9c-be2a-473b-8985-f3f2215791f4" Title="ApiErrorModel Properties" Url="html/594103786.htm">
+        <HelpTOCNode Title="ErrorCode Property " Url="html/882172233.htm" />
+        <HelpTOCNode Title="Messages Property " Url="html/1619772524.htm" />
+        <HelpTOCNode Title="StatusCode Property " Url="html/1830469432.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f0e67fdf-fedb-4317-a871-543f61e512f4" Title="AreaModel Class" Url="html/246405547.htm">
+      <HelpTOCNode Title="AreaModel Members" Url="html/1044080486.htm" />
+      <HelpTOCNode Title="AreaModel Methods" Url="html/1546377744.htm" />
+      <HelpTOCNode Id="7fee78a6-4a12-42dc-b3ca-38ed6e66db56" Title="AreaModel Properties" Url="html/597159678.htm">
+        <HelpTOCNode Title="Height Property " Url="html/722346020.htm" />
+        <HelpTOCNode Title="Width Property " Url="html/193752446.htm" />
+        <HelpTOCNode Title="X Property " Url="html/47010128.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/1519073813.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="aee38f1c-7c84-4dc8-8773-5c7099247be1" Title="DocReaderModel Class" Url="html/1526748337.htm">
+      <HelpTOCNode Title="DocReaderModel Members" Url="html/2030838989.htm" />
+      <HelpTOCNode Title="DocReaderModel Methods" Url="html/914724823.htm" />
+      <HelpTOCNode Id="86739308-e135-4350-8ba6-9d591f5cd511" Title="DocReaderModel Properties" Url="html/368083438.htm">
+        <HelpTOCNode Title="Area Property " Url="html/1272293868.htm" />
+        <HelpTOCNode Title="Image Property " Url="html/62799663.htm" />
+        <HelpTOCNode Title="Plugins Property " Url="html/593519568.htm" />
+        <HelpTOCNode Title="Token Property " Url="html/215537565.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a128afab-2f52-4686-a31e-6eb435eb2d65" Title="Bndb.Kyc.DocReader.Interfaces Namespace" Url="html/545008915.htm">
+    <HelpTOCNode Id="9d4652f8-3740-4b32-995d-0b9091f247b5" Title="IImageModifier Interface" Url="html/1130997802.htm">
+      <HelpTOCNode Title="IImageModifier Members" Url="html/1249627237.htm" />
+      <HelpTOCNode Id="b1daf4b2-06e5-4c0b-9560-349dba601f6b" Title="IImageModifier Methods" Url="html/1620583706.htm">
+        <HelpTOCNode Title="AutoBrightness Method " Url="html/891176077.htm" />
+        <HelpTOCNode Title="Crop Method " Url="html/1725422228.htm" />
+        <HelpTOCNode Title="DecreaseBrightness Method " Url="html/1979232132.htm" />
+        <HelpTOCNode Title="IncreaseBrightness Method " Url="html/323618712.htm" />
+        <HelpTOCNode Title="Rotate Method " Url="html/924046135.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ff4ac2fb-d4fa-4c2d-bcbb-e7fb9f4598c3" Title="IImageModifier Properties" Url="html/559230215.htm">
+        <HelpTOCNode Title="Image Property " Url="html/1698154874.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3e37b0ca-547a-4431-b9a8-5b70d0f6098b" Title="IOcrEngine Interface" Url="html/1648014276.htm">
+      <HelpTOCNode Title="IOcrEngine Members" Url="html/87666263.htm" />
+      <HelpTOCNode Id="5ee79572-54b2-4372-b8a7-d0a4266b585c" Title="IOcrEngine Methods" Url="html/1244957821.htm">
+        <HelpTOCNode Title="ConvertToGrayScale Method " Url="html/2011586387.htm" />
+        <HelpTOCNode Title="DeSkew Method " Url="html/1159865188.htm" />
+        <HelpTOCNode Title="Process Method " Url="html/1424803541.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c2f6f6a9-835c-4862-883c-19ee6b019935" Title="IOcrEngine Properties" Url="html/1388910077.htm">
+        <HelpTOCNode Title="Image Property " Url="html/498672979.htm" />
+        <HelpTOCNode Title="LanguagePath Property " Url="html/1600531567.htm" />
+        <HelpTOCNode Title="Result Property " Url="html/36929124.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="95f752a6-b96f-4e1f-b7ac-5ea5f0b4ee3d" Title="IReader Interface" Url="html/619451828.htm">
+      <HelpTOCNode Title="IReader Members" Url="html/375888768.htm" />
+      <HelpTOCNode Id="b43988e0-63a6-43bc-b7f6-a709231e4a1d" Title="IReader Methods" Url="html/860879644.htm">
+        <HelpTOCNode Title="GetAllPluginNames Method " Url="html/1096122229.htm" />
+        <HelpTOCNode Title="GetReader Method " Url="html/1896846927.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4aaaf571-5b21-4c05-b63f-f6ebc70c2134" Title="Bndb.Kyc.DocReader.Plugins Namespace" Url="html/1727299403.htm">
+    <HelpTOCNode Id="7363455e-d237-44f7-aec6-2881571934f5" Title="CountryIso3 Class" Url="html/310980573.htm">
+      <HelpTOCNode Title="CountryIso3 Members" Url="html/539133378.htm" />
+      <HelpTOCNode Id="74943e8d-0288-4a93-9b7a-9d4bbad5ef67" Title="CountryIso3 Methods" Url="html/1991063898.htm">
+        <HelpTOCNode Title="GuessCountry Method " Url="html/663106861.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c82bc856-86e9-40a7-8e5e-dd3a3fa3a26e" Title="IPluginReader Interface" Url="html/1858340067.htm">
+      <HelpTOCNode Title="IPluginReader Members" Url="html/663116815.htm" />
+      <HelpTOCNode Id="49a88292-fcc6-4369-82c5-021e8db446ec" Title="IPluginReader Methods" Url="html/1701047334.htm">
+        <HelpTOCNode Title="Read Method " Url="html/73896067.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7987bbd3-34ee-41a8-9b3e-d00cd7349005" Title="MrzPluginReader Class" Url="html/70811542.htm">
+      <HelpTOCNode Title="MrzPluginReader Members" Url="html/2099861566.htm" />
+      <HelpTOCNode Id="d289aa5d-0dda-46d8-926b-7a42cb553a5d" Title="MrzPluginReader Methods" Url="html/1997539416.htm">
+        <HelpTOCNode Title="Read Method " Url="html/1563589452.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fa2e7d94-bb16-40f7-a00f-36975a96e58e" Title="MrzResult Class" Url="html/1730579775.htm">
+      <HelpTOCNode Title="MrzResult Members" Url="html/1504071383.htm" />
+      <HelpTOCNode Title="MrzResult Methods" Url="html/1220735312.htm" />
+      <HelpTOCNode Id="2ccd5641-5772-4b6a-8084-9e4dda4ef8ce" Title="MrzResult Properties" Url="html/1465848959.htm">
+        <HelpTOCNode Title="DateOfBirth Property " Url="html/403516609.htm" />
+        <HelpTOCNode Title="ExpiryDate Property " Url="html/690197376.htm" />
+        <HelpTOCNode Title="Gender Property " Url="html/1106185667.htm" />
+        <HelpTOCNode Title="GivenName Property " Url="html/2128971387.htm" />
+        <HelpTOCNode Title="IssuerCountry Property " Url="html/276114353.htm" />
+        <HelpTOCNode Title="Nationality Property " Url="html/1086762252.htm" />
+        <HelpTOCNode Title="Number Property " Url="html/827460343.htm" />
+        <HelpTOCNode Title="PersonalNumber Property " Url="html/789205587.htm" />
+        <HelpTOCNode Title="Surname Property " Url="html/2114093648.htm" />
+        <HelpTOCNode Title="Type Property " Url="html/815242106.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1f2f56bf-0191-4af1-a1e3-5dcc490183ab" Title="PluginReaderMessage Class" Url="html/1035131520.htm">
+      <HelpTOCNode Title="PluginReaderMessage Members" Url="html/857450253.htm" />
+      <HelpTOCNode Title="PluginReaderMessage Methods" Url="html/1406783887.htm" />
+      <HelpTOCNode Id="1f9a9c69-4d3f-4f11-9b96-d41c4da28aa4" Title="PluginReaderMessage Properties" Url="html/897101373.htm">
+        <HelpTOCNode Title="Key Property " Url="html/1619119557.htm" />
+        <HelpTOCNode Title="Message Property " Url="html/1896407679.htm" />
+        <HelpTOCNode Title="Type Property " Url="html/1203004820.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="54f758ea-5d77-46fa-b0ff-f09f36bb2e76" Title="PluginReaderResult Class" Url="html/1689328687.htm">
+      <HelpTOCNode Title="PluginReaderResult Members" Url="html/148884577.htm" />
+      <HelpTOCNode Title="PluginReaderResult Constructor " Url="html/1765270985.htm" />
+      <HelpTOCNode Title="PluginReaderResult Methods" Url="html/507897270.htm" />
+      <HelpTOCNode Id="86da6caa-a9ee-4caf-b3d8-dbfc8d6042eb" Title="PluginReaderResult Properties" Url="html/1624421758.htm">
+        <HelpTOCNode Title="Messages Property " Url="html/246483111.htm" />
+        <HelpTOCNode Title="PluginName Property " Url="html/1723885633.htm" />
+        <HelpTOCNode Title="ReadText Property " Url="html/1649652376.htm" />
+        <HelpTOCNode Title="Result Property " Url="html/250539931.htm" />
+        <HelpTOCNode Title="Success Property " Url="html/810840693.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dd99d49c-fbd6-445c-ba3a-4df29f1cb04f" Title="ReaderExportAttribute Class" Url="html/399460336.htm">
+      <HelpTOCNode Title="ReaderExportAttribute Members" Url="html/1765054168.htm" />
+      <HelpTOCNode Title="ReaderExportAttribute Constructor " Url="html/149885673.htm" />
+      <HelpTOCNode Title="ReaderExportAttribute Methods" Url="html/265548371.htm" />
+      <HelpTOCNode Id="c45593aa-42ad-4aa5-a3fa-92ed34d8a018" Title="ReaderExportAttribute Properties" Url="html/1637618106.htm">
+        <HelpTOCNode Title="Description Property " Url="html/2064612034.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/147358049.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Setting>
+    <EmailSetting>
+		<MailManComponentCode>BRANDNMAILQ_CZKwC83c5P3M</MailManComponentCode>
+		<EmailServer>smtp.gmail.com</EmailServer>
+		<EmailSmtpPort>465</EmailSmtpPort>
+    <EmailSmtpAccount>Brandnewday</EmailSmtpAccount>
+		<EmailAccount>kobkiat.peace@gmail.com</EmailAccount>
+		<EmailPassword>qwerty@12345</EmailPassword>
+    <EmailFromName>Brand New Day</EmailFromName>
+	</EmailSetting>
+</Setting>

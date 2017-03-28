@@ -1,0 +1,1 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Plugins\EmailPluginChannel\_UnitTest\obj\Debug\BND.Services.Security.OTP.Plugins.EmailPluginChannelTest.csprojResolveAssemblyReference.cache

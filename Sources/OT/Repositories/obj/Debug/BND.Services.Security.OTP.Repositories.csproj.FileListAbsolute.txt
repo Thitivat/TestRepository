@@ -1,0 +1,7 @@
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Debug\BND.Services.Security.OTP.Repositories.dll.config
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Debug\BND.Services.Security.OTP.Repositories.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Debug\BND.Services.Security.OTP.Repositories.pdb
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Debug\EntityFramework.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\bin\Debug\EntityFramework.xml
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\obj\Debug\BND.Services.Security.OTP.Repositories.dll
+D:\BrandNewDay\VO\Services\Security\OTP_NL\Source\Repositories\obj\Debug\BND.Services.Security.OTP.Repositories.pdb

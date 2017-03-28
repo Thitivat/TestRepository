@@ -1,0 +1,5 @@
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Entities\bin\Debug\BND.Services.Payments.eMandates.Entities.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Entities\bin\Debug\BND.Services.Payments.eMandates.Entities.pdb
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Entities\obj\Debug\BND.Services.Payments.eMandates.Entities.csprojResolveAssemblyReference.cache
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Entities\obj\Debug\BND.Services.Payments.eMandates.Entities.dll
+D:\BrandNewDay\VO\Services\Payments\eMandate\BND.Services.Payments.eMandates.Entities\obj\Debug\BND.Services.Payments.eMandates.Entities.pdb

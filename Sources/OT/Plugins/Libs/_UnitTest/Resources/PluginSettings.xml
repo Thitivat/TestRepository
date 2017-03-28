@@ -1,0 +1,30 @@
+<plugin-settings>
+	<plugin-setting name="EMAIL" version="1.0.0.0">
+		<parameters>
+			<parameter key="ComponentCode" value="BRANDNMAILQ_CZKwC83c5P3M" />
+			<parameter key="HtmlToText" value="BRANDNHtmlToXml_eruWqpbOZD7k" />
+			<parameter key="EmailServer" value="smtp.gmail.com" />
+			<parameter key="EmailSmtpPort" value="465" />
+			<parameter key="EmailAccount" value="kobkiat.peace@gmail.com" />
+			<parameter key="EmailPassword" value="qwerty@12345" />
+			<parameter key="EmailSubject" value="This is a test mail." />
+		</parameters>
+	</plugin-setting>
+  <plugin-setting name="SMS">
+    <parameters>
+      <parameter key="SmsAccessKey" value="live_elaGiluktfJyREzEnJ43TikI9" />
+    </parameters>
+  </plugin-setting>
+	<plugin-setting name="NoParams" version="1.0.0.0" />
+  <plugin-setting name="NoKeyValue" version="1.0.0.0">
+    <parameters>
+      <parameter />
+    </parameters>
+  </plugin-setting>
+  <plugin-setting name="KeyDuplicate" version="1.0.0.0">
+    <parameters>
+      <parameter key="Key01" value="dfdsad" />
+      <parameter key="Key01" value="dddddddd" />
+    </parameters>
+  </plugin-setting>
+</plugin-settings>
