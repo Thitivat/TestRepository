@@ -1,0 +1,15 @@
+13db1626664c85554e917df863a3cae5ded08b09 <-- abn public
+9a0aef81ce0066a8d36e1829f5976b3e966f5908 <-- bnd cert with private
+
+
+
+
+
+
+openssl genrsa –aes128 -out D:\eMandate\Addendum\eMandatePrivate2.key 2048
+openssl req -key D:\eMandate\Addendum\eMandatePrivate2.key -new -x509 -sha256 -days 1826 -out D:\eMandate\Addendum\eMandate2.crt
+openssl pkcs12 -inkey D:\eMandate\Addendum\eMandatePrivate2.key -in D:\eMandate\Addendum\eMandate2.crt -export -out D:\eMandate\Addendum\eMandate2.pfx
+
+
+###############################################
+openssl pkcs12 -inkey D:\Certs\brand-new-day.key -in D:\Certs\idx_bvn_keystore_aab_merchant.cer -export -out D:\brand-new-day-key.pfx
