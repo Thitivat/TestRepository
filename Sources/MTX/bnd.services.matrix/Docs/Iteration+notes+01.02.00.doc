@@ -1,0 +1,509 @@
+Message-ID: <289244941.9765.1468246617408.JavaMail.FDIS-JIR-PRD-01$@FDIS-JIR-PRD-01>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_9764_1853231282.1468246617408"
+
+------=_Part_9764_1853231282.1468246617408
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Iteration notes 01.02.00</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Iteration notes 01.02.00</h1>
+    <div class=3D"Section1">
+        <p>Release Notes - FDS - Matrix Accounts - Version R 01.02.00&nbsp;=
+</p>
+<div>
+<div>
+Documentation:
+</div>
+<div>
+<a href=3D"https://confluence.fivedegrees.nl/confluence/display/MTRXDOCEXT/=
+Environment+preparation+and+setup+for+Matrix+Accounts" rel=3D"nofollow">Env=
+ironment preparation and setup for Matrix Accounts</a>
+</div>
+<div>
+<a href=3D"https://confluence.fivedegrees.nl/confluence/x/8wH0" rel=3D"nofo=
+llow">Matrix Accounts Installation guide</a>
+</div>
+<div>
+<a href=3D"https://confluence.fivedegrees.nl/confluence/pages/viewpage.acti=
+on?pageId=3D15993053" rel=3D"nofollow">Connect to the Matrix Accounts APIs =
+using C#</a>
+</div>
+<p>&nbsp;</p>
+<h2 id=3D"Iterationnotes01.02.00-Notpartofthe01.02.00release:KnownIssues">N=
+ot part of the 01.02.00 release: Known Issues&nbsp;</h2>
+<ol>
+<li>&nbsp;SchedulerProcess and&nbsp;<span>PaymentGateway.Monitor do not sup=
+port running on more than <strong>one</strong> environment</span></li>
+<li>&nbsp;PaymentGateway view in the Account Portal displays two scrollbars=
+ when the window is minimised.</li>
+<li><p>Known issues for the&nbsp;<span>PaymentGateway.Monitor</span></p>
+<ul>
+<li>When the Payment Gateway Windows Service is stopped&nbsp;it needs to be=
+ killed if the process is still running:&nbsp;
+<ul>
+<li>PS C:\&gt; Get-Process | Where-Object { $_.Name -eq "Matrix.Accounts.Pa=
+ymentGateway.Monitor.exe" } | Select-Object -First 1 | Stop-Process</li>
+</ul></li>
+<li>Creating a SEPA or SWIFT file directly in the \In folder is not allowed=
+, only copy.</li>
+</ul></li>
+</ol>
+<h2 id=3D"Iterationnotes01.02.00-Note">Note</h2>
+<ul>
+<li>If using WSDL , you need to update the WSDL .</li>
+<li>Health check implemented usage:&nbsp;<a href=3D"/confluence/display/MTR=
+XDOC/Environment+preparation+and+setup+for+Matrix+Accounts">Environment pre=
+paration and setup for Matrix Accounts</a></li>
+</ul>
+<h2 id=3D"Iterationnotes01.02.00-BuildVersions">Build Versions</h2>
+<p>The release/iteration includes all changes until change set <strong>7139=
+3</strong></p>
+<table id=3D"TBL1467098440975" class=3D"confluenceTable">
+<tbody>
+<tr>
+<th class=3D"confluenceTh">Item</th>
+<th class=3D"confluenceTh">Build Version</th>
+<th class=3D"confluenceTh">Notes</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Installer.01.02.05.70674</td>
+<td class=3D"confluenceTd">70674</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Database.01.02.00.71330</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.STS.01.00.00.69239</td>
+<td class=3D"confluenceTd">69239</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.AccountNumbers.API.01.02.00.7133=
+0</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Accounting.API.01.02.00.71330</t=
+d>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Approval.API.01.02.00.71330</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Center.API.01.02.00.71330</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.DataService.API.01.02.00.71330</=
+td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.FX.API.01.01.00.70511</td>
+<td class=3D"confluenceTd">70511</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.FXSpot.API.01.01.00.70511</td>
+<td class=3D"confluenceTd">70511</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Payment.API.01.02.00.71330</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Portfolio.API.01.02.00.71330</td=
+>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.ProductBuilder.API.01.02.00.7133=
+0</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Reversal.API.01.02.00.71330</td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Scheduler.API.01.02.00.71330</td=
+>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.TermContract.API.01.02.00.71330<=
+/td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Loan.API.01.01.00.70511</td>
+<td class=3D"confluenceTd">70511</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.CashAccount.API.01.02.00.71330</=
+td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.Portal.01.02.00.71375</td>
+<td class=3D"confluenceTd">71375</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.AuditProcess.01.00.00.69230</td>
+<td class=3D"confluenceTd">69230</td>
+<td class=3D"confluenceTd">No change</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.SchedulerProcess.01.02.00.71330<=
+/td>
+<td class=3D"confluenceTd">71330</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">Matrix.Accounts.PaymentGateway.Monitor.01.02.00.=
+71393</td>
+<td class=3D"confluenceTd">71393</td>
+<td class=3D"confluenceTd">NEW</td>
+</tr>
+</tbody>
+</table>=20
+<script type=3D"text/javascript">
+(new org_swift_TableSorter()).customizeMacroTable('TBL1467098440975',['S', =
+'I', 'S'],'',
+1,'lightgoldenrodyellow',true,
+'Click to sort','',false,
+false,false,true,
+0,false,'',true,
+''
+);
+AJS.$(document.getElementById('TBL1467098440975')).bind('makeSortable.Sorta=
+bleTables', function(e) { e.preventDefault(); });
+</script> &nbsp;
+<p></p>
+<p>&nbsp;</p>
+<div class=3D"table-wrap">
+<table class=3D"confluenceTable">
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Interface</p></th>
+<th class=3D"confluenceTh"><p>Item</p></th>
+<th class=3D"confluenceTh"><p>Change</p></th>
+<th class=3D"confluenceTh"><p>Affected methods</p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">IPaymentService</td>
+<td class=3D"confluenceTd">GetCustomerStatementByMessageId</td>
+<td class=3D"confluenceTd"><p>Changed return type</p>
+<ul>
+<li>From: CustomerStatementMessageItem</li>
+<li>To: List&lt;CustomerStatementMessageItem&gt;</li>
+</ul></td>
+<td class=3D"confluenceTd"><span>GetCustomerStatementByMessageId</span></td=
+>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">IPaymentService</td>
+<td colspan=3D"1" class=3D"confluenceTd">SepaBulkErrorCodes</td>
+<td colspan=3D"1" class=3D"confluenceTd">Trailing underscore "_" removed fr=
+om some values.</td>
+<td colspan=3D"1" class=3D"confluenceTd">RegisterMessageBulk,&nbsp;GetMessa=
+ges</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id=3D"Iterationnotes01.02.00-Listofitemsdeliveredinthisversion:">List o=
+f items delivered in this version:</h2>
+<ul>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1124" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1124</a>] - Remove cash account =
+calls from MatureTermContract proc</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1698" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1698</a>] - PG: Refactor Registe=
+rFile flow for PG/Portal/PaymentService to hand error/processing statuses</=
+li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1765" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1765</a>] - Skip validation on e=
+rroraccounts</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1790" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1790</a>] - First payment check =
+Account Sweep</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1799" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1799</a>] - Support load balance=
+ and query status of the service - Health check</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1807" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1807</a>] - MAP: Redesign Paymen=
+t Gateway</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1819" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1819</a>] - Refinement of EOD lo=
+gging</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1864" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1864</a>] - PG: Filter and mark =
+invalid buckets in outgoing payment flow</li>
+</ul>
+<h2 id=3D"Iterationnotes01.02.00-Bugsfixed:">Bugs fixed:</h2>
+<ul>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1593" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1593</a>] - Trailing white space=
+ in ReferenceData.SepaBulkErrorCodes</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1796" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1796</a>] - Errors in EOD sub pr=
+ocedures not logged</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1829" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1829</a>] - Files must be encode=
+d in UTF-8 without BOM</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1830" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1830</a>] - ISO date time have m=
+ore than 6 decimal digit</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1879" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1879</a>] - Empty Dataset return=
+ed in CashAccountOverview when the valueDate is not provided</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1886" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1886</a>] - Cancel interest Over=
+ride not working</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1904" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1904</a>] - MT940: Information m=
+issing from MT940 file when registered in DB</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1905" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1905</a>] - MT940 files end up i=
+n error folder with no error level entry in the PG log</li>
+<li>[<a href=3D"https://jira.fivedegrees.nl/jira/browse/MTXACC-1915" class=
+=3D"external-link" rel=3D"nofollow">MTXACC-1915</a>] - Mature term contract=
+: System date before value and accounting date<br><br></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_9764_1853231282.1468246617408--

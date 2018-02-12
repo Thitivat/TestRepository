@@ -1,0 +1,8 @@
+
+
+https://192.168.84.2 domaincontroller matrix
+https://192.168.84.3 database matrix
+https://192.168.84.4 process server matrix
+https://192.168.84.5 app server matrix
+https://192.168.84.6 webserver matrix
+
